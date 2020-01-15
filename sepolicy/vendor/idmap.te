@@ -1,0 +1,2 @@
+allow idmap dumpstate:fd use;
+allow idmap dumpstate:fifo_file write;

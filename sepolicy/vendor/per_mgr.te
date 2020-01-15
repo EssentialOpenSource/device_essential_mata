@@ -1,0 +1,28 @@
+# Policy for pm-service and pm-proxy
+type per_mgr, domain;
+type per_mgr_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(per_mgr);
+
+add_service(per_mgr, per_mgr_service)
+
+vndbinder_use(per_mgr)
+binder_call(per_mgr, hal_gnss)
+binder_call(per_mgr, per_proxy)
+binder_call(per_mgr, wcnss_service)
+binder_call(per_mgr, rild)
+
+allow per_mgr self:capability net_bind_service;
+
+allow per_mgr firmware_file:file r_file_perms;
+allow per_mgr firmware_file:dir search;
+
+allow per_mgr self:socket create_socket_perms;
+allowxperm per_mgr self:socket ioctl msm_sock_ipc_ioctls;
+allow per_mgr ssr_device:chr_file { open read };
+
+r_dir_file(per_mgr, sysfs_msm_subsys)
+r_dir_file(per_mgr, sysfs)
+r_dir_file(per_mgr, sysfs_esoc)
+
+set_prop(per_mgr, per_mgr_state_prop)

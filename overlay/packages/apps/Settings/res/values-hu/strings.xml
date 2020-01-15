@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Az Alkalmazkodó akkumulátor bekapcsolása"</string>
+    <string name="smart_battery_manager_title" >"Alkalmazkodó akkumulátor"</string>
+    <string name="smart_battery_footer" product="default" >"Az akkumulátor üzemidejének növelése érdekében az Alkalmazkodó akkumulátor korlátozza a ritkán használt alkalmazások akkumulátorhasználatát. A telefon idővel megtanulja, hogy Ön hogyan használja az alkalmazásokat.\n\nElőfordulhat, hogy az érintett alkalmazások értesítései késnek majd."</string>
+    <string name="smart_battery_footer" product="tablet" >"Az akkumulátor üzemidejének növelése érdekében az Alkalmazkodó akkumulátor korlátozza a ritkán használt alkalmazások akkumulátorhasználatát. A táblagép idővel megtanulja, hogy Ön hogyan használja az alkalmazásokat.\n\nElőfordulhat, hogy az érintett alkalmazások értesítései késnek majd."</string>
+    <string name="smart_battery_footer" product="device" >"Az akkumulátor üzemidejének növelése érdekében az Alkalmazkodó akkumulátor korlátozza a ritkán használt alkalmazások akkumulátorhasználatát. Az eszköz idővel megtanulja, hogy Ön hogyan használja az alkalmazásokat.\n\nElőfordulhat, hogy az érintett alkalmazások értesítései késnek majd."</string>
+    <string name="smart_battery_title" >"Alkalmazkodó akkumulátor használata"</string>
+    <string name="battery_tip_smart_battery_summary" >"Az Alkalmazkodó akkumulátor bekapcsolása"</string>
+</resources>

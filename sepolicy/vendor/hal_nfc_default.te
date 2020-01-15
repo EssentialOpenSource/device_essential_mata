@@ -1,0 +1,9 @@
+# Data file accesses.
+allow hal_nfc_default nfc_vendor_data_file:dir create_dir_perms;
+allow hal_nfc_default nfc_vendor_data_file:file create_file_perms;
+
+get_prop(hal_nfc_default, nfc_service_prop)
+get_prop(nfc, nfc_service_prop)
+
+dontaudit hal_nfc_default nxpese_hwservice:hwservice_manager find;
+dontaudit hal_nfc_default nxpnfc_hwservice:hwservice_manager add;

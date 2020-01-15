@@ -1,0 +1,1 @@
+binder_call(system_server, folio_daemon)

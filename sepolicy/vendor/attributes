@@ -1,0 +1,11 @@
+attribute hal_hbtp;
+attribute hal_hbtp_client;
+attribute hal_hbtp_server;
+
+attribute hal_sidecar_essential;
+attribute hal_sidecar_essential_client;
+attribute hal_sidecar_essential_server;
+
+attribute wifidisplayhalservice;
+attribute wifidisplayhalservice_client;
+attribute wifidisplayhalservice_server;

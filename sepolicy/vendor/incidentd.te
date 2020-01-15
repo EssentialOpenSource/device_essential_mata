@@ -1,0 +1,2 @@
+allow incidentd sysfs_msm_subsys:dir search;
+allow incidentd kernel:system syslog_read;

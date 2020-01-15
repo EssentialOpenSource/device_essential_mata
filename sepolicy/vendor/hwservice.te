@@ -1,0 +1,10 @@
+type vnd_ims_radio_hwservice, hwservice_manager_type;
+type vnd_qcrilhook_hwservice, hwservice_manager_type;
+type vnd_atcmdfwd_hwservice, hwservice_manager_type;
+type hal_imsrtp_hwservice, hwservice_manager_type;
+type hal_ipacm_hwservice, hwservice_manager_type;
+type hal_hbtp_hwservice, hwservice_manager_type;
+type hal_sidecar_essential_hwservice, hwservice_manager_type;
+type wifidisplayhalservice_hwservice, hwservice_manager_type;
+type nxpnfc_hwservice, hwservice_manager_type;
+type nxpese_hwservice, hwservice_manager_type;

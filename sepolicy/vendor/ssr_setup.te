@@ -1,0 +1,8 @@
+type ssr_setup, domain;
+type ssr_setup_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(ssr_setup);
+
+allow ssr_setup sysfs_msm_subsys:dir r_dir_perms;
+allow ssr_setup sysfs_msm_subsys:file rw_file_perms;
+allow ssr_setup sysfs_msm_subsys:lnk_file read;

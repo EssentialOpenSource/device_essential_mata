@@ -1,0 +1,6 @@
+allow migrate_legacy_obb_data storage_file:dir r_dir_perms;
+allow migrate_legacy_obb_data storage_file:lnk_file r_file_perms;
+allow migrate_legacy_obb_data mnt_user_file:dir r_dir_perms;
+allow migrate_legacy_obb_data mnt_user_file:lnk_file r_file_perms;
+allow migrate_legacy_obb_data sdcardfs:dir rw_dir_perms;
+allow migrate_legacy_obb_data sdcardfs:lnk_file r_file_perms;

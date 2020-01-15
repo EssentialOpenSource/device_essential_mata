@@ -1,0 +1,11 @@
+get_prop(dataservice_app, cnd_prop)
+
+r_dir_file(dataservice_app, sysfs_msm_subsys)
+
+binder_call(dataservice_app, cnd)
+
+# imsrcsd to bind with UceShimService.apk
+binder_call(dataservice_app, hal_rcsservice)
+get_prop(dataservice_app, omadm_prop)
+
+allow dataservice_app cgroup:file rw_file_perms;

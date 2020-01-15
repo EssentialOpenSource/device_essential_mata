@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Uključite Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Da bi se produljilo trajanje baterije, Adaptive Battery ograničava potrošnju baterije za aplikacije koje se upotrebljavaju rjeđe. Telefon će s vremenom saznati kako upotrebljavate aplikacije.\n\nObavijesti za te aplikacije mogu kasniti."</string>
+    <string name="smart_battery_footer" product="tablet" >"Da bi se produljilo trajanje baterije, Adaptive Battery ograničava potrošnju baterije za aplikacije koje se upotrebljavaju rjeđe. Tablet će s vremenom saznati kako upotrebljavate aplikacije.\n\nObavijesti za te aplikacije mogu kasniti."</string>
+    <string name="smart_battery_footer" product="device" >"Da bi se produljilo trajanje baterije, Adaptive Battery ograničava potrošnju baterije za aplikacije koje se upotrebljavaju rjeđe. Uređaj će s vremenom saznati kako upotrebljavate aplikacije.\n\nObavijesti za te aplikacije mogu kasniti."</string>
+    <string name="smart_battery_title" >"Koristi Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"Uključite Adaptive Battery"</string>
+</resources>

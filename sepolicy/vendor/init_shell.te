@@ -1,0 +1,96 @@
+# Restricted domain for shell processes spawned by init.
+# Normally these are shell commands or scripts invoked via sh
+# from an init*.rc file.  No service should ever run in this domain.
+type qti_init_shell, domain;
+type qti_init_shell_exec, exec_type, vendor_file_type,file_type;
+
+init_daemon_domain(qti_init_shell)
+
+domain_auto_trans(init, vendor_shell_exec, qti_init_shell)
+
+# For executing init shell scripts (init.qcom.early_boot.sh)
+allow qti_init_shell qti_init_shell_exec:file { rx_file_perms entrypoint };
+#execute init scripts
+allow qti_init_shell vendor_shell_exec:file {rx_file_perms entrypoint };
+allow qti_init_shell vendor_toolbox_exec:file  rx_file_perms;
+
+# For getting idle_time value
+# this is needed for dynamic_fps and bw_mode_bitmap
+allow qti_init_shell sysfs_graphics:file {rw_file_perms setattr};
+allow qti_init_shell sysfs:file setattr;
+
+allow qti_init_shell persist_file:dir w_dir_perms;
+allow qti_init_shell persist_file:file create_file_perms;
+allow qti_init_shell smd_device:chr_file rw_file_perms;
+
+# Run helpers from / or /system without changing domain.
+allow qti_init_shell { rootfs vendor_shell_exec }:file execute_no_trans;
+
+allow qti_init_shell gpu_device:chr_file getattr;
+
+# for insmod of iris ko, this is needed.
+# dac_read/override is needed for scripts to do chown/mkdir which is
+# needed by most of the services
+# fowner and fsetid are needed for chmod display nodes.
+allow qti_init_shell self:capability {
+    sys_module
+    net_admin
+    chown
+    fowner
+    fsetid
+    sys_admin
+};
+
+allow qti_init_shell sysfs_graphics:dir search;
+allow qti_init_shell sysfs_mdss_mdp_caps:file rw_file_perms;
+r_dir_file(qti_init_shell, sysfs_msm_subsys)
+allow qti_init_shell sysfs_msm_subsys:dir search;
+allow qti_init_shell sysfs_msm_subsys:file rw_file_perms;
+allow qti_init_shell sysfs_devices_system_cpu:file rw_file_perms;
+allow qti_init_shell proc_net:file rw_file_perms;
+
+allow qti_init_shell sysfs_thermal:dir search;
+allow qti_init_shell sysfs_soc:dir search;
+allow qti_init_shell sysfs_soc:file rw_file_perms;
+allow qti_init_shell pstorefs:dir r_dir_perms;
+allow qti_init_shell pstorefs:file r_file_perms;
+allow qti_init_shell kernel:system syslog_read;
+
+set_prop(qti_init_shell, nfc_service_prop)
+set_prop(qti_init_shell, build_prop)
+set_prop(qti_init_shell, system_prop)
+set_prop(qti_init_shell, system_radio_prop)
+set_prop(qti_init_shell, ctl_hbtp_prop)
+
+# To set default value
+get_prop(qti_init_shell, grip_prop)
+set_prop(qti_init_shell, grip_prop)
+
+#Needed for post-boot property
+set_prop(qti_init_shell, post_boot_prop)
+
+r_dir_file(qti_init_shell, proc_kernel)
+
+allow qti_init_shell proc_kernel:file rw_file_perms;
+
+allow qti_init_shell radio_vendor_data_file:dir create_dir_perms;
+allow qti_init_shell radio_vendor_data_file:file create_file_perms;
+
+allow qti_init_shell firmware_file:dir r_dir_perms;
+allow qti_init_shell firmware_file:file r_file_perms;
+
+#============= mata_provision ==============
+allow qti_init_shell persist_file:dir { add_name write };
+allow qti_init_shell persist_file:file { create getattr open read write };
+allow qti_init_shell persist_file:dir search;
+allow qti_init_shell firmware_file:dir search;
+allow qti_init_shell firmware_file:file { open read };
+allow qti_init_shell firmware_file:file getattr;
+allow qti_init_shell persist_file:file setattr;
+allow qti_init_shell kmsg_device:chr_file { open write };
+allow qti_init_shell system_file:lnk_file getattr;
+allow qti_init_shell ion_device:chr_file { ioctl open read };
+allow qti_init_shell kmsg_device:chr_file open;
+allow qti_init_shell tee_device:chr_file { ioctl open read write };
+get_prop(qti_init_shell, tee_listener_prop)
+r_dir_file(qti_init_shell, sysfs_esoc)

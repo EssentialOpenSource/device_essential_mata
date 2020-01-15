@@ -1,0 +1,2 @@
+allow hal_bootctl_default sysfs_scsi_devices_other:file rw_file_perms;
+allow hal_bootctl_default sysfs_scsi_devices_other:dir { open read search };

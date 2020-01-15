@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਚਾਲੂ ਕਰੋ"</string>
+    <string name="smart_battery_manager_title" >"ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ"</string>
+    <string name="smart_battery_footer" product="default" >"ਬੈਟਰੀ ਲਾਈਫ਼ ਨੂੰ ਵਧਾਉਣ ਲਈ, ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਕਦੇ-ਕਦੇ ਵਰਤੀਆਂ ਗਈਆਂ ਐਪਾਂ ਲਈ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਨੂੰ ਸੀਮਤ ਕਰਦਾ ਹੈ। ਸਮੇਂ ਦੇ ਨਾਲ ਤੁਹਾਡਾ ਫ਼ੋਨ ਇਹ ਜਾਣ ਜਾਵੇਗਾ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ।\n\nਇਹਨਾਂ ਐਪਾਂ ਦੀਆਂ ਸੂਚਨਾਵਾਂ ਦਿਖਾਉਣ ਵਿੱਚ ਦੇਰੀ ਹੋ ਸਕਦੀ ਹੈ।"</string>
+    <string name="smart_battery_footer" product="tablet" >"ਬੈਟਰੀ ਲਾਈਫ਼ ਨੂੰ ਵਧਾਉਣ ਲਈ, ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਕਦੇ-ਕਦੇ ਵਰਤੀਆਂ ਗਈਆਂ ਐਪਾਂ ਲਈ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਨੂੰ ਸੀਮਤ ਕਰਦਾ ਹੈ। ਸਮੇਂ ਦੇ ਨਾਲ ਤੁਹਾਡਾ ਟੈਬਲੈੱਟ ਇਹ ਜਾਣ ਜਾਵੇਗਾ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ।\n\nਇਹਨਾਂ ਐਪਾਂ ਦੀਆਂ ਸੂਚਨਾਵਾਂ ਦਿਖਾਉਣ ਵਿੱਚ ਦੇਰੀ ਹੋ ਸਕਦੀ ਹੈ।"</string>
+    <string name="smart_battery_footer" product="device" >"ਬੈਟਰੀ ਲਾਈਫ਼ ਨੂੰ ਵਧਾਉਣ ਲਈ, ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਕਦੇ-ਕਦੇ ਵਰਤੀਆਂ ਗਈਆਂ ਐਪਾਂ ਲਈ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਨੂੰ ਸੀਮਤ ਕਰਦਾ ਹੈ। ਸਮੇਂ ਦੇ ਨਾਲ ਤੁਹਾਡਾ ਡੀਵਾਈਸ ਇਹ ਜਾਣ ਜਾਵੇਗਾ ਕਿ ਤੁਸੀਂ ਕਿਵੇਂ ਐਪਾਂ ਦੀ ਵਰਤੋਂ ਕਰਦੇ ਹੋ।\n\nਇਹਨਾਂ ਐਪਾਂ ਦੀਆਂ ਸੂਚਨਾਵਾਂ ਦਿਖਾਉਣ ਵਿੱਚ ਦੇਰੀ ਹੋ ਸਕਦੀ ਹੈ।"</string>
+    <string name="smart_battery_title" >"ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਦੀ ਵਰਤੋਂ ਕਰੋ"</string>
+    <string name="battery_tip_smart_battery_summary" >"ਅਨੁਕੂਲਨਯੋਗ ਬੈਟਰੀ ਚਾਲੂ ਕਰੋ"</string>
+</resources>

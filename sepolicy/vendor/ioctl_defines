@@ -1,0 +1,10 @@
+# socket ioctls
+define(`RMNET_IOCTL_EXTENDED', `0x000089FD')
+
+# socket ioctls defined in the kernel in include/uapi/linux/msm_ipc.h
+define(`IPC_ROUTER_IOCTL_GET_VERSION', `0x0000c300')
+define(`IPC_ROUTER_IOCTL_GET_MTU', `0x0000c301')
+define(`IPC_ROUTER_IOCTL_LOOKUP_SERVER', `0x0000c302')
+define(`IPC_ROUTER_IOCTL_GET_CURR_PKT_SIZE', `0x0000c303')
+define(`IPC_ROUTER_IOCTL_BIND_CONTROL_PORT', `0x0000c304')
+define(`IPC_ROUTER_IOCTL_CONFIG_SEC_RULES', `0x0000c305')

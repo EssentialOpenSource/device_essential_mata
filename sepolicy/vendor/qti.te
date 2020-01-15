@@ -1,0 +1,17 @@
+type qti, domain;
+type qti_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(qti)
+net_domain(qti)
+
+allow qti sysfs_soc:dir search;
+allow qti sysfs_soc:file r_file_perms;
+
+allow qti smd_device:chr_file { read write };
+allow qti rmnet_device:chr_file rw_file_perms;
+
+allow qti self:socket create_socket_perms;
+allowxperm qti self:socket ioctl msm_sock_ipc_ioctls;
+
+r_dir_file(qti, sysfs_msm_subsys)
+r_dir_file(qti, sysfs_esoc)

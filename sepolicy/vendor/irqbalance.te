@@ -1,0 +1,14 @@
+type irqbalance, domain;
+type irqbalance_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(irqbalance);
+
+allow irqbalance sysfs_devices_system_cpu:file rw_file_perms;
+allow irqbalance proc_irq:dir r_dir_perms;
+allow irqbalance proc_irq:file rw_file_perms;
+allow irqbalance sysfs_irq:file r_file_perms;
+
+allow irqbalance proc_stat:file r_file_perms;
+allow irqbalance proc_interrupts:file r_file_perms;
+
+r_dir_file(irqbalance, proc)

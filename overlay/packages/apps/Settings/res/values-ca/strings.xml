@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Activa la bateria intel·ligent"</string>
+    <string name="smart_battery_manager_title" >"Bateria intel·ligent"</string>
+    <string name="smart_battery_footer" product="default" >"Per augmentar la durada de la bateria, la bateria intel·ligent en limita l\'ús a les aplicacions que no utilitzes habitualment. El teu telèfon aprendrà com fas servir les aplicacions al llarg del temps.\n\nÉs possible que rebis les notificacions d\'aquestes aplicacions amb retard."</string>
+    <string name="smart_battery_footer" product="tablet" >"Per augmentar la durada de la bateria, la bateria intel·ligent en limita l\'ús a les aplicacions que no utilitzes habitualment. La teva tauleta aprendrà com fas servir les aplicacions al llarg del temps.\n\nÉs possible que rebis les notificacions d\'aquestes aplicacions amb retard."</string>
+    <string name="smart_battery_footer" product="device" >"Per augmentar la durada de la bateria, la bateria intel·ligent en limita l\'ús a les aplicacions que no utilitzes habitualment. El teu dispositiu aprendrà com fas servir les aplicacions al llarg del temps.\n\nÉs possible que rebis les notificacions d\'aquestes aplicacions amb retard."</string>
+    <string name="smart_battery_title" >"Fes servir la bateria intel·ligent"</string>
+    <string name="battery_tip_smart_battery_summary" >"Activa la bateria intel·ligent"</string>
+</resources>

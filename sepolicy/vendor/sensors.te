@@ -1,0 +1,34 @@
+# Policy for sensor daemon
+type sensors, domain;
+type sensors_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(sensors)
+
+allow sensors self:capability {
+    net_bind_service
+};
+
+allow sensors self:socket create_socket_perms;
+allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
+
+allow sensors persist_sensors_file:dir rw_dir_perms;
+allow sensors persist_sensors_file:file create_file_perms;
+allow sensors persist_file:dir { getattr search };
+
+allow sensors sensors_vendor_data_file:dir create_dir_perms;
+allow sensors sensors_vendor_data_file:file create_file_perms;
+
+allow sensors system_file:dir r_dir_perms;
+allow sensors sensors_device:chr_file rw_file_perms;
+
+allow sensors sysfs_soc:dir r_dir_perms;
+allow sensors sysfs_soc:file r_file_perms;
+
+r_dir_file(sensors, sysfs_msm_subsys)
+
+userdebug_or_eng(`
+  r_dir_file(sensors, sysfs_diag)
+  allow sensors sysfs_timestamp_switch:file r_file_perms;
+')
+
+r_dir_file(sensors, sysfs_esoc)

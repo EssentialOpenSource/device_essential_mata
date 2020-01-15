@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Kveikja á breytilegri rafhlöðustjórnun"</string>
+    <string name="smart_battery_manager_title" >"Breytileg rafhlöðustjórnun"</string>
+    <string name="smart_battery_footer" product="default" >"Til að lengja endingu rafhlöðunnar takmarkar breytileg rafhlöðustjórnun rafhlöðunotkun forrita sem eru notuð sjaldan. Síminn lærir inn á forritanotkun þína með tímanum.\n\nTafir geta orðið á tilkynningum frá þessum forritum."</string>
+    <string name="smart_battery_footer" product="tablet" >"Til að lengja rafhlöðuendingu takmarkar breytileg rafhlöðustjórnun rafhlöðunotkun forrita sem eru notuð sjaldan. Spjaldtölvan lærir inn á forritanotkun þína með tímanum.\n\nTafir geta orðið á tilkynningum frá þessum forritum."</string>
+    <string name="smart_battery_footer" product="device" >"Til að lengja endingu rafhlöðunnar takmarkar breytileg rafhlöðustjórnun rafhlöðunotkun forrita sem eru notuð sjaldan. Tækið lærir inn á forritanotkun þína með tímanum.\n\nTafir geta orðið á tilkynningum frá þessum forritum."</string>
+    <string name="smart_battery_title" >"Nota breytilega rafhlöðustjórnun"</string>
+    <string name="battery_tip_smart_battery_summary" >"Kveikja á breytilegri rafhlöðustjórnun"</string>
+</resources>

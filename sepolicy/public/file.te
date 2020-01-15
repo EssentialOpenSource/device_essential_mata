@@ -1,0 +1,2 @@
+type elabel_data_file, file_type, core_data_file_type, data_file_type;
+type sysfs_pstore, sysfs_type, fs_type;

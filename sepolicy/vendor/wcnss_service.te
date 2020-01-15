@@ -1,0 +1,53 @@
+type wcnss_service, domain;
+type wcnss_service_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wcnss_service)
+net_domain(wcnss_service)
+
+vndbinder_use(wcnss_service)
+binder_call(wcnss_service, per_mgr)
+
+allow wcnss_service per_mgr_service:service_manager find;
+
+allow wcnss_service vendor_shell_exec:file rx_file_perms;
+allow wcnss_service vendor_toolbox_exec:file rx_file_perms;
+
+allow wcnss_service proc_net:file w_file_perms;
+
+allow wcnss_service self:capability { net_admin };
+
+allow wcnss_service self:socket create_socket_perms;
+allowxperm wcnss_service self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm wcnss_service self:udp_socket ioctl { SIOCIWFIRSTPRIV_05 SIOCSIFFLAGS };
+allow wcnss_service self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow wcnss_service self:netlink_socket create_socket_perms_no_ioctl;
+
+allow wcnss_service cnss_vendor_data_file:dir create_dir_perms;
+allow wcnss_service cnss_vendor_data_file:file create_file_perms;
+
+allow wcnss_service proc_net:file getattr;
+
+r_dir_file(wcnss_service, sysfs_msm_subsys)
+# pkt logging for cnss_diag
+userdebug_or_eng(`
+  r_dir_file(wcnss_service, proc_wifi_dbg)
+  r_dir_file(wcnss_service, sysfs_diag)
+  allow wcnss_service sysfs_timestamp_switch:file r_file_perms;
+  # This is needed for ptt_socket app to write logs file collected to sdcard
+  r_dir_file(wcnss_service, storage_file)
+  r_dir_file(wcnss_service, mnt_user_file)
+  allow wcnss_service sdcardfs:dir create_dir_perms;
+  allow wcnss_service sdcardfs:file create_file_perms;
+')
+
+allow wcnss_service sysfs_soc:dir search;
+allow wcnss_service sysfs_soc:file r_file_perms;
+
+r_dir_file(wcnss_service, sysfs_esoc)
+allow wcnss_service sysfs_esoc:dir search;
+allow wcnss_service sysfs_esoc:file r_file_perms;
+
+allow wcnss_service firmware_file:dir search;
+allow wcnss_service firmware_file:file r_file_perms;
+
+get_prop(wcnss_service, hwservicemanager_prop)

@@ -1,0 +1,26 @@
+type wcnss_filter, domain;
+type wcnss_filter_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(wcnss_filter)
+
+set_prop(wcnss_filter, wc_prop)
+set_prop(wcnss_filter, bluetooth_prop)
+
+allow wcnss_filter hci_attach_dev:chr_file rw_file_perms;
+
+userdebug_or_eng(`
+  allow wcnss_filter diag_device:chr_file rw_file_perms;
+  allow wcnss_filter ramdump_vendor_data_file:dir w_dir_perms;
+  allow wcnss_filter ramdump_vendor_data_file:file { create w_file_perms };
+  allow wcnss_filter proc_sysrq:file { open write };
+  allow wcnss_filter sysfs_timestamp_switch:file r_file_perms;
+  r_dir_file(wcnss_filter, debugfs_ipc)
+  r_dir_file(wcnss_filter, sysfs_diag)
+  set_prop(wcnss_filter, ssr_prop)
+')
+
+#allow wakelock
+wakelock_use(wcnss_filter)
+
+# allow wcnss to set threads to RT priority
+allow wcnss_filter self:capability sys_nice;

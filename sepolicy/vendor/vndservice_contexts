@@ -1,0 +1,3 @@
+display.qservice                        u:object_r:qdisplay_service:s0
+vendor.qcom.PeripheralManager           u:object_r:per_mgr_service:s0
+wfd.native.mm.service                   u:object_r:wfdnativemm_service:s0

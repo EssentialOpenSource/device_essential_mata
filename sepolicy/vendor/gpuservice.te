@@ -1,0 +1,2 @@
+allow gpuservice dumpstate:fd use;
+allow gpuservice dumpstate:fifo_file write;

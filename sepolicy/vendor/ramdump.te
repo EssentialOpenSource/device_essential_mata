@@ -1,0 +1,23 @@
+type ramdump_exec, exec_type, vendor_file_type, file_type;
+
+userdebug_or_eng(`
+  type ramdump, domain;
+  init_daemon_domain(ramdump)
+
+  set_prop(ramdump, ramdump_prop)
+
+  allow ramdump self:capability sys_rawio;
+
+  allow ramdump ramdump_vendor_data_file:dir create_dir_perms;
+  allow ramdump ramdump_vendor_data_file:file create_file_perms;
+  allow ramdump proc:file r_file_perms;
+
+  allow ramdump block_device:dir search;
+  allow ramdump misc_block_device:blk_file rw_file_perms;
+  allow ramdump userdata_block_device:blk_file rw_file_perms;
+
+  # read from /fstab.taimen
+  allow ramdump rootfs:file r_file_perms;
+
+  r_dir_file(ramdump, sysfs_type)
+')

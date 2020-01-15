@@ -1,0 +1,6 @@
+type timeservice_app, domain;
+app_domain(timeservice_app);
+
+allow timeservice_app app_api_service:service_manager find;
+allow timeservice_app app_data_file:dir { search getattr };
+allow timeservice_app time_daemon:unix_stream_socket connectto;

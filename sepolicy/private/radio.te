@@ -1,0 +1,1 @@
+allow radio uce_service:service_manager find;

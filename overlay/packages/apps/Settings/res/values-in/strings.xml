@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Aktifkan Baterai Adaptif"</string>
+    <string name="smart_battery_manager_title" >"Baterai Adaptif"</string>
+    <string name="smart_battery_footer" product="default" >"Untuk memperpanjang masa pakai baterai, Baterai Adaptif membatasi baterai untuk aplikasi yang jarang dipakai. Ponsel akan mempelajari cara Anda menggunakan aplikasi seiring waktu.\n\nNotifikasi dapat tertunda untuk aplikasi ini."</string>
+    <string name="smart_battery_footer" product="tablet" >"Untuk memperpanjang masa pakai baterai, Baterai Adaptif membatasi baterai untuk aplikasi yang jarang dipakai. Tablet akan mempelajari cara Anda menggunakan aplikasi seiring waktu.\n\nNotifikasi dapat tertunda untuk aplikasi ini."</string>
+    <string name="smart_battery_footer" product="device" >"Untuk memperpanjang masa pakai baterai, Baterai Adaptif membatasi baterai untuk aplikasi yang jarang dipakai. Perangkat akan mempelajari cara Anda menggunakan aplikasi seiring waktu.\n\nNotifikasi dapat tertunda untuk aplikasi ini."</string>
+    <string name="smart_battery_title" >"Gunakan Baterai Adaptif"</string>
+    <string name="battery_tip_smart_battery_summary" >"Aktifkan Baterai Adaptif"</string>
+</resources>

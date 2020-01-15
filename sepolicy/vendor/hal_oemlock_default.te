@@ -1,0 +1,8 @@
+type hal_oemlock_default, domain;
+hal_server_domain(hal_oemlock_default, hal_oemlock)
+
+allow hal_oemlock_default hal_bootctl_socket:sock_file write;
+allow hal_oemlock_default hal_bootctl:unix_stream_socket connectto;
+
+type hal_oemlock_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_oemlock_default)

@@ -1,0 +1,2 @@
+# suppress spurious denials
+dontaudit untrusted_app_all sysfs_zram:dir search;

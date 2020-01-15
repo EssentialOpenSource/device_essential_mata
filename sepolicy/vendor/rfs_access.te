@@ -1,0 +1,32 @@
+type rfs_access, domain;
+type rfs_access_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(rfs_access)
+
+#For tftp server
+allow rfs_access self:capability { chown setgid setpcap setuid net_bind_service };
+
+wakelock_use(rfs_access)
+
+# For tftp server file access
+allow rfs_access firmware_file:dir search;
+allow rfs_access firmware_file:file r_file_perms;
+allow rfs_access persist_file:dir search;
+allow rfs_access persist_rfs_file:dir create_dir_perms;
+allow rfs_access persist_rfs_file:file create_file_perms;
+
+allow rfs_access self:socket create_socket_perms_no_ioctl;
+allow rmt_storage kmsg_device:chr_file w_file_perms;
+
+allow rfs_access rfs_system_file:lnk_file r_file_perms;
+
+# RFS UID and GIDs were changed and moved from old values to new ones OEM range.
+# The below permissions are required to recursively update the folder ownership
+# to the new values in the OEM range.
+
+#The files created by rfs_access process in the /data folder will have type rfs_file
+type_transition rfs_access system_data_file:{ dir file } persist_rfs_file;
+type_transition rfs_access system_data_file:dir persist_rfs_file "hlos_rfs";
+
+allow rfs_access tombstone_rfs_vendor_data_file:dir create_dir_perms;
+allow rfs_access tombstone_rfs_vendor_data_file:file create_file_perms;

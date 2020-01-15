@@ -1,0 +1,16 @@
+type init-qcom-devstart-sh, domain;
+type init-qcom-devstart-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-qcom-devstart-sh)
+
+allow init-qcom-devstart-sh vendor_shell_exec:file rx_file_perms;
+allow init-qcom-devstart-sh vendor_toolbox_exec:file rx_file_perms;
+
+# execute grep
+allow init-qcom-devstart-sh vendor_file:file rx_file_perms;
+
+# Set the sys.qcom.devup property
+set_prop(init-qcom-devstart-sh, system_prop)
+
+# Set boot_adsp and boot_slpi to 1
+allow init-qcom-devstart-sh sysfs_msm_subsys:file w_file_perms;

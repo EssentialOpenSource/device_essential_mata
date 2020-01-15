@@ -1,0 +1,22 @@
+# associate netdomain to use for accessing internet sockets
+net_domain(hal_tetheroffload_default)
+
+userdebug_or_eng(`
+  # Allow using the logging file between ipacm and ipacm-diag
+  unix_socket_send(hal_tetheroffload_default, ipacm, hal_tetheroffload_default)
+')
+
+# Allow receiving NETLINK messages
+allow hal_tetheroffload_default self:{
+    netlink_socket
+    netlink_generic_socket
+} create_socket_perms_no_ioctl;
+
+# Allow creating and modifying the PID file
+allow hal_tetheroffload_default ipa_vendor_data_file:dir w_dir_perms;
+allow hal_tetheroffload_default ipa_vendor_data_file:file create_file_perms;
+
+# Register to hwbinder service
+add_hwservice(hal_tetheroffload_default, hal_tetheroffload_hwservice)
+hwbinder_use(hal_tetheroffload_default)
+get_prop(hal_tetheroffload_default, hwservicemanager_prop)

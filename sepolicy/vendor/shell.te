@@ -1,0 +1,19 @@
+# To allow non-root to find power_supply management info
+allow shell sysfs_msm_subsys:dir search;
+
+get_prop(shell, build_prop)
+set_prop(shell, fastboot_prop)
+
+# Needs for Essential Accessory OTA
+
+r_dir_file(shell, sysfs_usb_device)
+allow shell system_file:file execute_no_trans;
+allow shell ota_package_file:file { open read };
+allow shell usb_device:chr_file open;
+allow shell usb_device:dir search;
+allow shell ota_package_file:dir rw_dir_perms;
+allow shell ota_package_file:file create_file_perms;
+
+# Since we define our own tracing_shell_writable domain in file_contexts also
+# give shell permissions.
+allow shell tracing_shell_writable:file rw_file_perms;

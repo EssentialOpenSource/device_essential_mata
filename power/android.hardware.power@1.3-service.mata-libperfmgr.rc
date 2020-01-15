@@ -1,0 +1,25 @@
+service vendor.power-hal-1-3 /vendor/bin/hw/android.hardware.power@1.3-service.mata-libperfmgr
+    class hal
+    user root
+    group system
+    interface android.hardware.power@1.0::IPower default
+    interface android.hardware.power@1.1::IPower default
+    interface android.hardware.power@1.2::IPower default
+    interface android.hardware.power@1.3::IPower default
+
+# restart powerHAL when framework died
+on property:init.svc.zygote=restarting && property:vendor.powerhal.state=*
+   setprop vendor.powerhal.state ""
+   setprop vendor.powerhal.audio ""
+   setprop vendor.powerhal.rendering ""
+   restart vendor.power-hal-1-3
+
+# restart powerHAL when cameraHAL died
+on property:init.svc.vendor.camera-provider-2-4=restarting && property:vendor.powerhal.state=CAMERA_STREAMING
+   setprop vendor.powerhal.state ""
+   restart vendor.power-hal-1-3
+
+# restart powerHAL when audioHAL died
+on property:init.svc.vendor.audio-hal-2-0=restarting && property:vendor.powerhal.audio=AUDIO_LOW_LATENCY
+   setprop vendor.powerhal.audio ""
+   restart vendor.power-hal-1-3

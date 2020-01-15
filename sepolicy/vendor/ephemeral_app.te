@@ -1,0 +1,1 @@
+allow ephemeral_app toolbox_exec:file { open read execute execute_no_trans getattr};

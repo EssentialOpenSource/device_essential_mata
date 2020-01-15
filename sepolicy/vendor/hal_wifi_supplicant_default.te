@@ -1,0 +1,6 @@
+# TODO(b/36657258): Remove data_between_core_and_vendor_violators once
+# hal_wifi_supplicant no longer directly accesses wifi_data_file .
+typeattribute hal_wifi_supplicant_default data_between_core_and_vendor_violators;
+
+allow hal_wifi_supplicant_default wifi_data_file:dir create_dir_perms;
+allow hal_wifi_supplicant_default wifi_data_file:file create_file_perms;

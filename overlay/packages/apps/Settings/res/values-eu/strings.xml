@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Aktibatu bateria doigarria"</string>
+    <string name="smart_battery_manager_title" >"Bateria doigarria"</string>
+    <string name="smart_battery_footer" product="default" >"Bateriak gehiago iraun dezan, bateria doigarriak mugatu egiten du gutxitan erabiltzen dituzun aplikazioek erabiltzen duten bateria. Denborarekin, aplikazioak nola erabiltzen dituzun ikasiko du telefonoak.\n\nBaliteke aplikazio horietan jakinarazpenak atzeratzea."</string>
+    <string name="smart_battery_footer" product="tablet" >"Bateriak gehiago iraun dezan, bateria doigarriak mugatu egiten du gutxitan erabiltzen dituzun aplikazioek erabiltzen duten bateria. Denborarekin, aplikazioak nola erabiltzen dituzun ikasiko du tabletak.\n\nBaliteke aplikazio horietan jakinarazpenak atzeratzea."</string>
+    <string name="smart_battery_footer" product="device" >"Bateriak gehiago iraun dezan, bateria doigarriak mugatu egiten du gutxitan erabiltzen dituzun aplikazioek erabiltzen duten bateria. Denborarekin, aplikazioak nola erabiltzen dituzun ikasiko du gailuak.\n\nBaliteke aplikazio horietan jakinarazpenak atzeratzea."</string>
+    <string name="smart_battery_title" >"Erabili bateria doigarria"</string>
+    <string name="battery_tip_smart_battery_summary" >"Aktibatu bateria doigarria"</string>
+</resources>

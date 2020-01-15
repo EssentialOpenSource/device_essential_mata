@@ -1,0 +1,8 @@
+type hal_neuralnetworks_hvx, domain;
+hal_server_domain(hal_neuralnetworks_hvx, hal_neuralnetworks)
+
+type hal_neuralnetworks_hvx_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_neuralnetworks_hvx)
+
+allow hal_neuralnetworks_hvx ion_device:chr_file { read open ioctl };
+allow hal_neuralnetworks_hvx qdsp_device:chr_file { read open ioctl };

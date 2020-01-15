@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"เปิดแบตเตอรี่แบบปรับอัตโนมัติ"</string>
+    <string name="smart_battery_manager_title" >"แบตเตอรี่แบบปรับอัตโนมัติ"</string>
+    <string name="smart_battery_footer" product="default" >"แบตเตอรี่แบบปรับอัตโนมัติจะจำกัดแบตเตอรี่ของแอปที่ใช้ไม่บ่อยเพื่อยืดอายุการใช้งานแบตเตอรี่ โทรศัพท์จะเรียนรู้วิธีที่คุณใช้แอปเมื่อเวลาผ่านไป\n\nการแจ้งเตือนของแอปเหล่านี้อาจล่าช้า"</string>
+    <string name="smart_battery_footer" product="tablet" >"แบตเตอรี่แบบปรับอัตโนมัติจะจำกัดแบตเตอรี่ของแอปที่ใช้ไม่บ่อยเพื่อยืดอายุการใช้งานแบตเตอรี่ แท็บเล็ตจะเรียนรู้วิธีที่คุณใช้แอปเมื่อเวลาผ่านไป\n\nการแจ้งเตือนของแอปเหล่านี้อาจล่าช้า"</string>
+    <string name="smart_battery_footer" product="device" >"แบตเตอรี่แบบปรับอัตโนมัติจะจำกัดแบตเตอรี่ของแอปที่ใช้ไม่บ่อยเพื่อยืดอายุการใช้งานแบตเตอรี่ อุปกรณ์จะเรียนรู้วิธีที่คุณใช้แอปเมื่อเวลาผ่านไป\n\nการแจ้งเตือนของแอปเหล่านี้อาจล่าช้า"</string>
+    <string name="smart_battery_title" >"ใช้แบตเตอรี่แบบปรับอัตโนมัติ"</string>
+    <string name="battery_tip_smart_battery_summary" >"เปิดแบตเตอรี่แบบปรับอัตโนมัติ"</string>
+</resources>

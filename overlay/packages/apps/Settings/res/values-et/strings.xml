@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Kohanduva akuhalduri sisselülitamine"</string>
+    <string name="smart_battery_manager_title" >"Kohanduv akuhaldur"</string>
+    <string name="smart_battery_footer" product="default" >"Aku tööea pikendamiseks piirab kohanduv akuhaldur akukasutust harva kasutatavate rakenduste jaoks. Teie telefon õpib aja jooksul, kuidas rakendusi kasutada.\n\nNende rakenduste märguanded võivad viibida."</string>
+    <string name="smart_battery_footer" product="tablet" >"Aku tööea pikendamiseks piirab kohanduv akuhaldur akukasutust harva kasutatavate rakenduste jaoks. Teie tahvelarvuti õpib aja jooksul, kuidas rakendusi kasutada.\n\nNende rakenduste märguanded võivad viibida."</string>
+    <string name="smart_battery_footer" product="device" >"Aku tööea pikendamiseks piirab kohanduv akuhaldur akukasutust harva kasutatavate rakenduste jaoks. Teie seade õpib aja jooksul, kuidas rakendusi kasutada.\n\nNende rakenduste märguanded võivad viibida."</string>
+    <string name="smart_battery_title" >"Kohanduva akuhalduri kasutamine"</string>
+    <string name="battery_tip_smart_battery_summary" >"Kohanduva akuhalduri sisselülitamine"</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Turn on Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your phone will learn how you use apps over time.\n\nNotifications may be delayed for these apps."</string>
+    <string name="smart_battery_footer" product="tablet" >"To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your tablet will learn how you use apps over time.\n\nNotifications may be delayed for these apps."</string>
+    <string name="smart_battery_footer" product="device" >"To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your device will learn how you use apps over time.\n\nNotifications may be delayed for these apps."</string>
+    <string name="smart_battery_title" >"Use Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"Turn on Adaptive Battery"</string>
+</resources>

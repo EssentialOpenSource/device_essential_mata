@@ -1,0 +1,39 @@
+# Binder access (for display.qservice)
+vndbinder_use(hal_graphics_composer_default)
+allow hal_graphics_composer_default qdisplay_service:service_manager { add find };
+
+allow hal_graphics_composer_default persist_display_file:dir search;
+allow hal_graphics_composer_default persist_display_file:file r_file_perms;
+
+allow hal_graphics_composer_default sysfs_camera:dir search;
+allow hal_graphics_composer_default sysfs_camera:file r_file_perms;
+allow hal_graphics_composer_default sysfs_msm_subsys:dir search;
+allow hal_graphics_composer_default sysfs_msm_subsys:file r_file_perms;
+allow hal_graphics_composer_default sysfs_mdss_mdp_caps:file r_file_perms;
+allow hal_graphics_composer_default persist_file:dir search;
+
+allow hal_graphics_composer_default hal_graphics_mapper_hwservice:hwservice_manager find;
+
+r_dir_file(hal_graphics_composer_default, sysfs_leds)
+
+# TODO(b/37666508): Remove the following line upon resolution of the bug
+allow hal_graphics_composer_default video_device:chr_file rw_file_perms;
+
+# HWC_UeventThread
+allow hal_graphics_composer_default self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# Access /sys/devices/virtual/graphics/fb0
+r_dir_file(hal_graphics_composer_default, sysfs_type)
+r_dir_file(hal_graphics_composer_default, sysfs_graphics)
+allow hal_graphics_composer_default sysfs_graphics:file rw_file_perms;
+
+allow hal_graphics_composer_default display_vendor_data_file:dir create_dir_perms;
+allow hal_graphics_composer_default display_vendor_data_file:file create_file_perms;
+
+userdebug_or_eng(`
+        allow hal_graphics_composer_default debugfs_mdp:dir r_dir_perms;
+        allow hal_graphics_composer_default debugfs_mdp:file r_file_perms;
+')
+
+allow hal_graphics_composer_default perfd_socket:sock_file write;
+allow hal_graphics_composer_default perfd:unix_stream_socket connectto;

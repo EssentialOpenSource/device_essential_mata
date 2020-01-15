@@ -1,0 +1,73 @@
+type hal_dumpstate_impl, domain;
+hal_server_domain(hal_dumpstate_impl, hal_dumpstate)
+
+type hal_dumpstate_impl_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_dumpstate_impl)
+
+# Execute dump scripts from vendor partition
+allow hal_dumpstate_impl vendor_shell_exec:file rx_file_perms;
+allow hal_dumpstate_impl vendor_toolbox_exec:file rx_file_perms;
+
+userdebug_or_eng(`
+  # smlog_dump
+  domain_auto_trans(hal_dumpstate_impl, smlog_dump_exec, smlog_dump)
+  allow hal_dumpstate_impl modem_dump_file:dir create_dir_perms;
+  allow hal_dumpstate_impl modem_dump_file:file create_file_perms;
+  allow hal_dumpstate_impl radio_vendor_data_file:dir r_dir_perms;
+  allow hal_dumpstate_impl netmgr_data_file:dir r_dir_perms;
+  allow hal_dumpstate_impl radio_vendor_data_file:file r_file_perms;
+  allow hal_dumpstate_impl netmgr_data_file:file r_file_perms;
+  allow hal_dumpstate_impl sysfs_usb_device:dir r_dir_perms;
+  allow hal_dumpstate_impl sysfs_usb_device:file r_file_perms;
+  allow hal_dumpstate_impl sysfs_msm_subsys:file write;
+
+  set_prop(hal_dumpstate_impl, modem_diag_prop)
+')
+
+allow hal_dumpstate_impl uio_device:chr_file rw_file_perms;
+r_dir_file(hal_dumpstate_impl, sysfs_uio)
+r_dir_file(hal_dumpstate_impl, sysfs_rmtfs)
+r_dir_file(hal_dumpstate_impl, sysfs_msm_subsys)
+r_dir_file(hal_dumpstate_impl, sysfs_soc)
+r_dir_file(hal_dumpstate_impl, sysfs_thermal)
+r_dir_file(hal_dumpstate_impl, sysfs_easel)
+
+allow hal_dumpstate_impl debugfs_ion:dir r_dir_perms;
+allow hal_dumpstate_impl debugfs_ion:file r_file_perms;
+allow hal_dumpstate_impl debugfs_rpm:file r_file_perms;
+allow hal_dumpstate_impl debugfs_wlan:dir r_dir_perms;
+allow hal_dumpstate_impl debugfs_wlan:file r_file_perms;
+allow hal_dumpstate_impl debugfs_icnss:dir r_dir_perms;
+allow hal_dumpstate_impl debugfs_icnss:file r_file_perms;
+allow hal_dumpstate_impl debugfs_ipc:dir r_dir_perms;
+allow hal_dumpstate_impl debugfs_ipc:file r_file_perms;
+allow hal_dumpstate_impl proc_stat:file r_file_perms;
+allow hal_dumpstate_impl debugfs_ufs:dir r_dir_perms;
+allow hal_dumpstate_impl debugfs_ufs:file r_file_perms;
+allow hal_dumpstate_impl dumpstate:fifo_file w_file_perms;
+
+# Access to files for dumping
+allow hal_dumpstate_impl  sysfs:dir r_dir_perms;
+# rpm stat
+# usb logs
+allow hal_dumpstate_impl debugfs_usb:file r_file_perms;
+
+#Access display debug data
+allow hal_dumpstate_impl display_vendor_data_file:dir r_dir_perms;
+allow hal_dumpstate_impl display_vendor_data_file:file r_file_perms;
+
+# Access to touch firmware info
+allow hal_dumpstate_impl sysfs_touch:dir r_dir_perms;
+allow hal_dumpstate_impl sysfs_touch:file rw_file_perms;
+
+# Access to UFS info
+allow hal_dumpstate_impl sysfs_scsi_devices_0000:dir r_dir_perms;
+allow hal_dumpstate_impl sysfs_scsi_devices_0000:file r_file_perms;
+
+# Access Sidecar entries
+allow hal_dumpstate_impl sidecar_file:chr_file rw_file_perms;
+allow hal_dumpstate_impl sidecar_file:file rw_file_perms;
+
+allow hal_dumpstate_impl shell_data_file:file getattr;
+userdebug_or_eng(`allow hal_dumpstate_impl debugfs_dma_bufinfo:file r_file_perms;')
+dontaudit hal_dumpstate_impl debugfs_dma_bufinfo:file r_file_perms;

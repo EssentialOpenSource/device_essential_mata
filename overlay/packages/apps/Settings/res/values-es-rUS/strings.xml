@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Activar Batería automática"</string>
+    <string name="smart_battery_manager_title" >"Batería automática"</string>
+    <string name="smart_battery_footer" product="default" >"Para extender la duración de la batería, la función Batería automática limita el consumo por parte de las apps que no se usan con frecuencia. Con el tiempo, tu teléfono reconocerá cómo usas las apps.\n\nEs posible que se retrasen las notificaciones de esas apps."</string>
+    <string name="smart_battery_footer" product="tablet" >"Para extender la duración de la batería, la función Batería automática limita el consumo por parte de las apps que no se usan con frecuencia. Con el tiempo, la tablet reconocerá cómo usas las apps.\n\nEs posible que se retrasen las notificaciones de esas apps."</string>
+    <string name="smart_battery_footer" product="device" >"Para extender la duración de la batería, la función Batería automática limita el consumo por parte de las apps que no se usan con frecuencia. Con el tiempo, tu dispositivo reconocerá cómo usas las apps.\n\nEs posible que se retrasen las notificaciones de esas apps."</string>
+    <string name="smart_battery_title" >"Usar Batería automática"</string>
+    <string name="battery_tip_smart_battery_summary" >"Activar Batería automática"</string>
+</resources>

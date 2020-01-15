@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+** Copyright 2016, The Android Open Source Project
+**
+** Licensed under the Apache License, Version 2.0 (the "License");
+** you may not use this file except in compliance with the License.
+** You may obtain a copy of the License at
+**
+**     http://www.apache.org/licenses/LICENSE-2.0
+**
+** Unless required by applicable law or agreed to in writing, software
+** distributed under the License is distributed on an "AS IS" BASIS,
+** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+** See the License for the specific language governing permissions and
+** limitations under the License.
+*/
+-->
+<!-- These resources are around just to allow their values to be customized
+     for different hardware and product builds. -->
+<resources>
+    <!-- List of Carrier one mcc mncs-->
+    <string-array name="config_carrier_one_networks" translatable="false">
+        <item>405840</item>
+        <item>405854</item>
+        <item>405855</item>
+        <item>405856</item>
+        <item>405857</item>
+        <item>405858</item>
+        <item>405859</item>
+        <item>405860</item>
+        <item>405861</item>
+        <item>405862</item>
+        <item>405863</item>
+        <item>405864</item>
+        <item>405865</item>
+        <item>405866</item>
+        <item>405867</item>
+        <item>405868</item>
+        <item>405869</item>
+        <item>405870</item>
+        <item>405871</item>
+        <item>405872</item>
+        <item>405873</item>
+        <item>405874</item>
+    </string-array>
+
+    <integer-array name="carrier_one_strength_threshold_values">
+        <item>-128</item>
+        <item>-120</item>
+        <item>-115</item>
+        <item>-110</item>
+        <item>-105</item>
+        <item>-44</item>
+    </integer-array>
+
+<!-- Control whether status bar should distinguish HSPA data icon from UMTS
+          data icon on devices -->
+    <bool name="config_hspa_data_distinguishable">true</bool>
+
+    <!-- Should "4G" be shown instead of "LTE" when the network is NETWORK_TYPE_LTE? -->
+    <bool name="config_show4GForLTE">false</bool>
+
+    <!-- The tile list with letterboxing and immsersive mode toggles -->
+    <!--
+    <string name="quick_settings_tiles_default" translatable="false">
+        wifi,battery,dnd,flashlight,rotation,bt,airplane,letterbox,immersive,cell,custom(com.google.android.gms/.nearby.discovery.ui.DiscoveryTileService)
+    </string>
+-->
+    <!-- Tiles native to System UI. Order should match "quick_settings_tiles_default" -->
+<!--
+    <string name="quick_settings_tiles_stock" translatable="false">
+        wifi,battery,dnd,flashlight,rotation,bt,airplane,letterbox,immersive,cell,location,hotspot,inversion,saver,work,cast,night
+    </string>
+-->
+
+    <!-- The default tiles to display in QuickSettings -->
+    <string name="quick_settings_tiles_default" translatable="false">
+        wifi,cell,battery,dnd,flashlight,rotation,bt,airplane
+    </string>
+
+    <!-- Enable doze mode -->
+    <bool name="doze_display_state_supported">true</bool>
+
+    <bool name="config_showAmpm">false</bool>
+
+    <bool name="config_display_rat">false</bool>
+    <!-- If true, enable the advance anti-falsing classifier on the lockscreen. On some devices it
+         does not work well, particularly with noisy touchscreens. Note that disabling it may
+         increase the rate of unintentional unlocks. -->
+    <bool name="config_lockscreenAntiFalsingClassifierEnabled">false</bool>
+</resources>

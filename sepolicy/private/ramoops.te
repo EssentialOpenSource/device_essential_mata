@@ -1,0 +1,18 @@
+type ramoops, domain, coredomain;
+type ramoops_data_file, file_type, core_data_file_type, data_file_type;
+type ramoops_exec, exec_type, file_type, system_file_type;
+
+init_daemon_domain(ramoops);
+
+# kmod=crypto-gcm(aes)
+dontaudit ramoops kernel:system module_request;
+
+allow ramoops ramoops_exec:file rx_file_perms;
+allow ramoops shell_exec:file rx_file_perms;
+allow ramoops toolbox_exec:file rx_file_perms;
+
+# Set the sys.ramoops.decrypted property
+set_prop(ramoops, ramoops_prop);
+
+allow ramoops sysfs_pstore:file rw_file_perms;
+allow ramoops ramoops_device:chr_file rw_file_perms;

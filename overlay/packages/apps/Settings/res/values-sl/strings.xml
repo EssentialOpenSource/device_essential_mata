@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Vklopi prilagodljivo varčevanje z energijo akumulatorja"</string>
+    <string name="smart_battery_manager_title" >"Prilagodljivo varčevanje z energijo akumulatorja"</string>
+    <string name="smart_battery_footer" product="default" >"Prilagodljivo varčevanje z energijo akumulatorja omeji porabo energije akumulatorja za redko uporabljene aplikacije, da podaljša čas delovanja akumulatorja. Telefon se bo sčasoma naučil, kako uporabljate aplikacije.\n\nObvestila za te aplikacije bodo morda zakasnjena."</string>
+    <string name="smart_battery_footer" product="tablet" >"Prilagodljivo varčevanje z energijo akumulatorja omeji porabo energije akumulatorja za redko uporabljene aplikacije, da podaljša čas delovanja akumulatorja. Tablični računalnik se bo sčasoma naučil, kako uporabljate aplikacije.\n\nObvestila za te aplikacije bodo morda zakasnjena."</string>
+    <string name="smart_battery_footer" product="device" >"Prilagodljivo varčevanje z energijo akumulatorja omeji porabo energije akumulatorja za redko uporabljene aplikacije, da podaljša čas delovanja akumulatorja. Naprava se bo sčasoma naučila, kako uporabljate aplikacije.\n\nObvestila za te aplikacije bodo morda zakasnjena."</string>
+    <string name="smart_battery_title" >"Uporaba prilagodljivega varčevanja z energijo akumulatorja"</string>
+    <string name="battery_tip_smart_battery_summary" >"Vklopi prilagodljivo varčevanje z energijo akumulatorja"</string>
+</resources>

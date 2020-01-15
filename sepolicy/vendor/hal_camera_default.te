@@ -1,0 +1,29 @@
+allow hal_camera_default input_device:dir r_dir_perms;
+
+allow hal_camera_default sysfs_laser:file w_file_perms;
+vndbinder_use(hal_camera_default);
+allow hal_camera_default qdisplay_service:service_manager { find };
+
+allow hal_camera_default hal_graphics_mapper_hwservice:hwservice_manager find;
+
+hal_client_domain(hal_camera_default, hal_configstore)
+binder_call(hal_camera_default, hal_graphics_composer)
+binder_call(hal_camera_default, system_server)
+binder_call(hal_camera_default, hal_graphics_allocator)
+
+# For interfacing with PowerHAL and ThermalHAL
+hal_client_domain(hal_camera_default, hal_power)
+hal_client_domain(hal_camera_default, hal_thermal)
+
+# For camera team debugging
+userdebug_or_eng(`
+  allow hal_camera_default camera_vendor_data_file:dir create_dir_perms;
+  allow hal_camera_default camera_vendor_data_file:file create_file_perms;
+')
+
+allow hal_camera_default persist_sensors_file:dir search;
+allow hal_camera_default persist_sensors_file:file r_file_perms;
+
+allow hal_camera_default stm_device:chr_file { ioctl open read };
+r_dir_file(hal_camera_default, proc_sensor)
+r_dir_file(hal_camera_default, persist_file);

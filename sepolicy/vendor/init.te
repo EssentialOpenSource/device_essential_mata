@@ -1,0 +1,27 @@
+# symlink /sdcard to backing block
+allow init tmpfs:lnk_file create;
+allow init configfs:lnk_file create;
+
+allow init firmware_file:dir mounton;
+allow init configfs:file w_file_perms;
+allow init debugfs_clk:file w_file_perms;
+
+allow init tty_device:chr_file rw_file_perms;
+
+allow init persist_file:dir mounton;
+
+allow init adsprpcd_file:filesystem { mount relabelfrom relabelto };
+allow init adsprpcd_file:dir mounton;
+
+allow init ab_block_device:lnk_file relabelto;
+allow init boot_block_device:lnk_file relabelto;
+allow init persist_block_device:lnk_file relabelto;
+
+dontaudit init kernel:system module_request;
+
+allow init self:capability sys_module;
+allow init vendor_file:system module_load;
+
+allow init proc_kernel:file rw_file_perms;
+
+allow init diag_device:chr_file unlink;

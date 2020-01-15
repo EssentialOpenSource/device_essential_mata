@@ -1,0 +1,11 @@
+# Policy for /system/bin/pm-proxy
+type per_proxy, domain;
+type per_proxy_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(per_proxy)
+
+allow per_proxy per_mgr_service:service_manager find;
+r_dir_file(per_proxy, sysfs_type)
+
+vndbinder_use(per_proxy)
+binder_call(per_proxy, per_mgr)

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"අනුවර්තනීය බැටරිය ක්‍රියාත්මක කරන්න"</string>
+    <string name="smart_battery_manager_title" >"අනුවර්තනීය බැටරිය"</string>
+    <string name="smart_battery_footer" product="default" >"බැටරි ආයු කාලය දිගු කිරීමට, අනුවර්තනීය බැටරිය නිතර භාවිත කරන යෙදුම් සඳහා බැටරිය සීමා කරයි. ඔබගේ දුරකථනය කාලයත් සමඟ යෙදුම් භාවිත කරන ආකාරය දැන ගනු ඇත.\n\nමෙම යෙදුම් සඳහා දැනුම්දීම් ප්‍රමාද විය හැකිය."</string>
+    <string name="smart_battery_footer" product="tablet" >"බැටරි ආයු කාලය දිගු කිරීමට, අනුවර්තනීය බැටරිය නිතර භාවිත කරන යෙදුම් සඳහා බැටරිය සීමා කරයි. ඔබගේ ටැබ්ලට් පරිගණකය කාලයත් සමඟ යෙදුම් භාවිත කරන ආකාරය දැන ගනු ඇත.\n\nමෙම යෙදුම් සඳහා දැනුම්දීම් ප්‍රමාද විය හැකිය."</string>
+    <string name="smart_battery_footer" product="device" >"බැටරි ආයු කාලය දිගු කිරීමට, අනුවර්තනීය බැටරිය නිතර භාවිත කරන යෙදුම් සඳහා බැටරිය සීමා කරයි. ඔබගේ උපාංගය කාලයත් සමඟ යෙදුම් භාවිත කරන ආකාරය දැන ගනු ඇත.\n\nමෙම යෙදුම් සඳහා දැනුම්දීම් ප්‍රමාද විය හැකිය."</string>
+    <string name="smart_battery_title" >"අනුවර්තනීය බැටරිය භාවිත කරන්න"</string>
+    <string name="battery_tip_smart_battery_summary" >"අනුවර්තනීය බැටරිය ක්‍රියාත්මක කරන්න"</string>
+</resources>

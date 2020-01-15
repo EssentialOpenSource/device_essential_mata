@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Aktivér Selvjusterende batteri"</string>
+    <string name="smart_battery_manager_title" >"Selvjusterende batteri"</string>
+    <string name="smart_battery_footer" product="default" >"Selvjusterende batteri begrænser batteriforbruget for sjældent brugte app, så batteritiden forlænges. Din telefon lærer løbende, hvordan du bruger apps.\n\nUnderretninger fra disse apps kan være forsinkede."</string>
+    <string name="smart_battery_footer" product="tablet" >"Selvjusterende batteri begrænser batteriforbruget for sjældent brugte app, så batteritiden forlænges. Din tablet lærer løbende, hvordan du bruger apps.\n\nUnderretninger fra disse apps kan være forsinkede."</string>
+    <string name="smart_battery_footer" product="device" >"Selvjusterende batteri begrænser batteriforbruget for sjældent brugte app, så batteritiden forlænges. Din enhed lærer løbende, hvordan du bruger apps.\n\nUnderretninger fra disse apps kan være forsinkede."</string>
+    <string name="smart_battery_title" >"Brug Selvjusterende batteri"</string>
+    <string name="battery_tip_smart_battery_summary" >"Aktivér Selvjusterende batteri"</string>
+</resources>

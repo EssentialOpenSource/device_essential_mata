@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Hidupkan Bateri Mudah Suai"</string>
+    <string name="smart_battery_manager_title" >"Bateri Mudah Suai"</string>
+    <string name="smart_battery_footer" product="default" >"Untuk melanjutkan hayat bateri, Bateri Mudah Suai mengehadkan bateri untuk apl yang jarang digunakan. Telefon anda akan mempelajari cara anda menggunakan apl dari semasa ke semasa.\n\nPemberitahuan mungkin ditangguhkan untuk apl ini."</string>
+    <string name="smart_battery_footer" product="tablet" >"Untuk melanjutkan hayat bateri, Bateri Mudah Suai mengehadkan bateri untuk apl yang jarang digunakan. Peranti anda akan mempelajari cara anda menggunakan apl dari semasa ke semasa.\n\nPemberitahuan mungkin ditangguhkan untuk apl ini."</string>
+    <string name="smart_battery_footer" product="device" >"Untuk melanjutkan hayat bateri, Bateri Mudah Suai mengehadkan bateri untuk apl yang jarang digunakan. Peranti anda akan mempelajari cara anda menggunakan apl dari semasa ke semasa.\n\nPemberitahuan mungkin ditangguhkan untuk apl ini."</string>
+    <string name="smart_battery_title" >"Gunakan Bateri Mudah Suai"</string>
+    <string name="battery_tip_smart_battery_summary" >"Hidupkan Bateri Mudah Suai"</string>
+</resources>

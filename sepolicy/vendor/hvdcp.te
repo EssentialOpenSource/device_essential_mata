@@ -1,0 +1,44 @@
+# HVDVP quickcharge
+type hvdcp, domain;
+type hvdcp_exec, exec_type, vendor_file_type, file_type;
+
+# Make transition to its own HVDCP domain from init
+init_daemon_domain(hvdcp)
+
+# Add rules for access permissions
+allow hvdcp hvdcp_device:chr_file rw_file_perms;
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_usb_c
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+    sysfs_msm_subsys
+}:dir r_dir_perms;
+
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_usb_c
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+    sysfs_msm_subsys 
+    sysfs_batteryinfo
+}:file rw_file_perms;
+
+allow hvdcp {
+    sysfs_battery_supply
+    sysfs_usb_supply
+    sysfs_vadc_dev
+    sysfs_spmi_dev
+}:lnk_file r_file_perms;
+
+allow hvdcp self:capability { setgid setuid };
+allow hvdcp self:capability2 wake_alarm;
+allow hvdcp kmsg_device:chr_file rw_file_perms;
+allow hvdcp cgroup:dir { create add_name };
+allow hvdcp self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+allow hvdcp sysfs_battery_supply:file setattr;
+allow hvdcp sysfs_usb_supply:file setattr;
+allow hvdcp sysfs_usb_c:file setattr;
+wakelock_use(hvdcp)

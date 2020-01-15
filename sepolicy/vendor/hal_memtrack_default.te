@@ -1,0 +1,1 @@
+allow hal_memtrack_default debugfs_kgsl:file { open read getattr };

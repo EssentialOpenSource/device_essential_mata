@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<policy>
+
+<!--
+
+    * A signature is a hex encoded X.509 certificate or a tag defined in
+      keys.conf and is required for each signer tag.
+    * A signer tag may contain a seinfo tag and multiple package stanzas.
+    * A default tag is allowed that can contain policy for all apps not signed with a
+      previously listed cert. It may not contain any inner package stanzas.
+    * Each signer/default/package tag is allowed to contain one seinfo tag. This tag
+      represents additional info that each app can use in setting a SELinux security
+      context on the eventual process.
+    * When a package is installed the following logic is used to determine what seinfo
+      value, if any, is assigned.
+      - All signatures used to sign the app are checked first.
+      - If a signer stanza has inner package stanzas, those stanza will be checked
+        to try and match the package name of the app. If the package name matches
+        then that seinfo tag is used. If no inner package matches then the outer
+        seinfo tag is assigned.
+      - The default tag is consulted last if needed.
+-->
+</policy>

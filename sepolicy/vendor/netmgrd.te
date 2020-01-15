@@ -1,0 +1,62 @@
+type netmgrd, domain;
+type netmgrd_exec, exec_type, vendor_file_type, file_type;
+
+net_domain(netmgrd)
+init_daemon_domain(netmgrd)
+
+set_prop(netmgrd, net_radio_prop)
+set_prop(netmgrd, net_rmnet_prop)
+
+allow netmgrd netmgrd_socket:dir w_dir_perms;
+allow netmgrd netmgrd_socket:sock_file create_file_perms;
+allow netmgrd self:netlink_xfrm_socket { create_socket_perms_no_ioctl nlmsg_write };
+allow netmgrd self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow netmgrd self:netlink_route_socket nlmsg_write;
+allow netmgrd self:netlink_socket create_socket_perms_no_ioctl;
+allow netmgrd self:socket create_socket_perms;
+allowxperm netmgrd self:socket ioctl msm_sock_ipc_ioctls;
+allowxperm netmgrd self:udp_socket ioctl priv_sock_ioctls;
+
+allow netmgrd sysfs_net:dir r_dir_perms;
+allow netmgrd sysfs_net:file rw_file_perms;
+allow netmgrd sysfs_soc:dir search;
+allow netmgrd sysfs_soc:file r_file_perms;
+allow netmgrd sysfs_msm_subsys:dir r_dir_perms;
+allow netmgrd sysfs_msm_subsys:file r_file_perms;
+
+
+r_dir_file(netmgrd, sysfs_msm_subsys)
+
+wakelock_use(netmgrd)
+
+#Allow netutils usage
+domain_auto_trans(netmgrd, netutils_wrapper_exec, netutils_wrapper)
+
+#Allow diag logging
+allow netmgrd sysfs_timestamp_switch:file { read open };
+userdebug_or_eng(`
+  r_dir_file(netmgrd, sysfs_diag)
+')
+
+#Ignore if device loading for private IOCTL failed
+dontaudit netmgrd kernel:system { module_request };
+
+allow netmgrd proc_net:file rw_file_perms;
+allow netmgrd netmgr_data_file:dir rw_dir_perms;
+allow netmgrd netmgr_data_file:file create_file_perms;
+
+allow netmgrd self:capability { net_admin net_raw setgid setpcap setuid };
+
+allow netmgrd vendor_toolbox_exec:file rx_file_perms;
+
+# Allow netmgrd to use netd HAL
+allow netmgrd system_net_netd_hwservice:hwservice_manager find;
+get_prop(netmgrd, hwservicemanager_prop)
+binder_call(netmgrd, netd)
+hwbinder_use(netmgrd)
+
+dontaudit netmgrd kernel:system module_request;
+dontaudit netmgrd self:system module_request;
+
+allow netmgrd sysfs_esoc:dir r_dir_perms;
+allow netmgrd sysfs_esoc:lnk_file r_file_perms;

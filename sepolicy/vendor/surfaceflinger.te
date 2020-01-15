@@ -1,0 +1,3 @@
+dontaudit surfaceflinger firmware_file:dir search;
+dontaudit surfaceflinger kernel:system module_request;
+allow surfaceflinger debugfs_ion:dir search;

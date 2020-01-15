@@ -1,0 +1,58 @@
+persist.camera.            u:object_r:camera_prop:s0
+persist.vendor.sys.cnd     u:object_r:cnd_prop:s0
+persist.sys.cnd            u:object_r:cnd_prop:s0
+sys.ims.                   u:object_r:ims_prop:s0
+vendor.ims.                u:object_r:ims_prop:s0
+sys.keymaster.loaded       u:object_r:keymaster_prop:s0
+net.r_rmnet_data0          u:object_r:net_rmnet_prop:s0
+persist.net.doxlat         u:object_r:net_radio_prop:s0
+sys.post_boot.             u:object_r:post_boot_prop:s0
+radio.                     u:object_r:radio_prop:s0
+rcs.publish.status         u:object_r:radio_prop:s0
+persist.sys.crash_rcu      u:object_r:ramdump_prop:s0
+debug.ssrdump              u:object_r:ssr_prop:s0
+persist.sys.cnss.          u:object_r:cnss_diag_prop:s0
+vendor.sys.listeners.registered   u:object_r:tee_listener_prop:s0
+wc_transport.              u:object_r:wc_prop:s0
+sys.qcom.thermalcfg        u:object_r:thermal_prop:s0
+ctl.thermal-engine         u:object_r:thermal_prop:s0
+persist.sys.modem.diag.    u:object_r:modem_diag_prop:s0
+sys.modem.diag.            u:object_r:modem_diag_prop:s0
+persist.radio.enable_tel_mon  u:object_r:tel_mon_prop:s0
+sys.time.set               u:object_r:sys_time_prop:s0
+persist.radio.atfwd.start  u:object_r:atfwd_start_prop:s0
+sys.logger.bluetooth       u:object_r:bluetooth_log_prop:s0
+vendor.audio.mqa.          u:object_r:mqa_hd_prop:s0
+vendor.audio.hd.           u:object_r:mqa_hd_prop:s0
+
+ro.hardware.nfc_nci         u:object_r:nfc_service_prop:s0
+vendor.peripheral.          u:object_r:per_mgr_state_prop:s0
+ro.product.locale           u:object_r:build_prop:s0
+ro.boot.wificountrycode     u:object_r:build_prop:s0
+ro.boot.diagclean           u:object_r:build_prop:s0
+persist.vendor.radio        u:object_r:radio_prop:s0
+ctl.hbtp                    u:object_r:ctl_hbtp_prop:s0
+ro.vendor.ril.              u:object_r:radio_prop:s0
+sys.fastboot_status         u:object_r:fastboot_prop:s0
+persist.grip.status_manual  u:object_r:grip_prop:s0
+persist.touch.smoothness    u:object_r:grip_prop:s0
+
+# OMADM
+sys.omadm.                   u:object_r:omadm_prop:s0
+ro.com.android.dataroaming   u:object_r:omadm_prop:s0
+gsm.roaming.                 u:object_r:omadm_prop:s0
+cdma.roaming.                u:object_r:omadm_prop:s0
+ro.home.operator.carrierid   u:object_r:omadm_prop:s0
+ro.cdma.home.operator.numeric  u:object_r:omadm_prop:s0
+ro.cdma.home.operator.alpha  u:object_r:omadm_prop:s0
+ro.cnap.configstatus         u:object_r:omadm_prop:s0
+ro.com.google.clientidbase.  u:object_r:omadm_prop:s0
+
+
+vendor.wfdservice            u:object_r:wfd_service_prop:s0
+
+vendor.powerhal.state        u:object_r:power_prop:s0
+vendor.powerhal.audio        u:object_r:power_prop:s0
+vendor.powerhal.lpm          u:object_r:power_prop:s0
+vendor.powerhal.init         u:object_r:power_prop:s0
+vendor.powerhal.rendering    u:object_r:power_prop:s0

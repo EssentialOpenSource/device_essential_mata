@@ -1,0 +1,16 @@
+type atfwd, domain;
+type atfwd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(atfwd)
+
+hwbinder_use(atfwd)
+get_prop(atfwd, hwservicemanager_prop)
+allow atfwd vnd_atcmdfwd_hwservice:hwservice_manager find;
+binder_call(atfwd, qtelephony);
+
+allow atfwd self:socket create_socket_perms;
+allowxperm atfwd self:socket ioctl msm_sock_ipc_ioctls;
+
+r_dir_file(atfwd, sysfs_type)
+
+set_prop(atfwd, radio_prop)

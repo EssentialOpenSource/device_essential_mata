@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"開啟自動調節電池用量功能"</string>
+    <string name="smart_battery_manager_title" >"自動調節電池用量"</string>
+    <string name="smart_battery_footer" product="default" >"為了延長電池續航力，「自動調節電池用量」功能會針對不常使用的應用程式限制電池用量。一段時間後，你的手機會記住應用程式的使用情形。\n\n這些應用程式的通知可能會延遲。"</string>
+    <string name="smart_battery_footer" product="tablet" >"為了延長電池續航力，「自動調節電池用量」功能會針對不常使用的應用程式限制電池用量。一段時間後，你的平板電腦會記住應用程式的使用情形。\n\n這些應用程式的通知可能會延遲。"</string>
+    <string name="smart_battery_footer" product="device" >"為了延長電池續航力，「自動調節電池用量」功能會針對不常使用的應用程式限制電池用量。一段時間後，你的裝置會記住應用程式的使用情形。\n\n這些應用程式的通知可能會延遲。"</string>
+    <string name="smart_battery_title" >"使用自動調節電池用量功能"</string>
+    <string name="battery_tip_smart_battery_summary" >"開啟自動調節電池用量功能"</string>
+</resources>

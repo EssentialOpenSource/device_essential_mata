@@ -1,0 +1,57 @@
+type cnd, domain;
+type cnd_exec, exec_type, vendor_file_type, file_type;
+file_type_auto_trans(cnd, socket_device, cnd_socket);
+
+# cnd is started by init, type transit from init domain to cnd domain
+init_daemon_domain(cnd)
+
+# allow cnd the following capability
+allow cnd self:capability {
+    net_admin
+    sys_module
+    net_bind_service
+};
+
+allow cnd self:capability2 block_suspend;
+
+# socket used to communicate with kernel via the netlink syscall
+allow cnd self:{
+    netlink_tcpdiag_socket
+    netlink_route_socket
+    netlink_socket
+    netlink_generic_socket
+    # allow cnd to perform socket operation on itself
+    socket
+} create_socket_perms_no_ioctl;
+
+# allow cnd to read tcp diagnostics through netlink
+allow cnd self:netlink_tcpdiag_socket nlmsg_read;
+wakelock_use(cnd)
+
+allow cnd self:udp_socket create_socket_perms;
+allowxperm cnd self:udp_socket ioctl SIOCGIFMTU;
+
+allow cnd sysfs_timestamp_switch:file r_file_perms;
+r_dir_file(cnd, sysfs_msm_subsys)
+r_dir_file(cnd, sysfs_diag)
+r_dir_file(cnd, sysfs_soc)
+r_dir_file(cnd, sysfs_esoc)
+
+allow cnd proc_meminfo:file r_file_perms;
+
+set_prop(cnd, cnd_prop)
+
+allow cnd self:socket create_socket_perms;
+allowxperm cnd self:socket ioctl msm_sock_ipc_ioctls;
+
+# To register cnd to hwbinder
+add_hwservice(cnd, hal_cne_hwservice)
+hwbinder_use(cnd)
+get_prop(cnd, hwservicemanager_prop)
+binder_call(cnd, dataservice_app)
+binder_call(cnd, ims)
+
+# allow cnd to access wpa_socket
+unix_socket_send(cnd, wpa, hal_wifi_supplicant)
+allow cnd cnss_vendor_data_file:sock_file write;
+allow cnd self:netlink_route_socket nlmsg_read;

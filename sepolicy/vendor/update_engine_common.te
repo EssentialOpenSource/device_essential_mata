@@ -1,0 +1,8 @@
+# Allow update_engine and update_engine_sideload (recovery) read/write on the
+# device-specific partitions it should update.
+allow update_engine_common xbl_block_device:blk_file rw_file_perms;
+allow update_engine_common ab_block_device:blk_file rw_file_perms;
+allow update_engine_common modem_block_device:blk_file rw_file_perms;
+
+allow update_engine_common postinstall_mnt_dir:dir r_dir_perms;
+allow update_engine_common tmpfs:lnk_file r_file_perms;

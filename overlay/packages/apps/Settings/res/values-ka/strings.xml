@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Adaptive Battery-ს ჩართვა"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"ბატარეის მუშაობის გასახანგრძლივებლად, Adaptive Battery ზღუდავს ბატარეის მოხმარებას იშვიათად გამოყენებული აპების მიერ. თქვენი ტელეფონი დროთა განმავლობაში ისწავლის თქვენ მიერ აპების გამოყენების სპეციფიკა.\n\nასეთი აპებიდან შეტყობინებები შესაძლოა დაგვიანდეს."</string>
+    <string name="smart_battery_footer" product="tablet" >"ბატარეის მუშაობის გასახანგრძლივებლად, Adaptive Battery ზღუდავს ბატარეის მოხმარებას იშვიათად გამოყენებული აპების მიერ. თქვენი ტაბლეტი დროთა განმავლობაში ისწავლის თქვენ მიერ აპების გამოყენების სპეციფიკას.\n\nასეთი აპებიდან შეტყობინებები შესაძლოა დაგვიანდეს."</string>
+    <string name="smart_battery_footer" product="device" >"ბატარეის მუშაობის გასახანგრძლივებლად, Adaptive Battery ზღუდავს ბატარეის მოხმარებას იშვიათად გამოყენებული აპების მიერ. თქვენი მოწყობილობა დროთა განმავლობაში ისწავლის თქვენ მიერ აპების გამოყენების სპეციფიკას.\n\nასეთი აპებიდან შეტყობინებები შესაძლოა დაგვიანდეს."</string>
+    <string name="smart_battery_title" >"Adaptive Battery-ს გამოყენება"</string>
+    <string name="battery_tip_smart_battery_summary" >"Adaptive Battery-ს ჩართვა"</string>
+</resources>

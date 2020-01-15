@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Uyarlamalı Pil\'i aç"</string>
+    <string name="smart_battery_manager_title" >"Uyarlamalı Pil"</string>
+    <string name="smart_battery_footer" product="default" >"Uyarlamalı Pil özelliği pil ömrünü uzatmak için, sık kullanılmayan uygulamaların pil tüketimini sınırlar. Telefonunuz, zamanla uygulamaları nasıl kullandığınızı öğrenir.\n\nBu uygulamalara ait bildirimlerde gecikme olabilir."</string>
+    <string name="smart_battery_footer" product="tablet" >"Uyarlamalı Pil özelliği pil ömrünü uzatmak için, sık kullanılmayan uygulamaların pil tüketimini sınırlar. Tabletiniz, zamanla uygulamaları nasıl kullandığınızı öğrenir.\n\nBu uygulamalara ait bildirimlerde gecikme olabilir."</string>
+    <string name="smart_battery_footer" product="device" >"Uyarlamalı Pil özelliği pil ömrünü uzatmak için, sık kullanılmayan uygulamaların pil tüketimini sınırlar. Cihazınız, zamanla uygulamaları nasıl kullandığınızı öğrenir.\n\nBu uygulamalara ait bildirimlerde gecikme olabilir."</string>
+    <string name="smart_battery_title" >"Uyarlamalı Pil özelliğini kullan"</string>
+    <string name="battery_tip_smart_battery_summary" >"Uyarlamalı Pil\'i aç"</string>
+</resources>

@@ -1,0 +1,25 @@
+type rmt_storage, domain;
+type rmt_storage_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(rmt_storage)
+
+wakelock_use(rmt_storage)
+
+allow rmt_storage self:capability { net_bind_service setgid setpcap setuid };
+
+allow rmt_storage modem_block_device:blk_file rw_file_perms;
+allow rmt_storage uio_device:chr_file rw_file_perms;
+allow rmt_storage block_device:dir search;
+
+allow rmt_storage sysfs_uio:dir r_dir_perms;
+allow rmt_storage sysfs_uio:lnk_file r_file_perms;
+
+allow rmt_storage sysfs_rmtfs:dir search;
+allow rmt_storage sysfs_rmtfs:file r_file_perms;
+allow rmt_storage sysfs_rmtfs:dir search;
+
+allow rmt_storage debugfs_rmt_storage:dir search;
+allow rmt_storage debugfs_rmt_storage:file w_file_perms;
+
+allow rmt_storage self:socket create_socket_perms;
+allowxperm rmt_storage self:socket ioctl IPC_ROUTER_IOCTL_BIND_CONTROL_PORT;

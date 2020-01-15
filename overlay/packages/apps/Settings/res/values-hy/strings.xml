@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Միացրեք Adaptive Battery-ն"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Մարտկոցի աշխատաժամանակը երկարացնելու համար Adaptive Battery-ն սահմանափակում է հազվադեպ օգտագործվող հավելվածների ֆոնային աշխատանքը: Ժամանակի ընթացքում ձեր հեռախոսը հիշում է, թե որ հավելվածներն եք հաճախ օգտագործում, որոնք՝ ոչ:\n\nՍահմանափակված հավելվածների ծանուցումները կարող են ուշացումով ստացվել:"</string>
+    <string name="smart_battery_footer" product="tablet" >"Մարտկոցի աշխատաժամանակը երկարացնելու համար Adaptive Battery-ն սահմանափակում է հազվադեպ օգտագործվող հավելվածների ֆոնային աշխատանքը: Ժամանակի ընթացքում ձեր պլանշետը հիշում է, թե որ հավելվածներն եք հաճախ օգտագործում, որոնք՝ ոչ:\n\nՍահմանափակված հավելվածների ծանուցումները կարող են ուշացումով ստացվել:"</string>
+    <string name="smart_battery_footer" product="device" >"Մարտկոցի աշխատաժամանակը երկարացնելու համար Adaptive Battery-ն սահմանափակում է հազվադեպ օգտագործվող հավելվածների ֆոնային աշխատանքը: Ժամանակի ընթացքում ձեր սարքը հիշում է, թե որ հավելվածներն եք հաճախ օգտագործում, որոնք՝ ոչ:\n\nՍահմանափակված հավելվածների ծանուցումները կարող են ուշացումով ստացվել:"</string>
+    <string name="smart_battery_title" >"Միացնել Adaptive Battery-ն"</string>
+    <string name="battery_tip_smart_battery_summary" >"Միացրեք Adaptive Battery-ն"</string>
+</resources>

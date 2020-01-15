@@ -1,0 +1,32 @@
+type time_daemon, domain;
+type time_daemon_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(time_daemon)
+
+allow time_daemon self:capability { setgid setuid sys_time };
+
+allow time_daemon rtc_device:chr_file r_file_perms;
+
+r_dir_file(time_daemon, sysfs_msm_subsys)
+
+allow time_daemon sysfs_soc:dir search;
+allow time_daemon sysfs_soc:file r_file_perms;
+
+r_dir_file(time_daemon, sysfs_esoc)
+allow time_daemon sysfs_esoc:dir search;
+allow time_daemon sysfs_esoc:file r_file_perms;
+
+# Set sys.time.set property
+set_prop(time_daemon, sys_time_prop);
+
+allow time_daemon persist_time_file:dir w_dir_perms;
+allow time_daemon persist_time_file:file create_file_perms;
+allow time_daemon persist_time_file:dir search;
+
+allow time_daemon persist_file:dir search;
+
+allow time_daemon self:socket create_socket_perms;
+allowxperm time_daemon self:socket ioctl msm_sock_ipc_ioctls;
+
+allow time_daemon time_vendor_data_file:dir create_dir_perms;
+allow time_daemon time_vendor_data_file:file create_file_perms;

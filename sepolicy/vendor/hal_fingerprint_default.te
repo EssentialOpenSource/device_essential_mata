@@ -1,0 +1,14 @@
+typeattribute hal_fingerprint_default binder_in_vendor_violators;
+binder_use(hal_fingerprint_default)
+
+allow hal_fingerprint_default firmware_file:dir r_dir_perms;
+allow hal_fingerprint_default firmware_file:file r_file_perms;
+allow hal_fingerprint_default tee_device:chr_file rw_file_perms;
+allow hal_fingerprint_default vndbinder_device:chr_file rw_file_perms;
+
+# TODO(b/36644492): Remove data_between_core_and_vendor_violators once
+# hal_fingerprint no longer directly accesses fingerprintd_data_file.
+typeattribute hal_fingerprint_default data_between_core_and_vendor_violators;
+# access to /data/system/users/[0-9]+/fpdata
+allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
+allow hal_fingerprint_default fingerprintd_data_file:dir rw_dir_perms;

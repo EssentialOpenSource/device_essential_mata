@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"I-on ang Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Para mapatagal ang baterya, nililimitahan ng Adaptive Battery ang baterya para sa mga app na hindi madalas na ginagamit. Matututunan ng iyong telepono kung paano mo ginagamit ang mga app sa paglipas ng panahon.\n\nMaaaring maantala ang mga notification para sa mga app na ito."</string>
+    <string name="smart_battery_footer" product="tablet" >"Para mapatagal ang baterya, nililimitahan ng Adaptive Battery ang baterya para sa mga app na hindi madalas na ginagamit. Matututunan ng iyong tablet kung paano mo ginagamit ang mga app sa paglipas ng panahon.\n\nMaaaring maantala ang mga notification para sa mga app na ito."</string>
+    <string name="smart_battery_footer" product="device" >"Para mapatagal ang baterya, nililimitahan ng Adaptive Battery ang baterya para sa mga app na hindi madalas na ginagamit. Matututunan ng iyong device kung paano mo ginagamit ang mga app sa paglipas ng panahon.\n\nMaaaring maantala ang mga notification para sa mga app na ito."</string>
+    <string name="smart_battery_title" >"Gamitin ang Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"I-on ang Adaptive Battery"</string>
+</resources>

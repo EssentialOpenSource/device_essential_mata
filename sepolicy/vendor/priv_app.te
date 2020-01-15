@@ -1,0 +1,1 @@
+allow priv_app adsprpcd_file:filesystem getattr;

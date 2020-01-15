@@ -1,0 +1,3 @@
+# Allow Wifi Offload HAL to communicate with daemon via socket
+allow hal_wifi_offload_default chre:unix_stream_socket connectto;
+allow hal_wifi_offload_default chre_socket:sock_file write;

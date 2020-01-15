@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"অভিযোজিত বেটাৰি অন কৰক"</string>
+    <string name="smart_battery_manager_title" >"অভিযোজিত বেটাৰি"</string>
+    <string name="smart_battery_footer" product="default" >"বেটাৰিৰ অৱস্থা উন্নত কৰিবলৈ অভিযোজিত বেটাৰিয়ে সঘনাই ব্য়ৱহাৰ নোহোৱা এপসমূহৰ বেটাৰিৰ ব্য়ৱহাৰ সীমিত কৰে। সময়ৰ লগত সংগতি ৰাখি আপোনাৰ ফ\'নে আপুনি কেনেকৈ এপসমূহ ব্য়ৱহাৰ কৰে সেয়া অনুমান কৰিব।\n\nএই এপসমূহৰ বাবে জাননীসমূহ পলম হ\'ব পাৰে।"</string>
+    <string name="smart_battery_footer" product="tablet" >"বেটাৰিৰ অৱস্থা উন্নত কৰিবলৈ অভিযোজিত বেটাৰিয়ে সঘনাই ব্য়ৱহাৰ নোহোৱা এপসমূহৰ বেটাৰিৰ ব্য়ৱহাৰ সীমিত কৰে। সময়ৰ লগত সংগতি ৰাখি আপোনাৰ টেবলেটে আপুনি কেনেকৈ এপসমূহ ব্য়ৱহাৰ কৰে সেয়া অনুমান কৰিব।\n\nএই এপসমূহৰ বাবে জাননীসমূহ পলম হ\'ব পাৰে।"</string>
+    <string name="smart_battery_footer" product="device" >"বেটাৰিৰ অৱস্থা উন্নত কৰিবলৈ অভিযোজিত বেটাৰিয়ে সঘনাই ব্য়ৱহাৰ নোহোৱা এপসমূহৰ বেটাৰিৰ ব্য়ৱহাৰ সীমিত কৰে। সময়ৰ লগত সংগতি ৰাখি আপোনাৰ ডিভাইচে আপুনি কেনেকৈ এপসমূহ ব্য়ৱহাৰ কৰে সেয়া অনুমান কৰিব।\n\nএই এপসমূহৰ বাবে জাননীসমূহ পলম হ\'ব পাৰে।"</string>
+    <string name="smart_battery_title" >"অভিযোজিত বেটাৰি ব্যৱহাৰ কৰক"</string>
+    <string name="battery_tip_smart_battery_summary" >"অভিযোজিত বেটাৰি অন কৰক"</string>
+</resources>

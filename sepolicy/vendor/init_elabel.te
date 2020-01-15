@@ -1,0 +1,8 @@
+# /system/bin/init.elabel.sh
+#
+# write data from /persist/elabel to /data/misc/elabel for use by
+# settings app
+#
+allow init_elabel persist_file:dir {search getattr};
+allow init_elabel persist_elabel_file:dir r_dir_perms;
+allow init_elabel persist_elabel_file:file r_file_perms;

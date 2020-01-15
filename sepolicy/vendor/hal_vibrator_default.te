@@ -1,0 +1,8 @@
+r_dir_file(hal_vibrator_default, sysfs_leds)
+allow hal_vibrator_default sysfs_leds:file w_file_perms;
+allow hal_vibrator_default sysfs_msm_subsys:file rw_file_perms;
+allow hal_vibrator_default sysfs_msm_subsys:dir search;
+
+# read-only permission to obtain the calibration data
+r_dir_file(hal_vibrator_default, persist_haptics_file)
+allow hal_vibrator_default persist_file:dir search;
