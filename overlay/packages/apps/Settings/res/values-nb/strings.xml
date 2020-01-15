@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Slå på Tilpasset batteri"</string>
+    <string name="smart_battery_manager_title" >"Tilpasset batteri"</string>
+    <string name="smart_battery_footer" product="default" >"Tilpasset batteri begrenser batteribruken for apper du bruker sjelden, for å forlenge batterilevetiden. Telefonen lærer hvordan du bruker apper over tid.\n\nVarsler kan bli forsinket for disse appene."</string>
+    <string name="smart_battery_footer" product="tablet" >"Tilpasset batteri begrenser batteribruken for apper du bruker sjelden, for å forlenge batterilevetiden. Nettbrettet lærer hvordan du bruker apper over tid.\n\nVarsler kan bli forsinket for disse appene."</string>
+    <string name="smart_battery_footer" product="device" >"Tilpasset batteri begrenser batteribruken for apper du bruker sjelden, for å forlenge batterilevetiden. Enheten lærer hvordan du bruker apper over tid.\n\nVarsler kan bli forsinket for disse appene."</string>
+    <string name="smart_battery_title" >"Bruk Tilpasset batteri"</string>
+    <string name="battery_tip_smart_battery_summary" >"Slå på Tilpasset batteri"</string>
+</resources>

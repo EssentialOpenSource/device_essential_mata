@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"تفعيل البطارية التكيُّفية"</string>
+    <string name="smart_battery_manager_title" >"البطارية التكيُّفية"</string>
+    <string name="smart_battery_footer" product="default" >"لإطالة عمر البطارية، يعمل خيار \"البطارية التكيُّفية\" على تقييد استخدام البطارية للتطبيقات التي لا تستخدمها إلا نادرًا. وسيتعلم هاتفك كيفية استخدام التطبيقات مع مرور الوقت.\n\nقد تتأخر إشعارات هذه التطبيقات."</string>
+    <string name="smart_battery_footer" product="tablet" >"لإطالة عمر البطارية، يعمل خيار \"البطارية التكيُّفية\" على تقييد استخدام البطارية للتطبيقات التي لا تستخدمها إلا نادرًا. وسيتعلم جهازك اللوحي كيفية استخدام التطبيقات مع مرور الوقت.\n\nقد تتأخر إشعارات هذه التطبيقات."</string>
+    <string name="smart_battery_footer" product="device" >"لإطالة عمر البطارية، يعمل خيار \"البطارية التكيُّفية\" على تقييد استخدام البطارية للتطبيقات التي لا تستخدمها إلا نادرًا. وسيتعلم جهازك كيفية استخدام التطبيقات مع مرور الوقت.\n\nقد تتأخر إشعارات هذه التطبيقات."</string>
+    <string name="smart_battery_title" >"استخدام البطارية التكيُّفية"</string>
+    <string name="battery_tip_smart_battery_summary" >"تفعيل البطارية التكيُّفية"</string>
+</resources>

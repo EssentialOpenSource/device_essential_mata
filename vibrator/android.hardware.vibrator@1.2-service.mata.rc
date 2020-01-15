@@ -1,0 +1,4 @@
+service vendor.vibrator-1-2 /vendor/bin/hw/android.hardware.vibrator@1.2-service.mata
+    class hal
+    user system
+    group system

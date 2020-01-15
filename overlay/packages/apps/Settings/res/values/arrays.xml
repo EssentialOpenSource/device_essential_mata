@@ -1,0 +1,15 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="preferred_network_mode_choices" translatable="false">
+        <item>@string/preferred_network_mode_td_scdma_lte_gsm_wcdma_cdma_evdo_choice </item>
+        <item>@string/preferred_network_mode_cdma_lte_evdo_choice</item>
+        <item>@string/preferred_network_mode_cdma_evdo_auto_choice</item>
+        <item>@string/preferred_network_mode_gsm_wcdma_auto_choice</item>
+    </string-array>
+
+    <string-array name="preferred_network_mode_values"  translatable="false">
+        <item>"22"</item>
+        <item>"8"</item>
+        <item>"4"</item>
+        <item>"3"</item>
+    </string-array>
+</resources>

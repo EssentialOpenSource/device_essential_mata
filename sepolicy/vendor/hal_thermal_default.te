@@ -1,0 +1,4 @@
+allow hal_thermal_default sysfs_thermal:dir { open read search };
+allow hal_thermal_default sysfs_thermal:file { getattr open read };
+allow hal_thermal_default sysfs_thermal:lnk_file read;
+allow hal_thermal_default proc_stat:file { getattr open read };

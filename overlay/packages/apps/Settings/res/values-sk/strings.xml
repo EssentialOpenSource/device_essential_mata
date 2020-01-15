@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Zapnite adaptáciu batériu"</string>
+    <string name="smart_battery_manager_title" >"Adaptácia batérie"</string>
+    <string name="smart_battery_footer" product="default" >"Adaptácia batérie predĺži výdrž batérie tým, že obmedzí využívanie batérie zriedka používanými aplikáciami. Váš telefón sa časom naučí, ako využívate aplikácie.\n\nUpozornenia z týchto aplikácií môžu byť oneskorené."</string>
+    <string name="smart_battery_footer" product="tablet" >"Adaptácia batérie predĺži výdrž batérie tým, že obmedzí využívanie batérie zriedka používanými aplikáciami. Váš tablet sa časom naučí, ako využívate aplikácie.\n\nUpozornenia z týchto aplikácií môžu byť oneskorené."</string>
+    <string name="smart_battery_footer" product="device" >"Adaptácia batérie predĺži výdrž batérie tým, že obmedzí využívanie batérie zriedka používanými aplikáciami. Vaše zariadenie sa časom naučí, ako využívate aplikácie.\n\nUpozornenia z týchto aplikácií môžu byť oneskorené."</string>
+    <string name="smart_battery_title" >"Používať adaptáciu batérie"</string>
+    <string name="battery_tip_smart_battery_summary" >"Zapnite adaptáciu batérie"</string>
+</resources>

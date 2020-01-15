@@ -1,0 +1,1 @@
+allow recovery sysfs_scsi_devices_other:dir { open read search };

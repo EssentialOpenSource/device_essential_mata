@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Attiva Batteria adattiva"</string>
+    <string name="smart_battery_manager_title" >"Batteria adattiva"</string>
+    <string name="smart_battery_footer" product="default" >"Per prolungare la durata della batteria, la funzione Batteria adattiva limita l\'utilizzo della batteria per le app usate di rado. Il telefono capirà come usi le app nel corso del tempo.\n\nPotresti ricevere in ritardo le notifiche relative a queste app."</string>
+    <string name="smart_battery_footer" product="tablet" >"Per prolungare la durata della batteria, la funzione Batteria adattiva limita l\'utilizzo della batteria per le app usate di rado. Il tablet capirà come usi le app nel corso del tempo.\n\nPotresti ricevere in ritardo le notifiche relative a queste app."</string>
+    <string name="smart_battery_footer" product="device" >"Per prolungare la durata della batteria, la funzione Batteria adattiva limita l\'utilizzo della batteria per le app usate di rado. Il dispositivo capirà come usi le app nel corso del tempo.\n\nPotresti ricevere in ritardo le notifiche relative a queste app."</string>
+    <string name="smart_battery_title" >"Usa Batteria adattiva"</string>
+    <string name="battery_tip_smart_battery_summary" >"Attiva Batteria adattiva"</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"अॅडॅप्टिव्ह बॅटरी सुरू करा"</string>
+    <string name="smart_battery_manager_title" >"अॅडॅप्टिव्ह बॅटरी"</string>
+    <string name="smart_battery_footer" product="default" >"बॅटरी दीर्घकाळ टिकावी म्हणून, अॅडाप्टिव्ह बॅटरी व्यवस्थापकाद्वारे क्वचित वापरल्या जाणाऱ्या अॅप्ससाठी बॅटरीचा वापर मर्यादित केला जातो. काळानुसार तुमचा फोन तुम्ही अॅप्स कसे वापरता हे शिकेल. \n\nया अॅप्ससाठी सूचना येण्यास उशीर होऊ शकतो."</string>
+    <string name="smart_battery_footer" product="tablet" >"बॅटरी दीर्घकाळ टिकावी म्हणून, अॅडाप्टिव्ह बॅटरी व्यवस्थापकाद्वारे क्वचित वापरल्या जाणाऱ्या अॅप्ससाठी बॅटरीचा वापर मर्यादित केला जातो. काळानुसार तुमचा टॅबलेट तुम्ही अॅप्स कसे वापरता हे शिकेल. \n\nया अॅप्ससाठी सूचना येण्यास उशीर होऊ शकतो."</string>
+    <string name="smart_battery_footer" product="device" >"बॅटरी दीर्घकाळ टिकावी म्हणून, अॅडाप्टिव्ह बॅटरी व्यवस्थापकाद्वारे क्वचित वापरल्या जाणाऱ्या अॅप्ससाठी बॅटरीचा वापर मर्यादित केला जातो. काळानुसार तुमचे डिव्हाइस तुम्ही अॅप्स कसे वापरता हे शिकेल. \n\nया अॅप्ससाठी सूचना येण्यास उशीर होऊ शकतो."</string>
+    <string name="smart_battery_title" >"अॅडॅप्टिव्ह बॅटरी वापरा"</string>
+    <string name="battery_tip_smart_battery_summary" >"अॅडॅप्टिव्ह बॅटरी सुरू करा"</string>
+</resources>

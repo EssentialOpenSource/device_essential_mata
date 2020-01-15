@@ -1,0 +1,11 @@
+# /vendor/bin/init.radio.sh
+type init_radio, domain;
+type init_radio_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init_radio)
+
+allow init_radio vendor_shell_exec:file rx_file_perms;
+allow init_radio vendor_toolbox_exec:file rx_file_perms;
+
+allow init_radio radio_vendor_data_file:dir create_dir_perms;
+allow init_radio radio_vendor_data_file:file create_file_perms;

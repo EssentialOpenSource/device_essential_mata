@@ -1,0 +1,5 @@
+dontaudit priv_app device:dir read;
+dontaudit priv_app proc_interrupts:file read;
+dontaudit priv_app proc_modules:file read;
+allow priv_app vr_manager_service:service_manager find;
+allow priv_app rs_exec:file { execute execute_no_trans open read };

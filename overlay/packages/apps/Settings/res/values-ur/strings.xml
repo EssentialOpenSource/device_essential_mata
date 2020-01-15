@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"تغیر پذیر بیٹری آن کریں"</string>
+    <string name="smart_battery_manager_title" >"تغیر پذیر بیٹری"</string>
+    <string name="smart_battery_footer" product="default" >"بیٹری لائف بڑھانے کے لیے، تغیر پذیر بیٹری کبھی کبھار استعمال کی جانے والی ایپس کے لیے بیٹری کو محدود کرتی ہے۔ وقت گزرنے پر، آپ کا فون ایپس استعمال کرنے کا طریقہ سیکھے گا۔\n\nان ایپس کے لیے اطلاعات میں تاخیر ہو سکتی ہے۔"</string>
+    <string name="smart_battery_footer" product="tablet" >"بیٹری لائف بڑھانے کے لیے، تغیر پذیر بیٹری کبھی کبھار استعمال کی جانے والی ایپس کے لیے بیٹری کو محدود کرتی ہے۔ وقت گزرنے پر، آپ کا ٹیبلیٹ ایپس استعمال کرنے کا طریقہ سیکھے گا۔\n\nان ایپس کے لیے اطلاعات میں تاخیر ہو سکتی ہے۔"</string>
+    <string name="smart_battery_footer" product="device" >"بیٹری لائف بڑھانے کے لیے، تغیر پذیر بیٹری کبھی کبھار استعمال کی جانے والی ایپس کے لیے بیٹری کو محدود کرتی ہے۔ وقت گزرنے پر، آپ کا آلہ ایپس استعمال کرنے کا طریقہ سیکھے گا۔\n\nان ایپس کے لیے اطلاعات میں تاخیر ہو سکتی ہے۔"</string>
+    <string name="smart_battery_title" >"تغیر پذیر بیٹری استعمال کریں"</string>
+    <string name="battery_tip_smart_battery_summary" >"تغیر پذیر بیٹری آن کریں"</string>
+</resources>

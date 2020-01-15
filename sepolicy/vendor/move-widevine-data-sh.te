@@ -1,0 +1,18 @@
+type move-widevine-data-sh, domain, coredomain;
+type move-widevine-data-sh_exec, exec_type, file_type, system_file_type;
+init_daemon_domain(move-widevine-data-sh);
+
+typeattribute move-widevine-data-sh data_between_core_and_vendor_violators;
+
+allow move-widevine-data-sh shell_exec:file rx_file_perms;
+allow move-widevine-data-sh toolbox_exec:file rx_file_perms;
+
+allow move-widevine-data-sh file_contexts_file:file { read getattr open };
+
+allow move-widevine-data-sh media_data_file:file { getattr setattr relabelfrom };
+allow move-widevine-data-sh media_data_file:dir  { reparent rename rmdir setattr rw_dir_perms relabelfrom };
+
+allow move-widevine-data-sh mediadrm_vendor_data_file:dir { create_dir_perms relabelto };
+
+# for writing files_moved so we only execute the move once
+allow move-widevine-data-sh mediadrm_vendor_data_file:file { create open write getattr relabelto };

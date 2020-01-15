@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"‏הפעלת Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"‏כדי להאריך את חיי הסוללה, התכונה Adaptive Battery מגבילה את השימוש בסוללה לאפליקציות שנעשה בהן שימוש לעיתים רחוקות. לאורך זמן, הטלפון ילמד את אופן השימוש שלך באפליקציות.\n\nייתכן עיכוב בקבלת הודעות מאפליקציות אלה."</string>
+    <string name="smart_battery_footer" product="tablet" >"‏כדי להאריך את חיי הסוללה, התכונה Adaptive Battery מגבילה את השימוש בסוללה לאפליקציות שנעשה בהן שימוש לעיתים רחוקות. לאורך זמן, הטאבלט ילמד את אופן השימוש שלך באפליקציות.\n\nייתכן עיכוב בקבלת הודעות מאפליקציות אלה."</string>
+    <string name="smart_battery_footer" product="device" >"‏כדי להאריך את חיי הסוללה, התכונה Adaptive Battery מגבילה את השימוש בסוללה לאפליקציות שנעשה בהן שימוש לעיתים רחוקות. לאורך זמן, המכשיר ילמד את אופן השימוש שלך באפליקציות.\n\nייתכן עיכוב בקבלת הודעות מאפליקציות אלה."</string>
+    <string name="smart_battery_title" >"‏שימוש ב-Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"‏הפעלת Adaptive Battery"</string>
+</resources>

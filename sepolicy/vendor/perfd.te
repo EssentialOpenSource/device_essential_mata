@@ -1,0 +1,33 @@
+type perfd, domain;
+type perfd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(perfd)
+
+r_dir_file(perfd, sysfs_msm_subsys)
+
+# perfd uses kill(pid, 0) to determine if a process exists.
+# Determining if a process exists does not require the kill capability
+# since a permission denied indicates the process exists.
+dontaudit perfd self:capability kill;
+
+allow perfd mediacodec:process signull;
+allow perfd hal_power_default:process signull;
+
+allow perfd cgroup:file r_file_perms;
+allow perfd post_boot_prop:file { getattr open read };
+
+allow perfd proc:file rw_file_perms;
+allow perfd sysfs_clkscale:file r_file_perms;
+allow perfd sysfs_graphics:dir search;
+allow perfd sysfs_graphics:file r_file_perms;
+allow perfd sysfs_soc:dir search;
+allow perfd sysfs_soc:file r_file_perms;
+allow perfd sysfs_graphics:dir search;
+allow perfd sysfs_graphics:file r_file_perms;
+allow perfd sysfs_perf:file rw_file_perms;
+allow perfd sysfs_msm_subsys:file w_file_perms;
+allow perfd sysfs_devices_system_cpu:file w_file_perms;
+
+allow perfd perfd_socket:sock_file write;
+
+allow perfd latency_device:chr_file w_file_perms;

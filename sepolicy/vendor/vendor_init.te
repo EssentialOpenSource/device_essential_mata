@@ -1,0 +1,28 @@
+typeattribute vendor_init data_between_core_and_vendor_violators;
+
+allow vendor_init {
+  dhcp_data_file
+  media_rw_data_file
+  system_data_file
+  tombstone_data_file
+  wifi_data_file
+  vendor_data_file
+}:dir { create search getattr open read setattr ioctl write add_name remove_name rmdir relabelfrom };
+
+allow vendor_init proc_uid_cpupower:file write;
+dontaudit vendor_init kernel:system module_request;
+
+allow vendor_init bluetooth_data_file:dir setattr;
+allow vendor_init camera_data_file:dir setattr;
+allow vendor_init ipa_dev:chr_file { open write };
+allow vendor_init preloads_data_file:dir { read setattr };
+allow vendor_init self:capability sys_module;
+allow vendor_init vendor_data_file:dir setattr;
+allow vendor_init vendor_file:system module_load;
+allow vendor_init wpa_socket:dir setattr;
+allow vendor_init method_trace_data_file:dir setattr;
+allow vendor_init nfc_data_file:dir { ioctl open read setattr };
+allow vendor_init preloads_data_file:dir { ioctl open };
+allow vendor_init preloads_media_file:dir setattr;
+allow vendor_init unlabeled:dir { getattr setattr search read relabelfrom };
+allow vendor_init unlabeled:file { getattr setattr read relabelfrom };

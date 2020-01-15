@@ -1,0 +1,49 @@
+# loc_launcher service
+# which launches various other services supporting GPS & Wifi-RTT (LOWI) location
+type location, domain;
+type location_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(location)
+
+# STOPSHIP b/28340421
+# Temporarily grant this permission (for LOWI) and log its use.
+allow location self:capability { net_admin };
+auditallow location self:capability { net_admin };
+
+allow location self:capability { setgid setuid };
+
+hwbinder_use(location)
+get_prop(location, hwservicemanager_prop)
+allow location fwk_sensor_hwservice:hwservice_manager find;
+binder_call(location, system_server)
+allow location hal_wifi:unix_stream_socket { read write };
+
+# Enable standard network access (for XTRA download)
+net_domain(location)
+
+# And some additional network access
+allow location self:netlink_generic_socket create_socket_perms_no_ioctl;
+allow location self:netlink_socket create_socket_perms_no_ioctl;
+allowxperm location self:udp_socket ioctl { SIOCGIFINDEX SIOCGIFHWADDR SIOCIWFIRSTPRIV_05 };
+
+allow location self:socket create_socket_perms;
+# whitelist socket ioctl commands
+allowxperm location self:socket ioctl msm_sock_ipc_ioctls;
+
+# files in /sys
+r_dir_file(location, sysfs_type)
+
+dontaudit location kernel:system module_request;
+
+allow location proc_net:file r_file_perms;
+
+# execute /vendor/bin/lowi-server
+allow location location_exec:file rx_file_perms;
+
+# /data/vendor/location
+allow location location_data_file:dir create_dir_perms;
+allow location location_data_file:{ file sock_file } create_file_perms;
+
+userdebug_or_eng(`
+  allow location diag_device:chr_file rw_file_perms;
+')

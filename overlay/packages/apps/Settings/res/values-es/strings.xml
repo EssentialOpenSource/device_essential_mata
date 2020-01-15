@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Activar batería inteligente"</string>
+    <string name="smart_battery_manager_title" >"Batería inteligente"</string>
+    <string name="smart_battery_footer" product="default" >"Para aumentar la duración de la batería, el gestor de batería inteligente limita el consumo por parte de aplicaciones que se utilizan con poca frecuencia. Con el tiempo, el teléfono sabrá cómo utilizas las aplicaciones.\n\nEs posible que las notificaciones de estas aplicaciones te lleguen con retraso."</string>
+    <string name="smart_battery_footer" product="tablet" >"Para aumentar la duración de la batería, el gestor de batería inteligente limita el consumo por parte de aplicaciones que se utilizan con poca frecuencia. Con el tiempo, el tablet sabrá cómo utilizas las aplicaciones.\n\nEs posible que las notificaciones de estas aplicaciones te lleguen con retraso."</string>
+    <string name="smart_battery_footer" product="device" >"Para aumentar la duración de la batería, el gestor de batería inteligente limita el consumo por parte de aplicaciones que se utilizan con poca frecuencia. Con el tiempo, el dispositivo sabrá cómo utilizas las aplicaciones.\n\nEs posible que las notificaciones de estas aplicaciones te lleguen con retraso."</string>
+    <string name="smart_battery_title" >"Usar batería inteligente"</string>
+    <string name="battery_tip_smart_battery_summary" >"Activar batería inteligente"</string>
+</resources>

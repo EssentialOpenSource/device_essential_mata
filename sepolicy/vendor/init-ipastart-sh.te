@@ -1,0 +1,7 @@
+type init-qcom-ipastart-sh, domain;
+type init-qcom-ipastart-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-qcom-ipastart-sh)
+
+allow init-qcom-ipastart-sh vendor_shell_exec:file rx_file_perms;
+allow init-qcom-ipastart-sh vendor_toolbox_exec:file rx_file_perms;

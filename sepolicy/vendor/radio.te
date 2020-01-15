@@ -1,0 +1,33 @@
+get_prop(radio, ims_prop)
+userdebug_or_eng(`set_prop(radio, tel_mon_prop)')
+
+allow radio qmuxd_socket:dir search;
+allow radio qmuxd_socket:sock_file write;
+
+allow radio vendor_file:lnk_file r_file_perms;
+allow radio vendor_framework_file:file r_file_perms;
+allow radio vendor_framework_file:dir search;
+
+allow radio cache_file:lnk_file read;
+allow radio system_app_data_file:dir getattr;
+allow radio system_app_data_file:dir search;
+
+hwbinder_use(radio)
+allow radio vnd_ims_radio_hwservice:hwservice_manager find;
+allow radio vnd_qcrilhook_hwservice:hwservice_manager find;
+allow radio hal_imsrtp_hwservice:hwservice_manager find;
+
+allow radio {
+  mediaextractor_service
+  mediacodec_service
+}:service_manager find;
+
+r_dir_file(radio, sysfs_msm_subsys)
+
+# IMS needs permission to use avtimer
+allow radio avtimer_device:chr_file r_file_perms;
+
+binder_call(radio, hal_imsrtp)
+
+set_prop(radio, omadm_prop)
+get_prop(radio, omadm_prop)

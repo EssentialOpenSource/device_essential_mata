@@ -1,0 +1,5 @@
+qti.ims.ext                                          u:object_r:radio_service:s0
+cneservice                                           u:object_r:cne_service:s0
+uce                                                  u:object_r:uce_service:s0
+rcs                                                  u:object_r:radio_service:s0
+wfdservice                                           u:object_r:wfdservice_service:s0

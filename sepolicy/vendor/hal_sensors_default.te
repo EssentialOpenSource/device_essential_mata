@@ -1,0 +1,21 @@
+# read factory calibration and sensor configuration data
+allow hal_sensors_default persist_file:dir search;
+r_dir_file(hal_sensors_default, persist_sensors_file)
+
+# interact with the sensors low power island (SLPI) CPU
+allow hal_sensors_default self:socket { create ioctl read write };
+allowxperm hal_sensors_default self:socket ioctl msm_sock_ipc_ioctls;
+r_dir_file(hal_sensors_default, sysfs_msm_subsys);
+r_dir_file(hal_sensors_default, sysfs_esoc);
+
+allow hal_sensors_default qdsp_device:chr_file r_file_perms;
+
+userdebug_or_eng(`
+  r_dir_file(hal_sensors_default, sysfs_diag)
+  allow hal_sensors_default sysfs_timestamp_switch:file r_file_perms;
+')
+
+# Interact with ToF sensor
+allow hal_sensors_default input_device:chr_file r_file_perms;
+allow hal_sensors_default input_device:dir r_dir_perms;
+allow hal_sensors_default sysfs_laser:file rw_file_perms;

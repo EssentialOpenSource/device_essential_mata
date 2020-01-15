@@ -1,0 +1,38 @@
+on property:debug.sys.qxdm_cfg_file=*
+   setprop persist.sys.qxdm_cfg_file ${debug.sys.qxdm_cfg_file}
+
+#persist.sys.logging
+#where
+#    0 = none- ie lock out ports (prod default)
+#    1 = on device logging
+#    2 = PC logging (handled in diag.rc)
+
+on property:persist.sys.logging=0
+   setprop persist.sys.qxdm_logs 0
+
+on property:persist.sys.logging=1
+   setprop persist.sys.qxdm_logs 1
+
+on property:persist.sys.logging=2
+   setprop persist.sys.qxdm_logs 0
+
+on property:persist.sys.qxdm_logs=1 && property:sys.boot_completed=1
+  start mdlog_start
+
+on property:persist.sys.qxdm_logs=0 && property:sys.boot_completed=1
+  start mdlog_stop
+
+# QXDM logs
+service mdlog_start /vendor/bin/diag_mdlog -f ${persist.sys.qxdm_cfg_file:-/etc/Default_Log_Cfg.cfg} -c
+    class late_start
+    user system
+    group system diag sdcard_rw sdcard_r media_rw oem_2901
+    disabled
+    oneshot
+
+service mdlog_stop /vendor/bin/diag_mdlog -k
+    class late_start
+    user system
+    group system diag sdcard_rw sdcard_r media_rw oem_2901
+    disabled
+    oneshot

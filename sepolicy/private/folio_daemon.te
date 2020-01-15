@@ -1,0 +1,15 @@
+type folio_daemon, domain, coredomain;
+type folio_daemon_exec, exec_type, file_type, system_file_type;
+
+init_daemon_domain(folio_daemon)
+
+allow folio_daemon binder_device:chr_file rw_file_perms;
+allow folio_daemon uhid_device:chr_file rw_file_perms;
+
+allow folio_daemon system_server:unix_stream_socket rw_socket_perms_no_ioctl;
+
+binder_use(folio_daemon)
+binder_call(folio_daemon, system_server)
+
+allow folio_daemon sensorservice_service:service_manager find;
+allow folio_daemon permission_service:service_manager find;

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Adaptiv Batareyanı aktiv edin"</string>
+    <string name="smart_battery_manager_title" >"Adaptiv Batareya"</string>
+    <string name="smart_battery_footer" product="default" >"Batareya ömrünü uzatmaq üçün Adaptiv Batareya, daima istifadə edilən tətbiqlərin batareyadan istifadəsini məhdudlaşdırır. Telefon vaxt keçdikcə tətbiqlərdən istifadə etməyi öyrənəcək.\n\nHəmin tətbiqlərin bildirişləri gecikə bilər."</string>
+    <string name="smart_battery_footer" product="tablet" >"Batareya ömrünü uzatmaq üçün Adaptiv Batareya Meneceri, daima istifadə edilən tətbiqlərin batareyadan istifadəsini məhdudlaşdırır. Planşet vaxt keçdikcə tətbiqlərdən istifadə etməyi öyrənəcək.\n\nHəmin tətbiqlərin bildirişləri gecikə bilər."</string>
+    <string name="smart_battery_footer" product="device" >"Batareya ömrünü uzatmaq üçün Adaptiv Batareya, daima istifadə edilən tətbiqlərin batareyadan istifadəsini məhdudlaşdırır. Cihaz vaxt keçdikcə tətbiqlərdən istifadə etməyi öyrənəcək.\n\nHəmin tətbiqlərin bildirişləri gecikə bilər."</string>
+    <string name="smart_battery_title" >"Adaptiv Batareyadan istifadə edin"</string>
+    <string name="battery_tip_smart_battery_summary" >"Adaptiv Batareyanı aktiv edin"</string>
+</resources>

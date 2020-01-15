@@ -1,0 +1,4 @@
+allow netd sysfs_net:file w_file_perms;
+
+dontaudit netd kernel:system module_request;
+dontaudit netd self:capability { sys_resource sys_module };

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Funktion \"Intelligenter Akku\" aktivieren"</string>
+    <string name="smart_battery_manager_title" >"Intelligenter Akku"</string>
+    <string name="smart_battery_footer" product="default" >"Um die Akkulaufzeit zu verlängern, schränkt die Funktion \"Intelligenter Akku\" die Akkunutzung für selten verwendete Apps ein. Dein Smartphone lernt mit der Zeit, wie du deine Apps nutzt.\n\nBenachrichtigungen werden für die entsprechenden Apps eventuell verzögert angezeigt."</string>
+    <string name="smart_battery_footer" product="tablet" >"Um die Akkulaufzeit zu verlängern, schränkt die Funktion \"Intelligenter Akku\" die Akkunutzung für selten verwendete Apps ein. Dein Tablet lernt mit der Zeit, wie du deine Apps nutzt.\n\nBenachrichtigungen werden für die entsprechenden Apps eventuell verzögert angezeigt."</string>
+    <string name="smart_battery_footer" product="device" >"Um die Akkulaufzeit zu verlängern, schränkt die Funktion \"Intelligenter Akku\" die Akkunutzung für selten verwendete Apps ein. Dein Gerät lernt mit der Zeit, wie du deine Apps nutzt.\n\nBenachrichtigungen werden für die entsprechenden Apps eventuell verzögert angezeigt."</string>
+    <string name="smart_battery_title" >"Funktion \"Intelligenter Akku\" verwenden"</string>
+    <string name="battery_tip_smart_battery_summary" >"Funktion \"Intelligenter Akku\" aktivieren"</string>
+</resources>

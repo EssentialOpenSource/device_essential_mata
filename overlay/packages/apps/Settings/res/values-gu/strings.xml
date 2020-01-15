@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"સુવિધાજનક બૅટરી ચાલુ કરો"</string>
+    <string name="smart_battery_manager_title" >"સુવિધાજનક બૅટરી"</string>
+    <string name="smart_battery_footer" product="default" >"બૅટરી આવરદાને વધારવા માટે, સુવિધાજનક બૅટરી વારંવાર ઉપયોગમાં ન લેવાતી ઍપ માટે બૅટરી મર્યાદિત કરે છે. સમય જતાં તમારો ફોન જાણી લેશે કે તમે ઍપનો કેવી રીતે ઉપયોગ કરો છો.\n\nઆ ઍપ માટે નોટિફિકેશન વિલંબિત થઈ શકે છે."</string>
+    <string name="smart_battery_footer" product="tablet" >"બૅટરી આવરદાને વધારવા માટે, સુવિધાજનક બૅટરી વારંવાર ઉપયોગમાં ન લેવાતી ઍપ માટે બૅટરી મર્યાદિત કરે છે. સમય જતાં તમારું ટૅબ્લેટ જાણી લેશે કે તમે ઍપનો કેવી રીતે ઉપયોગ કરો છો.\n\nઆ ઍપ માટે નોટિફિકેશન વિલંબિત થઈ શકે છે."</string>
+    <string name="smart_battery_footer" product="device" >"બૅટરી આવરદાને વધારવા માટે, સુવિધાજનક બૅટરી વારંવાર ઉપયોગમાં ન લેવાતી ઍપ માટે બૅટરી મર્યાદિત કરે છે. સમય જતાં તમારું ઉપકરણ જાણી લેશે કે તમે ઍપનો કેવી રીતે ઉપયોગ કરો છો.\n\nઆ ઍપ માટે નોટિફિકેશન વિલંબિત થઈ શકે છે."</string>
+    <string name="smart_battery_title" >"સુવિધાજનક બૅટરીનો ઉપયોગ કરો"</string>
+    <string name="battery_tip_smart_battery_summary" >"સુવિધાજનક બૅટરી ચાલુ કરો"</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"ተለማማጅ ባትሪን ያብሩ"</string>
+    <string name="smart_battery_manager_title" >"ተለማማጅ ባትሪ"</string>
+    <string name="smart_battery_footer" product="default" >"የባትሪ ዕድሜን ለማራዘም ተለማማጅ ባትሪ በተደጋጋሚ ጥቅም ላይ ለማይውሉ መተግበሪያዎች ባትሪን ይገድባል። የእርስዎ ስልክ መተግበሪያዎችዎን እንዴት እንደሚጠቀሙ በጊዜ ሂደት ላይ ይማራል።\n\nማሳወቂያዎች ለእነዚህ መተግበሪያዎች ሊዘገዩ ይችካሉ።"</string>
+    <string name="smart_battery_footer" product="tablet" >"የባትሪ ዕድሜን ለማራዘም ተለማማጅ ባትሪ በተደጋጋሚ ጥቅም ላይ ለማይውሉ መተግበሪያዎች ባትሪን ይገድባል። የእርስዎ ጡባዊ መተግበሪያዎችዎን እንዴት እንደሚጠቀሙ በጊዜ ሂደት ላይ ይማራል።\n\nማሳወቂያዎች ለእነዚህ መተግበሪያዎች ሊዘገዩ ይችካሉ።"</string>
+    <string name="smart_battery_footer" product="device" >"የባትሪ ዕድሜን ለማራዘም ተለማማጅ ባትሪ በተደጋጋሚ ጥቅም ላይ ለማይውሉ መተግበሪያዎች ባትሪን ይገድባል። የእርስዎ መሣሪያ መተግበሪያዎችዎን እንዴት እንደሚጠቀሙ በጊዜ ሂደት ላይ ይማራል።\n\nማሳወቂያዎች ለእነዚህ መተግበሪያዎች ሊዘገዩ ይችካሉ።"</string>
+    <string name="smart_battery_title" >"ተለማማጅ ባትሪን ይጠቀሙ"</string>
+    <string name="battery_tip_smart_battery_summary" >"ተለማማጅ ባትሪን ያብሩ"</string>
+</resources>

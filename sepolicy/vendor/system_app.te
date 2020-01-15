@@ -1,0 +1,65 @@
+# Needed by Settings app's TelephonyMonitorPreferenceController, available only on a subset of
+# userdebug and eng devices
+userdebug_or_eng(`set_prop(system_app, tel_mon_prop)')
+
+# Needed by Settings app's CameraHalHdrplusPreferenceController
+set_prop(system_app, camera_prop)
+
+# read regulatory info
+allow system_app elabel_data_file:dir r_dir_perms;
+allow system_app elabel_data_file:file r_file_perms;
+
+# For Score
+allow system_app self:netlink_kobject_uevent_socket { read bind setopt create };
+
+allow system_app persist_file:dir rw_dir_perms;
+
+allow system_app pstore_backup_file:file r_file_perms;
+allow system_app pstore_backup_file:dir r_dir_perms;
+
+# For EssentialSUW barcode support
+allow system_app persist_file:dir create;
+
+# For Essential Accessory OTA support
+allow system_app ota_package_file:dir { add_name search write };
+allow system_app ota_package_file:file { read create getattr setattr open write };
+get_prop(system_app, fastboot_prop)
+
+## For OMA-DM access
+allow system_app persist_file:file getattr;
+allow system_app persist_file:dir create;
+allow system_app persist_file:dir create_dir_perms;
+allow system_app persist_file:file create_file_perms;
+allow system_app persist_file:dir search;
+allow system_app persist_file:dir create_file_perms;
+allow system_app persist_file:file create_file_perms;
+allow system_app persist_file:dir add_name;
+allow system_app persist_file:dir remove_name;
+
+## For Chameleon access
+allow system_app cache_file:lnk_file read;
+allow system_app cache_file:dir search;
+allow system_app cache_file:dir create_file_perms;
+
+# Allow Hub to read crash reports from /data/system/dropbox.
+allow system_app system_data_file:dir r_dir_perms;
+allow system_app system_data_file:file r_file_perms;
+
+# Allow Hub to read and process from /data/vendor/radio/diag_logs
+allow system_app radio_vendor_data_file:dir create_dir_perms;
+allow system_app radio_vendor_data_file:file create_file_perms;
+
+allow system_app sysfs_msm_subsys:dir r_dir_perms;
+allow system_app sysfs_msm_subsys:file r_file_perms;
+
+# Allow system app to write trace in pre-existing /data/misc/trace
+allow system_app method_trace_data_file:dir w_dir_perms;
+allow system_app method_trace_data_file:file { create w_file_perms };
+
+# For tracing support in Hub.
+allow system_app tracing_shell_writable:file rw_file_perms;
+
+set_prop(system_app, grip_prop)
+set_prop(system_app, mqa_hd_prop)
+set_prop(system_app, wfd_service_prop);
+set_prop(system_app, omadm_prop);

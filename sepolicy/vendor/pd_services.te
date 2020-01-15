@@ -1,0 +1,15 @@
+type pd_mapper, domain;
+
+type pd_mapper_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(pd_mapper);
+
+allow pd_mapper self:capability { setgid setpcap setuid net_bind_service };
+
+allow pd_mapper firmware_file:dir r_dir_perms;
+allow pd_mapper firmware_file:file r_file_perms;
+
+allow pd_mapper self:socket create_socket_perms;
+allowxperm pd_mapper self:socket ioctl IPC_ROUTER_IOCTL_BIND_CONTROL_PORT;
+
+r_dir_file(pd_mapper, sysfs_msm_subsys)
+r_dir_file(pd_mapper, sysfs_esoc)

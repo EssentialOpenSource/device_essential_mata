@@ -1,0 +1,7 @@
+allow hal_usb_default sysfs_msm_subsys:dir search;
+allow hal_usb_default sysfs_msm_subsys:file r_file_perms;
+allow hal_usb_default sysfs_usb_c:dir r_dir_perms;
+allow hal_usb_default sysfs_usb_c:lnk_file read;
+allow hal_usb_default sysfs_usb_c:file rw_file_perms;
+allow hal_usb_default sysfs_usb_device:dir r_dir_perms;
+allow hal_usb_default sysfs_usb_device:file rw_file_perms;

@@ -1,0 +1,12 @@
+#TODO Remove user "system" when b/63588267 is resolved
+user=system seinfo=platform name=com.qualcomm.telephony domain=qtelephony type=system_app_data_file
+
+# A fallback in case tango_core is missing something critical that untrusted_app provides
+user=_app seinfo=tango name=com.google.tango:app domain=untrusted_app type=app_data_file levelFrom=user
+
+# Use a custom domain for Klik, to allow access to Sidecar
+user=_app seinfo=platform name=com.essential.klik domain=essential_camera_app type=app_data_file
+
+#Needed for time service apk
+user=_app seinfo=platform name=com.qualcomm.timeservice domain=timeservice_app type=app_data_file
+

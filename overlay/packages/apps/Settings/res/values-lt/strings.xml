@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Įjunkite prisitaikantį akumuliatorių"</string>
+    <string name="smart_battery_manager_title" >"Prisitaikantis akumuliatorius"</string>
+    <string name="smart_battery_footer" product="default" >"Kad akumuliatorius veiktų ilgiau, prisitaikantis akumuliatorius apriboja retai naudojamų programų akumuliatoriaus energijos naudojimą. Telefonas laikui bėgant sužinos, kaip naudojate programas.\n\nŠių programų pranešimai gali vėluoti."</string>
+    <string name="smart_battery_footer" product="tablet" >"Kad akumuliatorius veiktų ilgiau, prisitaikantis akumuliatorius apriboja retai naudojamų programų akumuliatoriaus energijos naudojimą. Planšetinis kompiuteris laikui bėgant sužinos, kaip naudojate programas.\n\nŠių programų pranešimai gali vėluoti."</string>
+    <string name="smart_battery_footer" product="device" >"Kad akumuliatorius veiktų ilgiau, prisitaikantis akumuliatorius apriboja retai naudojamų programų akumuliatoriaus energijos naudojimą. Įrenginys laikui bėgant sužinos, kaip naudojate programas.\n\nŠių programų pranešimai gali vėluoti."</string>
+    <string name="smart_battery_title" >"Naudoti prisitaikantį akumuliatorių"</string>
+    <string name="battery_tip_smart_battery_summary" >"Įjunkite prisitaikantį akumuliatorių"</string>
+</resources>

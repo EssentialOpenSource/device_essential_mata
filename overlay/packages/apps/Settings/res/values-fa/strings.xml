@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"روشن کردن «باتری وفق‌پذیر»"</string>
+    <string name="smart_battery_manager_title" >"باتری وفق‌پذیر"</string>
+    <string name="smart_battery_footer" product="default" >"برای افزایش ماندگاری شارژ باتری، «باتری وفق‌پذیر» مصرف باتری برنامه‌هایی را که زیاد استفاده نمی‌شود محدود می‌کند. تلفنتان با گذشت زمان نحوه استفاده شما از برنامه‌ها را یاد می‌گیرد.\n\nممکن است اعلان‌های این برنامه‌ها با تأخیر همراه باشد."</string>
+    <string name="smart_battery_footer" product="tablet" >"برای افزایش ماندگاری شارژ باتری، «باتری وفق‌پذیر» مصرف باتری برنامه‌هایی را که زیاد استفاده نمی‌شود محدود می‌کند. رایانه لوحی‌تان با گذشت زمان نحوه استفاده شما از برنامه‌ها را یاد می‌گیرد.\n\nممکن است اعلان‌های این برنامه‌ها با تأخیر همراه باشد."</string>
+    <string name="smart_battery_footer" product="device" >"برای افزایش ماندگاری شارژ باتری، «باتری وفق‌پذیر» مصرف باتری برنامه‌هایی را که زیاد استفاده نمی‌شود محدود می‌کند. دستگاهتان با گذشت زمان نحوه استفاده شما از برنامه‌ها را یاد می‌گیرد.\n\nممکن است اعلان‌های این برنامه‌ها با تأخیر همراه باشد."</string>
+    <string name="smart_battery_title" >"استفاده از باتری وفق‌پذیر"</string>
+    <string name="battery_tip_smart_battery_summary" >"«باتری وفق‌پذیر» را روشن کنید"</string>
+</resources>

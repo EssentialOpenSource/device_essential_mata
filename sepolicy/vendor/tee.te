@@ -1,0 +1,26 @@
+allow tee self:capability { chown setgid setuid sys_admin sys_rawio };
+
+allow tee device:dir r_dir_perms;
+
+set_prop(tee, tee_listener_prop)
+set_prop(tee, keymaster_prop)
+
+allow tee firmware_file:dir search;
+allow tee block_device:dir { getattr search };
+allow tee ssd_block_device:blk_file rw_file_perms;
+allow tee sg_device:chr_file { rw_file_perms setattr };
+
+allow tee persist_file:dir r_dir_perms;
+allow tee persist_drm_file:dir create_dir_perms;
+allow tee persist_drm_file:file create_file_perms;
+allow tee persist_data_file:dir create_dir_perms;
+allow tee persist_data_file:file create_file_perms;
+
+# TODO(b/36644492): Remove data_between_core_and_vendor_violators once
+# tee no longer directly accesses /data owned by the frameworks.
+typeattribute tee data_between_core_and_vendor_violators;
+allow tee system_data_file:dir r_dir_perms;
+allow tee fingerprintd_data_file:dir rw_dir_perms;
+allow tee fingerprintd_data_file:file create_file_perms;
+
+allow tee time_daemon:unix_stream_socket connectto;

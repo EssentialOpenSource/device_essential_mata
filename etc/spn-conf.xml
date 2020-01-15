@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spnOverrides>
+    <spnOverride numeric="23430" spn="EE"/>
+    <spnOverride numeric="23433" spn="EE"/>
+    <spnOverride numeric="26201" spn="Telekom"/>
+    <spnOverride numeric="302370" spn="Fido"/>
+    <spnOverride numeric="302720" spn="Rogers"/>
+    <spnOverride numeric="310004" spn="Verizon Wireless"/>
+    <spnOverride numeric="310120" spn="Sprint"/>
+    <spnOverride numeric="310150" spn="AT&amp;T"/>
+    <spnOverride numeric="310160" spn="T-Mobile"/>
+    <spnOverride numeric="310200" spn="T-Mobile"/>
+    <spnOverride numeric="310210" spn="T-Mobile"/>
+    <spnOverride numeric="310220" spn="T-Mobile"/>
+    <spnOverride numeric="310230" spn="T-Mobile"/>
+    <spnOverride numeric="310240" spn="T-Mobile"/>
+    <spnOverride numeric="310250" spn="T-Mobile"/>
+    <spnOverride numeric="310260" spn="T-Mobile"/>
+    <spnOverride numeric="310270" spn="T-Mobile"/>
+    <spnOverride numeric="310300" spn="T-Mobile"/>
+    <spnOverride numeric="310310" spn="T-Mobile"/>
+    <spnOverride numeric="310490" spn="T-Mobile USA"/>
+    <spnOverride numeric="310530" spn="T-Mobile"/>
+    <spnOverride numeric="310560" spn="AT&amp;T"/>
+    <spnOverride numeric="310580" spn="T-Mobile"/>
+    <spnOverride numeric="310590" spn="T-Mobile"/>
+    <spnOverride numeric="310640" spn="T-Mobile"/>
+    <spnOverride numeric="310660" spn="T-Mobile"/>
+    <spnOverride numeric="310680" spn="AT&amp;T"/>
+    <spnOverride numeric="310800" spn="T-Mobile"/>
+    <spnOverride numeric="310980" spn="AT&amp;T"/>
+    <spnOverride numeric="311180" spn="AT&amp;T"/>
+    <spnOverride numeric="311480" spn="Verizon Wireless"/>
+    <spnOverride numeric="40402" spn="airtel"/>
+    <spnOverride numeric="40403" spn="airtel"/>
+    <spnOverride numeric="40410" spn="airtel"/>
+    <spnOverride numeric="40416" spn="airtel"/>
+    <spnOverride numeric="40431" spn="airtel"/>
+    <spnOverride numeric="40440" spn="airtel"/>
+    <spnOverride numeric="40445" spn="airtel"/>
+    <spnOverride numeric="40449" spn="airtel"/>
+    <spnOverride numeric="40490" spn="airtel"/>
+    <spnOverride numeric="40492" spn="airtel"/>
+    <spnOverride numeric="40493" spn="airtel"/>
+    <spnOverride numeric="40494" spn="airtel"/>
+    <spnOverride numeric="40495" spn="airtel"/>
+    <spnOverride numeric="40496" spn="airtel"/>
+    <spnOverride numeric="40497" spn="airtel"/>
+    <spnOverride numeric="40498" spn="airtel"/>
+    <spnOverride numeric="40551" spn="airtel"/>
+    <spnOverride numeric="40552" spn="airtel"/>
+    <spnOverride numeric="40553" spn="airtel"/>
+    <spnOverride numeric="40554" spn="airtel"/>
+    <spnOverride numeric="40555" spn="airtel"/>
+    <spnOverride numeric="40556" spn="airtel"/>
+    <spnOverride numeric="405840" spn="JIO"/>
+    <spnOverride numeric="405854" spn="JIO"/>
+    <spnOverride numeric="405855" spn="JIO"/>
+    <spnOverride numeric="405856" spn="JIO"/>
+    <spnOverride numeric="405857" spn="JIO"/>
+    <spnOverride numeric="405858" spn="JIO"/>
+    <spnOverride numeric="405859" spn="JIO"/>
+    <spnOverride numeric="405860" spn="JIO"/>
+    <spnOverride numeric="405861" spn="JIO"/>
+    <spnOverride numeric="405862" spn="JIO"/>
+    <spnOverride numeric="405863" spn="JIO"/>
+    <spnOverride numeric="405864" spn="JIO"/>
+    <spnOverride numeric="405865" spn="JIO"/>
+    <spnOverride numeric="405866" spn="JIO"/>
+    <spnOverride numeric="405867" spn="JIO"/>
+    <spnOverride numeric="405868" spn="JIO"/>
+    <spnOverride numeric="405869" spn="JIO"/>
+    <spnOverride numeric="405870" spn="JIO"/>
+    <spnOverride numeric="405871" spn="JIO"/>
+    <spnOverride numeric="405872" spn="JIO"/>
+    <spnOverride numeric="405873" spn="JIO"/>
+    <spnOverride numeric="405874" spn="JIO"/>
+    <spnOverride numeric="42507" spn="HOT mobile"/>
+    <spnOverride numeric="42508" spn="Golan Telecom"/>
+    <spnOverride numeric="42510" spn="Orange-IL"/>
+    <spnOverride numeric="42514" spn="YouPhone"/>
+    <spnOverride numeric="42515" spn="Home Cellular"/>
+    <spnOverride numeric="42516" spn="Rami Levy"/>
+    <!-- China -->
+    <spnOverride numeric="46000" spn="China Mobile" />
+    <spnOverride numeric="46001" spn="China Unicom" />
+    <spnOverride numeric="46002" spn="China Mobile" />
+    <spnOverride numeric="46003" spn="China Telecom" />
+    <spnOverride numeric="46005" spn="China Telecom" />
+    <spnOverride numeric="46006" spn="China Unicom" />
+    <spnOverride numeric="46007" spn="China Mobile" />
+    <!-- Taiwan -->
+    <spnOverride numeric="46601" spn="FarEasTone" />
+    <spnOverride numeric="46605" spn="APBW" />
+    <spnOverride numeric="46606" spn="Tuntex" />
+    <spnOverride numeric="46688" spn="KG Telecom" />
+    <spnOverride numeric="46689" spn="VIBO" />
+    <spnOverride numeric="46692" spn="Chungwa" />
+    <spnOverride numeric="46693" spn="MobiTai" />
+    <spnOverride numeric="46697" spn="Taiwan Mobile" />
+    <spnOverride numeric="46699" spn="TransAsia" />
+    <!--Hong Kong -->
+    <spnOverride numeric="45429" spn="PCCW" />
+    <spnOverride numeric="45404" spn="Hutchison"  />
+    <spnOverride numeric="45406" spn="Smartone"  />
+</spnOverrides>

@@ -1,0 +1,324 @@
+# dev nodes
+/dev/btpower                                    u:object_r:bt_device:s0
+/dev/diag                                       u:object_r:diag_device:s0
+/dev/kgsl-3d0                                   u:object_r:gpu_device:s0
+/dev/rtc0                                       u:object_r:rtc_device:s0
+/dev/smd.*                                      u:object_r:smd_device:s0
+# TODO: does ttyMSM0 need to be more specific
+/dev/ttyMSM0                                    u:object_r:tty_device:s0
+/dev/ipa                                        u:object_r:ipa_dev:s0
+/dev/wwan_ioctl                                 u:object_r:ipa_dev:s0
+/dev/ipaNatTable                                u:object_r:ipa_dev:s0
+/dev/cpu_dma_latency                            u:object_r:latency_device:s0
+/dev/rmnet_ctrl.*                               u:object_r:rmnet_device:s0
+/dev/at_.*                                      u:object_r:at_device:s0
+/dev/video([0-9])+                              u:object_r:video_device:s0
+/dev/media([0-9])+                              u:object_r:video_device:s0
+/dev/v4l-subdev.*                               u:object_r:video_device:s0
+/dev/qseecom                                    u:object_r:tee_device:s0
+/dev/qsee_ipc_irq_spss                          u:object_r:qsee_ipc_irq_spss_device:s0
+/dev/seemplog                                   u:object_r:seemplog_device:s0
+/dev/spcom                                      u:object_r:spcom_device:s0
+/dev/jpeg[0-9]*                                 u:object_r:video_device:s0
+/dev/adsprpc-smd                                u:object_r:qdsp_device:s0
+/dev/sdsprpc-smd                                u:object_r:dsp_device:s0
+/dev/wcd-dsp-glink                              u:object_r:audio_device:s0
+/dev/wcd_dsp0_control                           u:object_r:audio_device:s0
+/dev/msm_thermal_query                          u:object_r:thermal_device:s0
+/dev/msm_.*                                     u:object_r:audio_device:s0
+/dev/avtimer                                    u:object_r:avtimer_device:s0
+/dev/subsys_.*                                  u:object_r:ssr_device:s0
+/dev/ramdump_.*                                 u:object_r:ramdump_device:s0
+/dev/hbtp_input                                 u:object_r:hbtp_device:s0
+/dev/hbtp_vm                                    u:object_r:hbtp_device:s0
+/dev/sg[0-9]+                                   u:object_r:sg_device:s0
+/dev/sensors                                    u:object_r:sensors_device:s0
+/dev/mnh_sm                                     u:object_r:easel_device:s0
+/dev/easelcomm-client                           u:object_r:easel_device:s0
+/dev/pn81a                                      u:object_r:pn81a_device:s0
+/dev/stmvl53l0_ranging                          u:object_r:stm_device:s0
+/dev/dpl_ctrl                                   u:object_r:rmnet_device:s0
+/dev/ttyACM[0-9]*                               u:object_r:sidecar_file:s0
+/dev/neko([0-9])+                               u:object_r:neko_device:s0
+
+# dev socket nodes
+/dev/socket/chre                                u:object_r:chre_socket:s0
+/dev/socket/oemlock                             u:object_r:hal_bootctl_socket:s0
+/dev/socket/qmux_audio(/.*)?                    u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_bluetooth(/.*)?                u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_gps(/.*)?                      u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_nfc(/.*)?                      u:object_r:qmuxd_socket:s0
+/dev/socket/qmux_radio(/.*)?                    u:object_r:qmuxd_socket:s0
+/dev/socket/ims_qmid                            u:object_r:ims_socket:s0
+/dev/socket/ims_datad                           u:object_r:ims_socket:s0
+/dev/socket/ipacm_log_file                      u:object_r:ipacm_socket:s0
+/dev/socket/cnd                                 u:object_r:cnd_socket:s0
+/dev/socket/msm_irqbalance                      u:object_r:irqbalance_socket:s0
+/dev/socket/thermal-send-client                 u:object_r:thermal_socket:s0
+/dev/socket/thermal-recv-client                 u:object_r:thermal_socket:s0
+/dev/socket/thermal-recv-passive-client         u:object_r:thermal_socket:s0
+/dev/socket/thermal-send-rule                   u:object_r:thermal_socket:s0
+/dev/socket/perfd                               u:object_r:perfd_socket:s0
+/dev/socket/netmgr(/.*)?                        u:object_r:netmgrd_socket:s0
+/dev/nq-nci                                     u:object_r:nfc_device:s0
+/dev/ttyHS0                                     u:object_r:hci_attach_dev:s0
+/dev/wlan                                       u:object_r:wlan_device:s0
+
+# dev block nodes
+/dev/block/platform/soc/1da4000\.ufshc/by-name/abl_[ab]        u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/dsp_[ab]        u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/cmnlib64_[ab]   u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/cmnlib_[ab]     u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/devcfg_[ab]     u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/hyp_[ab]        u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/keymaster_[ab]  u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/pmic_[ab]       u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/rpm_[ab]        u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/storsec_[ab]    u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/tz_[ab]         u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/nvdef_[ab]      u:object_r:ab_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/bluetooth_[ab]  u:object_r:ab_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/boot_[ab]       u:object_r:boot_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/metadata        u:object_r:metadata_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/misc            u:object_r:misc_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/frp             u:object_r:frp_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/fsc             u:object_r:modem_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/fsg             u:object_r:modem_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/modem_[ab]      u:object_r:modem_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/modemst[12]     u:object_r:modem_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/persist         u:object_r:persist_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/ramdump         u:object_r:ramdump_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/ssd             u:object_r:ssd_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/system_[ab]     u:object_r:system_block_device:s0
+/dev/block/platform/soc/1da4000\.ufshc/by-name/vendor_[ab]     u:object_r:system_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/userdata        u:object_r:userdata_block_device:s0
+
+/dev/block/platform/soc/1da4000\.ufshc/by-name/xbl_[ab]        u:object_r:xbl_block_device:s0
+
+# Block device holding the GPT, where the A/B attributes are stored.
+/dev/block/sda                                  u:object_r:gpt_block_device:s0
+
+# Block devices for the drive that holds the xbl_a and xbl_b partitions.
+/dev/block/sd[bc]1?                             u:object_r:xbl_block_device:s0
+
+# Block device for hal_bootctl
+/dev/block/sde                                  u:object_r:boot_block_device:s0
+
+# Block device for ZRAM
+/dev/block/zram0                                u:object_r:swap_block_device:s0
+
+# files in /vendor
+/vendor/firmware(/.*)?          u:object_r:vendor_firmware_file:s0
+/vendor/bin/hw/android\.hardware\.dumpstate@1\.0-service.mata      u:object_r:hal_dumpstate_impl_exec:s0
+/vendor/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.1-service.mata u:object_r:hal_fingerprint_default_exec:s0
+/vendor/bin/msm_irqbalance      u:object_r:irqbalance_exec:s0
+/vendor/bin/perfd               u:object_r:perfd_exec:s0
+/vendor/bin/thermal-engine      u:object_r:thermal-engine_exec:s0
+/vendor/bin/sensors.qcom        u:object_r:sensors_exec:s0
+/vendor/bin/ssr_setup           u:object_r:ssr_setup_exec:s0
+/vendor/bin/ssr_diag            u:object_r:ssr_diag_exec:s0
+/vendor/bin/pm-service          u:object_r:per_mgr_exec:s0
+/vendor/bin/pm-proxy            u:object_r:per_proxy_exec:s0
+/vendor/bin/qseecomd            u:object_r:tee_exec:s0
+/vendor/bin/adsprpcd            u:object_r:adsprpcd_exec:s0
+/vendor/bin/irsc_util           u:object_r:irsc_util_exec:s0
+/vendor/bin/rmt_storage         u:object_r:rmt_storage_exec:s0
+/vendor/bin/tftp_server         u:object_r:rfs_access_exec:s0
+/vendor/bin/cnss-daemon         u:object_r:wcnss_service_exec:s0
+/vendor/bin/cnss_diag           u:object_r:wcnss_service_exec:s0
+/vendor/bin/diag_mdlog          u:object_r:qlogd_exec:s0
+/vendor/bin/netmgrd             u:object_r:netmgrd_exec:s0
+/vendor/bin/port-bridge         u:object_r:port-bridge_exec:s0
+/vendor/bin/qti                 u:object_r:qti_exec:s0
+/vendor/bin/ramdump             u:object_r:ramdump_exec:s0
+/vendor/bin/smlog_dump          u:object_r:smlog_dump_exec:s0
+/vendor/bin/wcnss_filter        u:object_r:wcnss_filter_exec:s0
+/vendor/bin/loc_launcher        u:object_r:location_exec:s0
+/vendor/bin/lowi-server         u:object_r:location_exec:s0
+/vendor/bin/xtra-daemon         u:object_r:location_exec:s0
+/vendor/bin/pd-mapper           u:object_r:pd_mapper_exec:s0
+/vendor/bin/imsqmidaemon        u:object_r:ims_exec:s0
+/vendor/bin/imsdatadaemon       u:object_r:ims_exec:s0
+/vendor/bin/ims_rtp_daemon      u:object_r:hal_imsrtp_exec:s0
+/vendor/bin/ipacm               u:object_r:hal_tetheroffload_default_exec:s0
+/vendor/bin/ipacm-diag          u:object_r:hal_tetheroffload_default_exec:s0
+/vendor/bin/qmuxd               u:object_r:qmuxd_exec:s0
+/vendor/bin/cnd                 u:object_r:cnd_exec:s0
+/vendor/bin/ATFWD-daemon        u:object_r:atfwd_exec:s0
+# Remove after b/38447389
+/vendor/bin/esed                u:object_r:esed_exec:s0
+# Rename to android.hardware.[XXX] after b/38447431
+/vendor/bin/hw/esed             u:object_r:esed_exec:s0
+/vendor/bin/ese_load            u:object_r:init_ese_exec:s0
+/vendor/bin/ese-replay          u:object_r:esed_exec:s0
+/vendor/bin/ese-ls-provision    u:object_r:esed_exec:s0
+/vendor/bin/hw/android\.hardware\.oemlock@1\.0-service               u:object_r:hal_oemlock_default_exec:s0
+/vendor/bin/oemlock_provision   u:object_r:hal_bootctl_default_exec:s0
+/vendor/bin/oemlock-bridge      u:object_r:hal_bootctl_default_exec:s0
+/vendor/bin/hw/android\.hardware\.usb@1\.0-service.mata              u:object_r:hal_usb_default_exec:s0
+/vendor/bin/hw/android\.hardware\.power@1\.3-service.mata-libperfmgr u:object_r:hal_power_default_exec:s0
+/vendor/bin/hw/android\.hardware\.thermal@1\.0-service.mata          u:object_r:hal_thermal_default_exec:s0
+/vendor/bin/hw/android\.hardware\.health@2\.0-service.mata           u:object_r:hal_health_default_exec:s0
+/vendor/bin/chre                u:object_r:chre_exec:s0
+/vendor/bin/time_daemon         u:object_r:time_daemon_exec:s0
+/vendor/bin/imsrcsd             u:object_r:hal_rcsservice_exec:s0
+/vendor/bin/hbtp_daemon         u:object_r:hbtp_exec:s0
+/vendor/bin/init\.qcom\.devstart\.sh                                 u:object_r:init-qcom-devstart-sh_exec:s0
+/vendor/bin/init\.qcom\.ipastart\.sh                                 u:object_r:init-qcom-ipastart-sh_exec:s0
+/vendor/bin/init\.insmod\.sh                                         u:object_r:init-insmod-sh_exec:s0
+/vendor/etc/init\.insmod\.cfg                                        u:object_r:init-insmod-sh_exec:s0
+/vendor/bin/init\.power\.sh     u:object_r:init_power_exec:s0
+/vendor/bin/init\.radio\.sh     u:object_r:init_radio_exec:s0
+/vendor/bin/init\.qcom\.bt\.sh          u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.early_boot\.sh  u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.post_boot\.sh   u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.usb\.sh         u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.mdm\.sh                   u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.mdm\.crashdata\.sh        u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.syspart_fixup\.sh   u:object_r:qti_init_shell_exec:s0
+/vendor/bin/hcidump.sh                      u:object_r:qti_init_shell_exec:s0
+/vendor/bin/hsic\.control\.bt\.sh           u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.ath3k\.bt\.sh             u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.crda\.sh                  u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.coex\.sh            u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.debug-sdm660\.sh    u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.debug\.sh           u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.efs\.sync\.sh       u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qti\.fm\.sh               u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.sdio\.sh            u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.uicc\.sh            u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qcom\.wifi\.sh            u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.qti\.ims\.sh              u:object_r:qti_init_shell_exec:s0
+/vendor/bin/init\.ambientos\.sh             u:object_r:qti_init_shell_exec:s0
+/vendor/bin/btaddr_extract                  u:object_r:btaddr_extract_exec:s0
+
+/vendor/bin/provision.sh                    u:object_r:qti_init_shell_exec:s0
+/vendor/bin/kb_parser                       u:object_r:qti_init_shell_exec:s0
+/vendor/bin/hdcp1prov                       u:object_r:qti_init_shell_exec:s0
+/vendor/bin/hdcp2p2prov                     u:object_r:qti_init_shell_exec:s0
+/vendor/bin/StoreKeybox                     u:object_r:qti_init_shell_exec:s0
+/vendor/bin/KmInstallKeybox                 u:object_r:qti_init_shell_exec:s0
+
+/system/bin/move_widevine_data\.sh                                   u:object_r:move-widevine-data-sh_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.2-service.widevine          u:object_r:hal_drm_widevine_exec:s0
+/vendor/bin/hw/android\.hardware\.drm@1\.2-service\.clearkey         u:object_r:hal_drm_clearkey_exec:s0
+/vendor/bin/hw/android\.hardware\.vibrator@1\.2-service.mata         u:object_r:hal_vibrator_default_exec:s0
+/vendor/bin/hw/android\.hardware\.gnss@1\.0-service-qti              u:object_r:hal_gnss_qti_exec:s0
+/vendor/bin/hw/android\.hardware\.neuralnetworks@1\.0-service-hvx    u:object_r:hal_neuralnetworks_hvx_exec:s0
+/vendor/bin/hw/vendor\.essential\.hardware\.sidecar@1\.0-service     u:object_r:hal_sidecar_essential_default_exec:s0
+/vendor/bin/wifidisplayhalservice                                    u:object_r:wifidisplayhalservice_qti_exec:s0
+
+###############################################
+# same-process HAL files and their dependencies
+#
+/vendor/lib(64)?/hw/android\.hardware\.graphics\.mapper@2\.0-impl-2.1\.so u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/hw/gralloc\.msm8998\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libqdMetaData\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libqservice\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libqdutils\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libadreno_utils\.so       u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libgsl\.so                u:object_r:same_process_hal_file:s0
+
+/vendor/lib(64)?/hw/vulkan\.msm8998\.so    u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libEGL_adreno\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libGLESv1_CM_adreno\.so   u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libGLESv2_adreno\.so      u:object_r:same_process_hal_file:s0
+
+/vendor/lib(64)?/libdrmutils\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libdrm\.so                u:object_r:same_process_hal_file:s0
+
+# /vendor/app/TimeService/TimeService.apk
+/vendor/lib(64)?/libTimeService\.so        u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libtime_genoff\.so        u:object_r:same_process_hal_file:s0
+
+# RenderScript dependencies.
+# To test: run cts -m CtsRenderscriptTestCases
+/vendor/lib(64)?/libRSDriver_adreno\.so     u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libCB\.so                  u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libllvm-qgl\.so            u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libbccQTI\.so              u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libllvm-qcom\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/librs_adreno\.so           u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/librs_adreno_sha1\.so      u:object_r:same_process_hal_file:s0
+/vendor/lib(64)?/libqti-perfd-client\.so    u:object_r:same_process_hal_file:s0
+
+# TODO(b/36895509): remove the following 2 lines once this bug is resolved
+# needed by radio
+/vendor/lib(64)?/libimsmedia_jni\.so        u:object_r:same_process_hal_file:s0
+
+# libGLESv2_adreno depends on this
+/vendor/lib(64)?/libllvm-glnext\.so         u:object_r:same_process_hal_file:s0
+
+# Hexagon DSP host runtime and DSP-side executable needed for Halide operation
+/vendor/lib(64)?/libadsprpc\.so             u:object_r:same_process_hal_file:s0
+/vendor/lib/dsp/fastrpc_shell_0             u:object_r:hexagon_halide_file:s0
+
+# Hexagon DSP lib to extract image features
+/vendor/lib/rfsa/adsp/libexternal_dog_skel\.so  u:object_r:same_process_hal_file:s0
+/vendor/lib/rfsa/adsp/libdspCV_skel\.so         u:object_r:same_process_hal_file:s0
+/vendor/lib/rfsa/adsp/libapps_mem_heap\.so      u:object_r:same_process_hal_file:s0
+
+# thermal sysfs files
+/sys/class/thermal(/.*)?                    u:object_r:sysfs_thermal:s0
+
+# data files
+/data/vendor/netmgr(/.*)?              u:object_r:netmgr_data_file:s0
+/data/vendor/location(/.*)?            u:object_r:location_data_file:s0
+/data/ramdump(/.*)?                    u:object_r:ramdump_data_file:s0
+/data/nfc(/.*)?                        u:object_r:nfc_data_file:s0
+/data/vendor/camera(/.*)?              u:object_r:camera_vendor_data_file:s0
+/data/vendor/display(/.*)?             u:object_r:display_vendor_data_file:s0
+/data/vendor/nfc(/.*)?                 u:object_r:nfc_vendor_data_file:s0
+/data/vendor/radio(/.*)?               u:object_r:radio_vendor_data_file:s0
+/data/vendor/wifi/cnss_diag(/.*)?      u:object_r:cnss_vendor_data_file:s0
+/data/vendor/ramdump(/.*)?             u:object_r:ramdump_vendor_data_file:s0
+/data/vendor/ssrdump(/.*)?             u:object_r:ramdump_vendor_data_file:s0
+/data/vendor/modem_dump(/.*)?          u:object_r:modem_dump_file:s0
+/data/vendor/ese(/.*)?                 u:object_r:ese_vendor_data_file:s0
+/data/vendor/ipa(/.*)?                 u:object_r:ipa_vendor_data_file:s0
+/data/vendor/sensors(/.*)?             u:object_r:sensors_vendor_data_file:s0
+/data/vendor/misc/audio(/.*)?          u:object_r:audio_vendor_data_file:s0
+/data/vendor/time(/.*)?                u:object_r:time_vendor_data_file:s0
+/data/vendor/hbtp(/.*)?                u:object_r:hbtp_vendor_data_file:s0
+/data/vendor/tombstones/rfs(/.*)?      u:object_r:tombstone_rfs_vendor_data_file:s0
+/data/vendor/mediadrm(/.*)?            u:object_r:mediadrm_vendor_data_file:s0
+
+# input files
+/vendor/usr/idc(/.*)?                  u:object_r:idc_file:s0
+/vendor/usr/keylayout(/.*)?            u:object_r:keylayout_file:s0
+
+# /
+/tombstones                u:object_r:rootfs:s0
+/dsp(/.*)?                 u:object_r:adsprpcd_file:s0
+
+
+# files in firmware
+/firmware                  u:object_r:firmware_file:s0
+
+# /persist
+/persist(/.*)?            u:object_r:persist_file:s0
+/persist/data(/.*)?       u:object_r:persist_data_file:s0
+/persist/display(/.*)?    u:object_r:persist_display_file:s0
+/persist/drm(/.*)?        u:object_r:persist_drm_file:s0
+/persist/elabel(/.*)?     u:object_r:persist_elabel_file:s0
+/persist/haptics(/.*)?    u:object_r:persist_haptics_file:s0
+/persist/hlos_rfs(/.*)?   u:object_r:persist_rfs_file:s0
+/persist/rfs(/.*)?        u:object_r:persist_rfs_file:s0
+/persist/sensors(/.*)?    u:object_r:persist_sensors_file:s0
+/persist/time(/.*)?       u:object_r:persist_time_file:s0
+/persist/bluetooth(/.*)?  u:object_r:persist_bluetooth_file:s0
+
+/metadata                 u:object_r:rootfs:s0
+/metadata/.*              u:object_r:vold_data_file:s0
+
+/vendor/bin/hvdcp_opti    u:object_r:hvdcp_exec:s0
+
+/sys/devices/virtual/block/.*/stat u:object_r:sysfs_devices_block_stat:s0

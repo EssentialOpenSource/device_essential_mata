@@ -1,0 +1,11 @@
+allow hal_health_default sysfs_batteryinfo:dir search;
+allow hal_health_default sysfs_batteryinfo:file r_file_perms;
+allow hal_health_default sysfs_msm_subsys:dir search;
+allow hal_health_default kmsg_device:chr_file rw_file_perms;
+r_dir_file(hal_health_default, persist_file);
+r_dir_file(hal_health_default, sysfs_msm_subsys)
+
+allow hal_health_default debugfs_ufs:dir search;
+allow hal_health_default sysfs_scsi_devices_0000:dir search;
+allow hal_health_default debugfs_ufs:file { getattr open read };
+allow hal_health_default sysfs_scsi_devices_0000:file { getattr open read };

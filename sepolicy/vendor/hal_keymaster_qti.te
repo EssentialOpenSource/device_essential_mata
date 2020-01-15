@@ -1,0 +1,9 @@
+type hal_keymaster_qti, domain;
+hal_server_domain(hal_keymaster_qti, hal_keymaster)
+
+type hal_keymaster_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_keymaster_qti)
+
+dontaudit hal_keymaster_qti firmware_file:dir search;
+
+get_prop(hal_keymaster_qti, tee_listener_prop)

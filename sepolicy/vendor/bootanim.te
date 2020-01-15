@@ -1,0 +1,7 @@
+allow bootanim hwservicemanager:binder call;
+
+# TODO(b/62954877). On Android Wear, bootanim reads the time
+# during boot to display. It currently gets that time from a file
+# in /data/system. This should be moved. In the meantime, suppress
+# this denial since this functionality is not used.
+dontaudit bootanim system_data_file:dir read;

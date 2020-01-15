@@ -1,0 +1,19 @@
+# /vendor/bin/ese_load init called shell script.
+type init_ese, domain;
+type init_ese_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init_ese)
+
+# Shell script exec (toolbox)
+allow init_ese vendor_shell_exec:file r_file_perms;
+allow init_ese vendor_toolbox_exec:file rx_file_perms;
+
+# eSE tools
+allow init_ese esed_exec:file rx_file_perms;
+
+# eSE device and data dirs
+allow init_ese pn81a_device:chr_file rw_file_perms;
+allow init_ese ese_vendor_data_file:dir create_dir_perms;
+allow init_ese ese_vendor_data_file:file create_file_perms;
+
+allow init_ese vendor_file:file execute_no_trans;

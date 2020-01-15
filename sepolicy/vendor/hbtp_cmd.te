@@ -1,0 +1,25 @@
+type hbtp_cmd, domain;
+type hbtp_cmd_exec, exec_type, file_type;
+
+allow hbtp adsprpcd_file:dir { getattr search };
+
+allow hbtp_cmd hal_hbtp_hwservice:hwservice_manager find;
+allow hbtp_cmd hbtp:binder { call transfer };
+allow hbtp_cmd hbtp_exec:file { execute execute_no_trans getattr open read };
+allow hbtp_cmd hbtp_log_file:dir { getattr search };
+allow hbtp_cmd hwservicemanager:binder { call transfer };
+allow hbtp_cmd hwservicemanager_prop:file { getattr open read };
+allow hbtp_cmd vendor_shell_exec:file { rx_file_perms entrypoint };
+allow hbtp_cmd vendor_file:file { execute getattr open read };
+
+allow hwservicemanager hbtp_cmd:binder { call transfer };
+allow hwservicemanager hbtp_cmd:dir search;
+allow hwservicemanager hbtp_cmd:file { open read };
+allow hwservicemanager hbtp_cmd:process getattr;
+
+allow init hbtp_cmd:process { noatsecure rlimitinh siginh transition };
+
+allow hbtp_cmd hbtp_vendor_data_file:dir search;
+allow hbtp_cmd hbtp_vendor_data_file:file { open read getattr };
+allow hbtp_cmd hbtp_vendor_data_file:dir { open read getattr };
+

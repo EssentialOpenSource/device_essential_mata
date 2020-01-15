@@ -1,0 +1,13 @@
+# for diag over socket
+allow kernel self:socket create;
+
+allow kernel vendor_firmware_file:dir search;
+allow kernel vendor_firmware_file:file r_file_perms;
+allow kernel vendor_firmware_file:lnk_file read;
+
+dontaudit kernel kernel:system module_request;
+
+allow kernel debugfs_ipc:dir search;
+allow kernel persist_file:dir search;
+
+allow kernel debugfs_wlan:dir search;

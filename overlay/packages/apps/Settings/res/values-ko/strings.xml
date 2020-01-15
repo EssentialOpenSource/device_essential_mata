@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"배터리 자동 조절 사용 설정"</string>
+    <string name="smart_battery_manager_title" >"배터리 자동 조절"</string>
+    <string name="smart_battery_footer" product="default" >"배터리 자동 조절에서는 자주 사용하지 않는 앱의 배터리 사용량을 제한하여 배터리 수명을 늘립니다. 시간이 지남에 따라 휴대전화에서 사용자의 앱 사용 방식을 학습합니다.\n\n제한된 앱의 알림이 지연될 수 있습니다."</string>
+    <string name="smart_battery_footer" product="tablet" >"배터리 자동 조절에서는 자주 사용하지 않는 앱의 배터리 사용량을 제한하여 배터리 수명을 늘립니다. 시간이 지남에 따라 태블릿에서 사용자의 앱 사용 방식을 학습합니다.\n\n제한된 앱의 알림이 지연될 수 있습니다."</string>
+    <string name="smart_battery_footer" product="device" >"배터리 자동 조절에서는 자주 사용하지 않는 앱의 배터리 사용량을 제한하여 배터리 수명을 늘립니다. 시간이 지남에 따라 기기에서 사용자의 앱 사용 방식을 학습합니다.\n\n제한된 앱의 알림이 지연될 수 있습니다."</string>
+    <string name="smart_battery_title" >"배터리 자동 조절 사용"</string>
+    <string name="battery_tip_smart_battery_summary" >"배터리 자동 조절 사용 설정"</string>
+</resources>

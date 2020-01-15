@@ -1,0 +1,125 @@
+type sysfs_camera, sysfs_type, fs_type;
+type sysfs_clkscale, sysfs_type, fs_type;
+type sysfs_console_suspend, sysfs_type, fs_type;
+type sysfs_easel, sysfs_type, fs_type;
+type sysfs_fingerprint, sysfs_type, fs_type;
+type sysfs_graphics, sysfs_type, fs_type;
+type sysfs_laser, sysfs_type, fs_type;
+type sysfs_mdss_mdp_caps, sysfs_type, fs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_msm_subsys_restart, sysfs_type, fs_type;
+type sysfs_rmtfs, sysfs_type, fs_type;
+type sysfs_soc, sysfs_type, fs_type;
+type sysfs_scsi_devices_0000, sysfs_type, fs_type;
+type sysfs_scsi_devices_other, sysfs_type, fs_type;
+type sysfs_devices_block_stat, sysfs_type, fs_type;
+type sysfs_timestamp_switch, sysfs_type, fs_type;
+type sysfs_touch, sysfs_type, fs_type;
+type sysfs_usb_c, sysfs_type, fs_type;
+type sysfs_usb_device, sysfs_type, fs_type;
+type sysfs_battery_supply, sysfs_type, fs_type;
+type sysfs_usb_supply, sysfs_type, fs_type;
+# sysfs vadc device for hvdcp/quickcharge
+type sysfs_vadc_dev, sysfs_type, fs_type;
+# sysfs spmi device for hvdcp/quickcharge
+type sysfs_spmi_dev, sysfs_type, fs_type;
+type sysfs_audio, sysfs_type, fs_type;
+type sysfs_perf, sysfs_type, fs_type;
+
+type debugfs_clk, debugfs_type, fs_type;
+type debugfs_ion, debugfs_type, fs_type;
+type debugfs_ipc, debugfs_type, fs_type;
+type debugfs_kgsl, debugfs_type, fs_type;
+type debugfs_rpm, debugfs_type, fs_type;
+type debugfs_rmt_storage, debugfs_type, fs_type;
+type debugfs_usb, debugfs_type, fs_type;
+type debugfs_wlan, debugfs_type, fs_type;
+type debugfs_mdp, debugfs_type, fs_type;
+type debugfs_icnss, debugfs_type, fs_type;
+type debugfs_ufs, debugfs_type, fs_type;
+type debugfs_dma_bufinfo, debugfs_type, fs_type;
+
+# /proc
+type proc_wifi_dbg, fs_type, proc_type;
+type proc_sensor, fs_type, proc_type;
+type proc_kernel, fs_type, proc_type;
+
+type qmuxd_socket, file_type;
+type netmgrd_socket, file_type;
+type thermal_socket, file_type;
+type perfd_socket, file_type;
+
+type ims_socket, file_type;
+type ipacm_socket, file_type;
+type cnd_socket, file_type;
+type chre_socket, file_type;
+type hal_bootctl_socket, file_type;
+
+type firmware_file, fs_type, contextmount_type;
+
+type location_data_file, file_type, data_file_type;
+
+type persist_file, file_type;
+type persist_data_file, file_type;
+type persist_display_file, file_type;
+type persist_drm_file, file_type;
+type persist_elabel_file, file_type;
+type persist_haptics_file, file_type;
+type persist_rfs_file, file_type;
+type persist_sensors_file, file_type;
+type persist_time_file, file_type;
+type persist_bluetooth_file, file_type;
+
+type netmgr_data_file, file_type, data_file_type;
+type ipa_vendor_data_file, file_type, data_file_type;
+
+type camera_vendor_data_file, file_type, data_file_type;
+type display_vendor_data_file, file_type, data_file_type;
+type nfc_vendor_data_file, file_type, data_file_type;
+type radio_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+type cnss_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+type ramdump_vendor_data_file, file_type, data_file_type, mlstrustedobject;
+type modem_dump_file, file_type, data_file_type;
+type ese_vendor_data_file, file_type, data_file_type;
+type sensors_vendor_data_file, file_type, data_file_type;
+type audio_vendor_data_file, file_type, data_file_type;
+type time_vendor_data_file, file_type, data_file_type;
+type hbtp_vendor_data_file, file_type, data_file_type;
+type tombstone_rfs_vendor_data_file, file_type, data_file_type;
+type pstore_backup_file, file_type, core_data_file_type, data_file_type;
+type tracing_shell_writable, fs_type, debugfs_type;
+type mediadrm_vendor_data_file, file_type, data_file_type;
+
+type vendor_firmware_file, vendor_file_type, file_type;
+
+type ramdump_data_file, file_type, core_data_file_type, data_file_type, mlstrustedobject;
+
+#data sysfs files
+type sysfs_data, fs_type, sysfs_type;
+
+#diag sysfs files
+type sysfs_diag, fs_type, sysfs_type;
+
+type hexagon_halide_file, vendor_file_type, file_type;
+
+# input files
+type idc_file, file_type, vendor_file_type;
+type keylayout_file, file_type, vendor_file_type;
+
+# Battery Stats file
+typeattribute sysfs_batteryinfo mlstrustedobject;
+
+# msm_irqbalance
+type proc_irq, fs_type, proc_type;
+type sysfs_irq, fs_type, sysfs_type;
+type irqbalance_socket, file_type;
+
+type sysfs_esoc, sysfs_type, fs_type;
+
+# hbtp config file
+type hbtp_cfg_file, file_type;
+type hbtp_log_file, file_type;
+type adsprpcd_file, file_type, mlstrustedobject;
+
+type sidecar_file, fs_type, sysfs_type;
+type rfs_system_file, file_type, system_file_type;

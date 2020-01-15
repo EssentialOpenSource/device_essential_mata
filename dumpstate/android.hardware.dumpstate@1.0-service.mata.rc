@@ -1,0 +1,4 @@
+service dumpstate-1-0 /vendor/bin/hw/android.hardware.dumpstate@1.0-service.mata
+    class hal
+    user system
+    group system

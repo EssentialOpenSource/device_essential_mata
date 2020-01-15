@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
+/* Copyright (c) 2016, The Linux Foundation. All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are
+ * met:
+ *     * Redistributions of source code must retain the above copyright
+ *       notice, this list of conditions and the following disclaimer.
+ *     * Redistributions in binary form must reproduce the above
+ *       copyright notice, this list of conditions and the following
+ *       disclaimer in the documentation and/or other materials provided
+ *       with the distribution.
+ *     * Neither the name of The Linux Foundation nor the names of its
+ *       contributors may be used to endorse or promote products derived
+ *       from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+ * ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+ * BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+ * BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+ * WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+ * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+ * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ */
+-->
+
+<Powerhint>
+    <Hint type="0x0A00"> <!--video encode 30 fps-->
+        <Resource opcode="0x40804000" value="0x7A6"/>   <!-- B CPU - Cluster max freq ~1.958 Ghz -->
+    </Hint>
+    <Hint type="0x0F00"> <!--sustained performance-->
+        <Resource opcode="0x40800000" value="0x0"/>     <!-- B CPU - Cluster min freq uncapped -->
+        <Resource opcode="0x40800100" value="0x0"/>     <!-- L CPU - Cluster min freq uncapped -->
+        <Resource opcode="0x40804000" value="0x4E0"/>   <!-- B CPU - Cluster max freq ~1.2 GHz -->
+        <Resource opcode="0x40804100" value="0x4E0"/>   <!-- L CPU - Cluster max freq ~1.2 Ghz -->
+        <Resource opcode="0x4280C000" value="0xB4"/>    <!-- GPU - min freq 180 Mhz -->
+        <Resource opcode="0x42810000" value="0x156"/>   <!-- GPU - max freq 342 Mhz -->
+        <Resource opcode="0x42814000" value="0x0"/>     <!-- GPUBW freq uncapped -->
+    </Hint>
+    <Hint type="0x1000"> <!--vr mode-->
+        <Resource opcode="0x40800000" value="0x626"/>   <!-- B CPU - Cluster min freq ~1.4 Ghz -->
+        <Resource opcode="0x40800100" value="0x613"/>   <!-- L CPU - Cluster min freq ~1.4 Ghz -->
+        <Resource opcode="0x40804000" value="0x626"/>   <!-- B CPU - Cluster max freq ~1.4 Ghz -->
+        <Resource opcode="0x40804100" value="0x613"/>   <!-- L CPU - Cluster max freq ~1.4 Ghz -->
+        <Resource opcode="0x4280C000" value="0x203"/>   <!-- GPU - min freq 515 Mhz -->
+        <Resource opcode="0x42810000" value="0x203"/>   <!-- GPU - max freq 515 Mhz -->
+        <Resource opcode="0x42814000" value="0x2E57"/>  <!-- GPUBW freq 1555 Mhz-->
+    </Hint>
+    <Hint type="0x1001"> <!--vr mode sustained performance-->
+        <Resource opcode="0x40800000" value="0x540"/>   <!-- B CPU - Cluster min freq ~1.5 Ghz -->
+        <Resource opcode="0x40800100" value="0x5c6"/>   <!-- L CPU - Cluster min freq ~1.3 Ghz -->
+        <Resource opcode="0x40804000" value="0x540"/>   <!-- B CPU - Cluster max freq ~1.5 Ghz -->
+        <Resource opcode="0x40804100" value="0x5c6"/>   <!-- L CPU - Cluster max freq ~1.3 Ghz -->
+        <Resource opcode="0x4280C000" value="0x19E"/>   <!-- GPU - min freq 414 Mhz -->
+        <Resource opcode="0x42810000" value="0x19E"/>   <!-- GPU - max freq 414 Mhz -->
+        <Resource opcode="0x42814000" value="0x1E4F"/>  <!-- GPUBW freq 1017 Mhz -->
+    </Hint>
+    <Hint type="0x1A00"> <!--interaction-->
+        <Resource opcode="0x40800000" value="0x44C"/>     <!-- B CPU - Cluster min freq ~1.1 Ghz -->
+        <Resource opcode="0x40800100" value="0x44C"/>     <!-- L CPU - Cluster min freq ~1.1 Ghz -->
+        <Resource opcode="0x4180C000" value="0x0"/>       <!-- CPUBW disable hysteresis -->
+        <Resource opcode="0x41800000" value="0x33"/>      <!-- CPUBW min freq 681 MHz -->
+    </Hint>
+    <Hint type="0x1B00"> <!--boost-->
+        <Resource opcode="0x40804000" value="0xFFF"/>     <!-- B CPU - Cluster max freq ~ max -->
+        <Resource opcode="0x40804100" value="0xFFF"/>     <!-- L CPU - Cluster max freq ~ max -->
+        <Resource opcode="0x40800000" value="0xFFF"/>     <!-- B CPU - Cluster min freq ~ max -->
+        <Resource opcode="0x40800100" value="0xFFF"/>     <!-- L CPU - Cluster min freq ~ max -->
+        <Resource opcode="0x4180C000" value="0x0"/>       <!-- CPUBW disable hysteresis -->
+        <Resource opcode="0x40400000" value="0x1"/>       <!-- POWER_COLLAPSE -->
+        <Resource opcode="0x41800000" value="0x8C"/>      <!-- CPUBW min freq 1804 MHz -->
+    </Hint>
+</Powerhint>

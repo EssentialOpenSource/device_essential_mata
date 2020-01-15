@@ -1,0 +1,21 @@
+allow hal_power_default perfd:unix_stream_socket connectto;
+allow hal_power_default perfd_socket:sock_file write;
+
+allow hal_power_default sysfs_graphics:dir search;
+allow hal_power_default sysfs_graphics:file r_file_perms;
+
+allow hal_power_default debugfs_rpm:file r_file_perms;
+
+allow hal_power_default debugfs_wlan:dir r_dir_perms;
+allow hal_power_default debugfs_wlan:file r_file_perms;
+
+allow hal_power_default sysfs_soc:dir search;
+allow hal_power_default sysfs_soc:file r_file_perms;
+
+# To do powerhint on nodes defined in powerhint.json
+allow hal_power_default sysfs_msm_subsys:dir search;
+allow hal_power_default sysfs_msm_subsys:file rw_file_perms;
+allow hal_power_default sysfs_devices_system_cpu:file rw_file_perms;
+allow hal_power_default latency_device:chr_file rw_file_perms;
+# To get/set powerhal state property
+set_prop(hal_power_default, power_prop)

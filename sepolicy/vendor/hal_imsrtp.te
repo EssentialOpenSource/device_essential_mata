@@ -1,0 +1,33 @@
+#ims rtp service
+type hal_imsrtp, domain;
+type hal_imsrtp_exec, exec_type, vendor_file_type, file_type;
+
+# Started by init
+init_daemon_domain(hal_imsrtp)
+net_domain(hal_imsrtp)
+
+hwbinder_use(hal_imsrtp)
+get_prop(hal_imsrtp, hwservicemanager_prop)
+add_hwservice(hal_imsrtp, hal_imsrtp_hwservice)
+
+allow hal_imsrtp self:socket create_socket_perms;
+unix_socket_connect(hal_imsrtp, ims, ims)
+
+allow hal_imsrtp sysfs_timestamp_switch:file r_file_perms;
+
+# ioctlcmd=c302
+allowxperm hal_imsrtp self:socket ioctl msm_sock_ipc_ioctls;
+
+allow hal_imsrtp self:capability net_bind_service;
+
+allow hal_imsrtp sysfs_timestamp_switch:file r_file_perms;
+allow hal_imsrtp ion_device:chr_file r_file_perms;
+allow hal_imsrtp sysfs_data:file r_file_perms;
+r_dir_file(hal_imsrtp, sysfs_msm_subsys)
+r_dir_file(hal_imsrtp, sysfs_diag)
+r_dir_file(hal_imsrtp, sysfs_soc)
+r_dir_file(hal_imsrtp, sysfs_esoc)
+
+allow hal_imsrtp ion_device:chr_file r_file_perms;
+get_prop(hal_imsrtp, ims_prop)
+binder_call(hal_imsrtp, radio)

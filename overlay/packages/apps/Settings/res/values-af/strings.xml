@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Skakel Aanpasbare Battery aan"</string>
+    <string name="smart_battery_manager_title" >"Aanpasbare Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Om die batterylewe te verleng, beperk Aanpasbare Battery die batterygebruik van programme wat selde gebruik word. Jou foon sal mettertyd leer hoe jy programme gebruik.\n\nKennisgewings sal dalk vir hierdie programme vertraag word."</string>
+    <string name="smart_battery_footer" product="tablet" >"Om die batterylewe te verleng, beperk Aanpasbare Battery die batterygebruik van programme wat selde gebruik word. Jou tablet sal mettertyd leer hoe jy programme gebruik.\n\nKennisgewings sal dalk vir hierdie programme vertraag word."</string>
+    <string name="smart_battery_footer" product="device" >"Om die batterylewe te verleng, beperk Aanpasbare Battery die batterygebruik van programme wat selde gebruik word. Jou toestel sal mettertyd leer hoe jy programme gebruik.\n\nKennisgewings sal dalk vir hierdie programme vertraag word."</string>
+    <string name="smart_battery_title" >"Gebruik Aanpasbare Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"Skakel Aanpasbare Battery aan"</string>
+</resources>

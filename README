@@ -1,0 +1,19 @@
+To build:
+
+- Clone the latest AOSP code (For example 10.0.0_r25 tag)
+
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r25
+
+- Add Essential mata repo
+
+mkdir -p device/essential
+cd device/essential
+git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata
+
+- Download prebuilt vendor.img (To be provided)
+
+source build/envsetup.sh
+lunch mata-userdebug
+make -j16
+
+- Flash boot, system and vendor (unlock device only)

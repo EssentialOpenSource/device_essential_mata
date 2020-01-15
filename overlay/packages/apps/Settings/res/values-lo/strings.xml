@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"ເປີດໃຊ້ແບັດເຕີຣີແບບປັບຕົວໄດ້"</string>
+    <string name="smart_battery_manager_title" >"ແບັດເຕີຣີແບບປັບຕົວໄດ້"</string>
+    <string name="smart_battery_footer" product="default" >"ເພື່ອເພີ່ມອາຍຸແບັດເຕີຣີ, ແບັດເຕີຣີແບບປັບຕົວໄດ້ຈະຈຳກັດແບັດເຕີຣີສຳລັບແອັບທີ່ບໍ່ຄ່ອຍໄດ້ໃຊ້. ໂທລະສັບຂອງທ່ານຈະຮຽນຮູ້ວິທີທີ່ທ່ານໃຊ້ແອັບຕ່າງໆເມື່ອເວລາຜ່ານໄປ.\n\nການແຈ້ງເຕືອນອາດຊັກຊ້າສຳລັບແອັບເຫຼົ່ານີ້."</string>
+    <string name="smart_battery_footer" product="tablet" >"ເພື່ອເພີ່ມອາຍຸແບັດເຕີຣີ, ແບັດເຕີຣີແບບປັບຕົວໄດ້ຈະຈຳກັດແບັດເຕີຣີສຳລັບແອັບທີ່ບໍ່ຄ່ອຍໄດ້ໃຊ້. ແທັບເລັດຂອງທ່ານຈະຮຽນຮູ້ວິທີທີ່ທ່ານໃຊ້ແອັບຕ່າງໆເມື່ອເວລາຜ່ານໄປ.\n\nການແຈ້ງເຕືອນອາດຊັກຊ້າສຳລັບແອັບເຫຼົ່ານີ້."</string>
+    <string name="smart_battery_footer" product="device" >"ເພື່ອເພີ່ມອາຍຸແບັດເຕີຣີ, ແບັດເຕີຣີແບບປັບຕົວໄດ້ຈະຈຳກັດແບັດເຕີຣີສຳລັບແອັບທີ່ບໍ່ຄ່ອຍໄດ້ໃຊ້. ອຸປະກອນຂອງທ່ານຈະຮຽນຮູ້ວິທີທີ່ທ່ານໃຊ້ແອັບຕ່າງໆເມື່ອເວລາຜ່ານໄປ.\n\nການແຈ້ງເຕືອນອາດຊັກຊ້າສຳລັບແອັບເຫຼົ່ານີ້."</string>
+    <string name="smart_battery_title" >"ແບັດເຕີຣີແບບປັບຕົວໄດ້"</string>
+    <string name="battery_tip_smart_battery_summary" >"ເປີດໃຊ້ແບັດເຕີຣີແບບປັບຕົວໄດ້"</string>
+</resources>

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Adaptive Battery funksiyasini yoqing"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Batareya quvvatini uzaytirish uchun Adaptive Battery kam ishlatiladigan ilovalar uchun batareyani cheklaydi. Telefoningiz ilovalardan qancha muddatda foydalanishingizni o‘rganib boradi.\n\nMazkur ilovalar uchun bildirishnomalar kechikishi mumkin."</string>
+    <string name="smart_battery_footer" product="tablet" >"Batareya quvvatini uzaytirish uchun Adaptive Battery kam ishlatiladigan ilovalar uchun batareyani cheklaydi. Planshetingiz ilovalardan qancha muddatda foydalanishingizni o‘rganib boradi.\n\nMazkur ilovalar uchun bildirishnomalar kechikishi mumkin."</string>
+    <string name="smart_battery_footer" product="device" >"Batareya quvvatini uzaytirish uchun Adaptive Battery kam ishlatiladigan ilovalar uchun batareyani cheklaydi. Qurilmangiz ilovalardan qancha muddatda foydalanishingizni o‘rganib boradi.\n\nMazkur ilovalar uchun bildirishnomalar kechikishi mumkin."</string>
+    <string name="smart_battery_title" >"Adaptive Battery funksiyasidan foydalanish"</string>
+    <string name="battery_tip_smart_battery_summary" >"Adaptive Battery funksiyasini yoqing"</string>
+</resources>

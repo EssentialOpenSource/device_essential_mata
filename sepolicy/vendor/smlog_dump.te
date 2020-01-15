@@ -1,0 +1,27 @@
+type smlog_dump_exec, exec_type, vendor_file_type, file_type;
+
+userdebug_or_eng(`
+  type smlog_dump, domain;
+  allow smlog_dump modem_dump_file:dir create_dir_perms;
+  allow smlog_dump modem_dump_file:file create_file_perms;
+  r_dir_file(smlog_dump, sysfs_uio)
+  r_dir_file(smlog_dump, sysfs_rmtfs)
+
+  allow smlog_dump diag_device:chr_file rw_file_perms;
+  allow smlog_dump radio_vendor_data_file:file { append read write };
+  allow smlog_dump rild:fd use;
+  allow smlog_dump rild:fifo_file { read write };
+  allow smlog_dump rild:unix_stream_socket { read write };
+  allow smlog_dump rild:netlink_generic_socket { read write };
+  allow smlog_dump self:socket create_socket_perms;
+  allowxperm smlog_dump self:socket ioctl msm_sock_ipc_ioctls;
+  allow smlog_dump sysfs:dir r_dir_perms;
+  allow smlog_dump sysfs_msm_subsys:dir r_dir_perms;
+  allow smlog_dump sysfs_msm_subsys:file r_file_perms;
+  allow smlog_dump sysfs_msm_subsys:lnk_file read;
+  allow smlog_dump sysfs_soc:dir search;
+  allow smlog_dump sysfs_soc:file r_file_perms;
+  allow smlog_dump dumpstate:fd use;
+  allow smlog_dump hal_dumpstate_impl:fd use;
+  allow smlog_dump uio_device:chr_file rw_file_perms;
+')

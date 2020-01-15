@@ -1,0 +1,19 @@
+type init_power, domain;
+type init_power_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init_power)
+
+set_prop(init_power, post_boot_prop)
+
+allow init_power vendor_shell_exec:file rx_file_perms;
+allow init_power vendor_toolbox_exec:file rx_file_perms;
+
+r_dir_file(init_power, sysfs_msm_subsys)
+
+allow init_power sysfs_msm_subsys:file write;
+allow init_power sysfs_thermal:dir search;
+allow init_power sysfs_thermal:file w_file_perms;
+allow init_power sysfs_devices_system_cpu:file w_file_perms;
+allow init_power sysfs_soc:file r_file_perms;
+allow init_power sysfs_soc:dir search;
+allow init_power sysfs_console_suspend:file w_file_perms;

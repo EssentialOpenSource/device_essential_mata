@@ -1,0 +1,12 @@
+# This daemon loads the Context Hub Runtime Environment (CHRE) dynamic modules
+# onto the SLPI using FastRPC, and exposes a sockets interface for clients on
+# the applications processor to interact CHRE
+type chre, domain;
+type chre_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(chre)
+
+allow chre ion_device:chr_file { open read };
+allow chre qdsp_device:chr_file { ioctl open read };
+
+allow chre system_file:dir read;

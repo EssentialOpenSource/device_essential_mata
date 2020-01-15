@@ -1,0 +1,9 @@
+allow hal_bluetooth_default bt_device:chr_file rw_file_perms;
+
+allow hal_bluetooth_default wcnss_filter:unix_stream_socket connectto;
+
+# talk to system_server to set priority
+allow hal_bluetooth fwk_scheduler_hwservice:hwservice_manager find;
+allow hal_bluetooth system_server:binder call;
+
+set_prop(hal_bluetooth_default, wc_prop)

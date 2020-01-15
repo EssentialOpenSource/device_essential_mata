@@ -1,0 +1,23 @@
+userdebug_or_eng(`
+  allow dumpstate proc_modules:file r_file_perms;
+  allow dumpstate proc_stat:file r_file_perms;
+  allow dumpstate persist_file:dir r_dir_perms;
+  allow dumpstate sysfs_leds:dir search;
+  allow dumpstate system_block_device:blk_file r_file_perms;
+
+  dontaudit dumpstate self:netlink_xfrm_socket create_socket_perms_no_ioctl;
+
+  binder_call(dumpstate, per_mgr)
+')
+
+# Allow access to /data/misc/trace
+allow dumpstate method_trace_data_file:dir rw_dir_perms;
+allow dumpstate method_trace_data_file:file create_file_perms;
+allow dumpstate sysfs_scsi_devices_0000:file r_file_perms;
+allow dumpstate sysfs_scsi_devices_other:file r_file_perms;
+allow dumpstate sysfs_devices_block_stat:file r_file_perms;
+dontaudit dumpstate persist_file:dir r_dir_perms;
+dontaudit dumpstate kernel:system module_request;
+
+allow dumpstate adsprpcd_file:dir getattr;
+allow dumpstate adsprpcd_file:filesystem getattr;

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"开启 Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"为了延长电池续航时间，Adaptive Battery 会针对不常用的应用限制用电量。久而久之，您的手机就会逐渐了解应用的使用情况。\n\n这些应用的通知可能会有所延迟。"</string>
+    <string name="smart_battery_footer" product="tablet" >"为了延长电池续航时间，Adaptive Battery 会针对不常用的应用限制用电量。久而久之，您的平板电脑就会逐渐了解应用的使用情况。\n\n这些应用的通知可能会有所延迟。"</string>
+    <string name="smart_battery_footer" product="device" >"为了延长电池续航时间，Adaptive Battery 会针对不常用的应用限制用电量。久而久之，您的设备就会逐渐了解应用的使用情况。\n\n这些应用的通知可能会有所延迟。"</string>
+    <string name="smart_battery_title" >"使用 Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"开启 Adaptive Battery"</string>
+</resources>

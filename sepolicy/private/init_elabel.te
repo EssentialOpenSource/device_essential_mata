@@ -1,0 +1,10 @@
+# /system/bin/init.elabel.sh
+#
+# write data from /persist/elabel to /data/misc/elabel for use by
+# settings app
+#
+init_daemon_domain(init_elabel)
+
+allow init_elabel shell_exec:file rx_file_perms;
+allow init_elabel toolbox_exec:file rx_file_perms;
+

@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Aktivizo \"Baterinë me përshtatje\""</string>
+    <string name="smart_battery_manager_title" >"Bateria me përshtatje"</string>
+    <string name="smart_battery_footer" product="default" >"Për të zgjatur kohëzgjatjen e baterisë, \"Bateria me përshtatje\" kufizon baterinë për aplikacionet që nuk përdoren shpesh. Telefoni yt do të mësojë se si i përdor ti aplikacionet me kalimin e kohës.\n\nNjoftimet mund të vonohen për këto aplikacione."</string>
+    <string name="smart_battery_footer" product="tablet" >"Për të zgjatur kohëzgjatjen e baterisë, \"Bateria me përshtatje\" kufizon baterinë për aplikacionet që nuk përdoren shpesh. Tableti yt do të mësojë se si i përdor ti aplikacionet me kalimin e kohës.\n\nNjoftimet mund të vonohen për këto aplikacione."</string>
+    <string name="smart_battery_footer" product="device" >"Për të zgjatur kohëzgjatjen e baterisë, \"Bateria me përshtatje\" kufizon baterinë për aplikacionet që nuk përdoren shpesh. Pajisja jote do të mësojë se si i përdor ti aplikacionet me kalimin e kohës.\n\nNjoftimet mund të vonohen për këto aplikacione."</string>
+    <string name="smart_battery_title" >"Përdor \"Baterinë me përshtatje\""</string>
+    <string name="battery_tip_smart_battery_summary" >"Aktivizo \"Baterinë me përshtatje\""</string>
+</resources>

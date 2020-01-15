@@ -1,0 +1,17 @@
+vendor.qti.hardware.radio.ims::IImsRadio                            u:object_r:vnd_ims_radio_hwservice:s0
+vendor.qti.hardware.radio.qcrilhook::IQtiOemHook                    u:object_r:vnd_qcrilhook_hwservice:s0
+com.qualcomm.qti.uceservice::IUceService                            u:object_r:hal_imsrcsd_hwservice:s0
+vendor.qti.hardware.radio.atcmdfwd::IAtCmdFwd                       u:object_r:vnd_atcmdfwd_hwservice:s0
+vendor.qti.hardware.radio.am::IQcRilAudio                           u:object_r:vnd_qcrilhook_hwservice:s0
+vendor.qti.imsrtpservice::IRTPService                               u:object_r:hal_imsrtp_hwservice:s0
+com.quicinc.cne.api::IApiService                                    u:object_r:hal_cne_hwservice:s0
+com.quicinc.cne.server::IServer                                     u:object_r:hal_cne_hwservice:s0
+vendor.qti.hardware.improvetouch.touchcompanion::ITouchCompanion    u:object_r:hal_hbtp_hwservice:s0
+vendor.qti.hardware.improvetouch.gesturemanager::IGestureManager    u:object_r:hal_hbtp_hwservice:s0
+vendor.qti.hardware.improvetouch.blobmanager::IBlobManager          u:object_r:hal_hbtp_hwservice:s0
+vendor.essential.hardware.sidecar::ISidecar                         u:object_r:hal_sidecar_essential_hwservice:s0
+com.qualcomm.qti.imscmservice::IImsCmService                        u:object_r:hal_imsrcsd_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IHDCPSession                       u:object_r:wifidisplayhalservice_hwservice:s0
+com.qualcomm.qti.wifidisplayhal::IDSManager                         u:object_r:wifidisplayhalservice_hwservice:s0
+vendor.nxp.nxpnfc::INxpNfc                                          u:object_r:nxpnfc_hwservice:s0
+vendor.nxp.nxpese::INxpEse                                          u:object_r:nxpese_hwservice:s0

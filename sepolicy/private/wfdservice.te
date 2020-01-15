@@ -1,0 +1,137 @@
+# Copyright (c) 2017, The Linux Foundation. All rights reserved.
+#
+# Redistribution and use in source and binary forms, with or without
+# modification, are permitted provided that the following conditions are
+# met:
+#     * Redistributions of source code must retain the above copyright
+#       notice, this list of conditions and the following disclaimer.
+#     * Redistributions in binary form must reproduce the above
+#       copyright notice, this list of conditions and the following
+#       disclaimer in the documentation and/or other materials provided
+#       with the distribution.
+#     * Neither the name of The Linux Foundation nor the names of its
+#       contributors may be used to endorse or promote products derived
+#       from this software without specific prior written permission.
+#
+# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
+# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
+# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
+# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
+# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
+# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
+# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
+# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+type wfdservice, domain;
+type wfdservice_exec, exec_type, file_type, system_file_type;
+typeattribute wfdservice coredomain;
+
+#Allow for transition from init domain to wfdservice
+init_daemon_domain(wfdservice)
+
+#Inherit base socket permissions from netd domain
+net_domain(wfdservice)
+
+#Allow wfdservice to use Binder IPC
+binder_use(wfdservice)
+
+#Allow for interaction with Display HAL
+binder_call(wfdservice, surfaceflinger)
+binder_call(surfaceflinger, wfdservice)
+
+#Allow apps to interact with wfdservice
+binder_call(wfdservice, platform_app)
+binder_call(platform_app, wfdservice)
+binder_call(wfdservice, system_app)
+binder_call(system_app, wfdservice)
+
+#Allow access to Audio Flinger APIs
+binder_call(wfdservice, audioserver)
+
+#Allow access to Permission Controller in System Server
+binder_call(wfdservice, system_server)
+
+# Mark wfdservice as a Binder service domain
+binder_service(wfdservice)
+
+#Allow wfdservice to be registered with service manager
+allow wfdservice wfdservice_service:service_manager add;
+
+#Allow access to PCM sound card
+allow wfdservice audio_device:chr_file rw_file_perms;
+allow wfdservice audio_device:dir r_dir_perms;
+
+#Allow access to /dev/graphics/fb* for screen capture
+allow wfdservice graphics_device:chr_file rw_file_perms;
+
+#Allow access to encoder for YUV statistics
+allow wfdservice gpu_device:chr_file rw_file_perms;
+
+#Allow communication with init over property server
+unix_socket_connect(wfdservice, property, init);
+
+#Allow access to /dev/video/* devices for encoding/decoding
+allow wfdservice video_device:chr_file rw_file_perms;
+allow wfdservice video_device:dir r_dir_perms;
+
+#Allow access to tee device for HDCP sessions
+
+#Allow access to uhid driver for HID event injection
+allow wfdservice uhid_device:chr_file rw_file_perms;
+
+#Allow PROT_EXEC for 3rd party library loaded by wfdservice
+allow wfdservice self:process execmem;
+
+userdebug_or_eng(`
+#Allow access to read mmosal_logmask file in /data partition
+  allow wfdservice system_data_file:file r_file_perms;
+#Allow access to dump encoder/decoder dumps in /data/misc/media
+  allow wfdservice media_data_file:dir w_dir_perms;
+  allow wfdservice media_data_file:file create_file_perms;
+')
+
+#Allow access to /data/media for dumping
+allow wfdservice media_rw_data_file:dir create_dir_perms;
+allow wfdservice media_rw_data_file:file create_file_perms;
+
+allow wfdservice self:netlink_kobject_uevent_socket create_socket_perms_no_ioctl;
+
+# Allow access to input_device for touch input detection
+allow wfdservice input_device:dir r_dir_perms;
+allow wfdservice input_device:chr_file r_file_perms;
+
+# Allow access to mediaserver, surfaceflinger and permissionmanager
+# for interaction of wfdservice
+allow wfdservice {audioserver_service permission_service surfaceflinger_service wfdservice_service}: service_manager find;
+
+#Allow setting of net_admin capability so that libnl API's can be used
+allow wfdservice self:capability net_admin;
+
+#Allow wfdservice to query interface name of network (p2p etc.)
+allow wfdservice self:netlink_socket create_socket_perms_no_ioctl;
+
+#Allow ion device access
+allow wfdservice ion_device:chr_file r_file_perms;
+
+#Allow udp socket ioctl
+allow wfdservice self:udp_socket ioctl;
+
+# ioctlcmd=8bff
+allowxperm wfdservice self:udp_socket ioctl priv_sock_ioctls;
+
+#Allow access to proc/net/arp
+allow wfdservice proc_net:file r_file_perms;
+
+#Allow hardware binder use
+hwbinder_use(wfdservice)
+get_prop(wfdservice, hwservicemanager_prop)
+
+#Allow hal graphics mapper permissions
+hal_client_domain(wfdservice, hal_graphics_composer);
+
+#Allow hal graphics allocator permissions
+hal_client_domain(wfdservice, hal_graphics_allocator);
+

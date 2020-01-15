@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Uključite prilagodljivu bateriju"</string>
+    <string name="smart_battery_manager_title" >"Prilagodljiva baterija"</string>
+    <string name="smart_battery_footer" product="default" >"Da bi se produžio vijek trajanja baterije, prilagodljiva baterija ograničava upotrebu baterije za aplikacije koje se ne koriste često. Telefon će vremenom učiti na koji način koristite aplikacije.\n\nMoguće je da će obavještenja za te aplikacije kasniti."</string>
+    <string name="smart_battery_footer" product="tablet" >"Da bi se produžio vijek trajanja baterije, prilagodljiva baterija ograničava upotrebu baterije za aplikacije koje se ne koriste često. Tablet će vremenom učiti na koji način koristite aplikacije.\n\nMoguće je da će obavještenja za te aplikacije kasniti."</string>
+    <string name="smart_battery_footer" product="device" >"Da bi se produžio vijek trajanja baterije, prilagodljiva baterija ograničava upotrebu baterije za aplikacije koje se ne koriste često. Uređaj će vremenom učiti na koji način koristite aplikacije.\n\nMoguće je da će obavještenja za te aplikacije kasniti."</string>
+    <string name="smart_battery_title" >"Koristi prilagodljivu bateriju"</string>
+    <string name="battery_tip_smart_battery_summary" >"Uključite prilagodljivu bateriju"</string>
+</resources>

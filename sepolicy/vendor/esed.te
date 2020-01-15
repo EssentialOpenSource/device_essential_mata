@@ -1,0 +1,12 @@
+# android.hardware.weaver HAL implementation
+# Clean up naming after via b/38447431
+type esed, domain;
+type esed_exec, exec_type, vendor_file_type, file_type;
+
+hal_server_domain(esed, hal_weaver)
+
+allow esed pn81a_device:chr_file rw_file_perms;
+allow esed ese_vendor_data_file:dir create_dir_perms;
+allow esed ese_vendor_data_file:file create_file_perms;
+
+init_daemon_domain(esed)

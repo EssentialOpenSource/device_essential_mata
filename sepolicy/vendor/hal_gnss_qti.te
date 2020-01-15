@@ -1,0 +1,46 @@
+type hal_gnss_qti, domain;
+hal_server_domain(hal_gnss_qti, hal_gnss)
+
+type hal_gnss_qti_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_gnss_qti)
+
+r_dir_file(hal_gnss_qti, sysfs_msm_subsys)
+
+vndbinder_use(hal_gnss_qti)
+
+allow hal_gnss_qti sysfs_soc:dir r_dir_perms;
+allow hal_gnss_qti sysfs_soc:file r_file_perms;
+
+binder_call(hal_gnss_qti, per_mgr)
+allow hal_gnss_qti per_mgr_service:service_manager find;
+
+# /data/vendor/location
+allow hal_gnss_qti location_data_file:fifo_file { open read setattr write };
+allow hal_gnss_qti location_data_file:dir create_dir_perms;
+allow hal_gnss_qti location_data_file:sock_file write;
+
+allow hal_gnss_qti location:unix_stream_socket connectto;
+
+allow hal_gnss_qti self:socket create_socket_perms;
+allowxperm hal_gnss_qti self:socket ioctl msm_sock_ipc_ioctls;
+
+unix_socket_connect(hal_gnss_qti, netmgrd, netmgrd)
+allow hal_gnss_qti netmgrd_socket:dir search;
+
+allow hal_gnss_qti self:netlink_generic_socket { bind create read };
+allow hal_gnss_qti self:netlink_route_socket { bind create nlmsg_read read write };
+
+# Most HALs are not allowed to use network sockets. Qcom library
+# libqdi is used across multiple processes which are clients of
+# netmgrd including the GNSS HAL. libqdi first attempts to get the network
+# interface using an IOCTL on a UDP INET socket, which isn't allowed here.
+# If that fails, it falls back to using libc's if_nameindex() which requires
+# a netlink route socket, which HALs may use. Due to the initial
+# attempt to use a UDP socket, we still see a selinux denial,
+# but it is safe to ignore.
+# TODO (b/37730994) Remove udp_socket requirement from
+# libqdi and have all its clients use netlink route
+# sockets.
+dontaudit hal_gnss_qti self:udp_socket create;
+
+r_dir_file(hal_gnss_qti, sysfs_esoc)

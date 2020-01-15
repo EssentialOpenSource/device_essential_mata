@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Включите Adaptive Battery"</string>
+    <string name="smart_battery_manager_title" >"Adaptive Battery"</string>
+    <string name="smart_battery_footer" product="default" >"Чтобы продлить время работы от батареи, функция Adaptive Battery ограничивает фоновые процессы редко используемых приложений. Со временем ваш телефон запоминает, какие приложения вы используете чаще, а какие реже.\n\nУведомления от приложений, работу которых вы ограничиваете, могут приходить с задержкой."</string>
+    <string name="smart_battery_footer" product="tablet" >"Чтобы продлить время работы от батареи, функция Adaptive Battery ограничивает фоновые процессы редко используемых приложений. Со временем ваш планшет запоминает, какие приложения вы используете чаще, а какие реже.\n\nУведомления от приложений, работу которых вы ограничиваете, могут приходить с задержкой."</string>
+    <string name="smart_battery_footer" product="device" >"Чтобы продлить время работы от батареи, функция Adaptive Battery ограничивает фоновые процессы редко используемых приложений. Со временем ваше устройство запоминает, какие приложения вы используете чаще, а какие реже.\n\nУведомления от приложений, работу которых вы ограничиваете, могут приходить с задержкой."</string>
+    <string name="smart_battery_title" >"Включить Adaptive Battery"</string>
+    <string name="battery_tip_smart_battery_summary" >"Включите Adaptive Battery"</string>
+</resources>

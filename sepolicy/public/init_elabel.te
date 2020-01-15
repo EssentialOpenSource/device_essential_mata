@@ -1,0 +1,7 @@
+# /system/bin/init.elabel.sh
+#
+# write data from /persist/elabel to /data/misc/elabel for use by
+# settings app
+#
+type init_elabel, domain, coredomain;
+type init_elabel_exec, exec_type, file_type, system_file_type;

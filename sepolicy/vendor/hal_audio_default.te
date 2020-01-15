@@ -1,0 +1,15 @@
+r_dir_file(hal_audio_default, sysfs_soc)
+
+allow hal_audio_default perfd:unix_stream_socket connectto;
+allow hal_audio_default perfd_socket:sock_file write;
+
+userdebug_or_eng(`
+  allow hal_audio diag_device:chr_file rw_file_perms;
+')
+
+allow hal_audio_default audio_vendor_data_file:dir create_dir_perms;
+allow hal_audio_default audio_vendor_data_file:file create_file_perms;
+
+r_dir_file(hal_audio_default, sysfs_audio)
+
+set_prop(hal_audio_default, mqa_hd_prop)

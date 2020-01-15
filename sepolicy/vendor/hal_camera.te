@@ -1,0 +1,52 @@
+# communicate with perfd
+allow hal_camera perfd:unix_stream_socket connectto;
+allow hal_camera perfd_socket:sock_file write;
+allow hal_camera perfd_socket:sock_file w_file_perms;
+
+allow hal_camera self:capability sys_nice;
+
+# communicate with camera
+#allow hal_camera camera:unix_dgram_socket sendto;
+#allow hal_camera camera_data_file:sock_file write;
+#allow hal_camera camera_device:chr_file rw_file_perms;
+
+allow hal_camera gpu_device:chr_file rw_file_perms;
+
+# access to /dev/input/event{5,10}
+allow hal_camera input_device:dir r_dir_perms;
+allow hal_camera input_device:chr_file r_file_perms;
+
+set_prop(hal_camera, camera_prop)
+
+#allow hal_camera sysfs_enable_ps_sensor:file w_file_perms;
+r_dir_file(hal_camera, sysfs_type)
+# find libraries
+allow hal_camera system_file:dir r_dir_perms;
+
+allow hal_camera qdisplay_service:service_manager find;
+
+# talk to system_server
+
+allow hal_camera system_server:unix_stream_socket { read write };
+
+allow hal_camera self:socket { create ioctl read write };
+
+# Grant access to Qualcomm MSM Interface (QMI) radio sockets
+# qmux_socket(hal_camera)
+
+# allow hal_camera to call some socket ioctls
+allowxperm hal_camera self:socket ioctl { IPC_ROUTER_IOCTL_LOOKUP_SERVER IPC_ROUTER_IOCTL_BIND_CONTROL_PORT };
+
+# ignore spurious denial
+dontaudit hal_camera graphics_device:dir search;
+
+userdebug_or_eng(`
+  allow hal_camera diag_device:chr_file rw_file_perms;
+')
+
+# access easel dev nodes
+allow hal_camera easel_device:chr_file { read write ioctl open getattr };
+allow hal_camera sysfs_easel:file rw_file_perms;
+
+# access hexagon
+allow hal_camera qdsp_device:chr_file r_file_perms;

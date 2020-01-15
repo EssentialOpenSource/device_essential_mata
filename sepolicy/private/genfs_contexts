@@ -1,0 +1,4 @@
+genfscon sysfs /devices/virtual/ramoops/pstore/aes_key                  u:object_r:sysfs_pstore:s0
+genfscon sysfs /devices/virtual/ramoops/pstore/aes_key_iv               u:object_r:sysfs_pstore:s0
+genfscon sysfs /devices/virtual/ramoops/pstore/aes_key_tag              u:object_r:sysfs_pstore:s0
+genfscon sysfs /devices/virtual/ramoops/pstore/use_alt                  u:object_r:sysfs_pstore:s0

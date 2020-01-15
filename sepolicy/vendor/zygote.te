@@ -1,0 +1,2 @@
+get_prop(zygote, build_prop)
+get_prop(webview_zygote, build_prop)

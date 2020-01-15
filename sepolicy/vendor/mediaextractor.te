@@ -1,0 +1,3 @@
+userdebug_or_eng(`
+  allow mediaextractor dumpstate:fifo_file append;
+')

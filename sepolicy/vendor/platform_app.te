@@ -1,0 +1,10 @@
+# Allow Ecore to update these debug data collection properties:
+# dalvik.vm.stack-trace-file
+# debug.sys.enableThreadTrace
+# debug.sys.enableAnrUploads
+set_prop(platform_app, dalvik_prop);
+set_prop(platform_app, debug_prop);
+
+# Allow Ecore access to /data/anr similar to Hub.
+allow platform_app anr_data_file:dir rw_dir_perms;
+allow platform_app anr_data_file:file create_file_perms;

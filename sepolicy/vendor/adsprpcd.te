@@ -1,0 +1,14 @@
+type adsprpcd, domain;
+type adsprpcd_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(adsprpcd)
+
+allow adsprpcd ion_device:chr_file r_file_perms;
+allow adsprpcd qdsp_device:chr_file r_file_perms;
+
+# For search/read fluence libs
+allow adsprpcd adsprpcd_file:dir { getattr search };
+allow adsprpcd adsprpcd_file:dir read;
+allow adsprpcd adsprpcd_file:file { getattr open read };
+
+allow adsprpcd_file self:filesystem associate;

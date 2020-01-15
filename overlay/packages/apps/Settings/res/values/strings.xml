@@ -1,0 +1,27 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="help_url_fingerprint" translatable="false">https://support.essential.com</string>
+    <string name="battery_suggestion_summary">Turn on Adaptive Battery</string>
+    <string name="smart_battery_manager_title">Adaptive Battery</string>
+    <string name="smart_battery_footer" product="default">To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your phone will learn how you use apps over time.\n\nNotifications may be delayed for these apps.</string>
+    <string name="smart_battery_footer" product="tablet">To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your tablet will learn how you use apps over time.\n\nNotifications may be delayed for these apps.</string>
+    <string name="smart_battery_footer" product="device">To extend battery life, Adaptive Battery limits battery for infrequently used apps. Your device will learn how you use apps over time.\n\nNotifications may be delayed for these apps.</string>
+    <string name="smart_battery_title">Use Adaptive Battery</string>
+    <string name="battery_tip_smart_battery_summary">Turn on Adaptive Battery</string>
+    <string name="preferred_network_mode_lte_gsm_wcdma_summary">Preferred network mode: GSM/WCDMA/LTE</string>
+    <string name="preferred_network_mode_lte_wcdma_summary">Preferred network mode: LTE/WCDMA</string>
+    <string name="preferred_network_mode_wcdma_perf_summary">Preferred network mode: WCDMA preferred</string>
+    <string name="preferred_network_mode_wcdma_only_summary">Preferred network mode: WCDMA only</string>
+    <string name="preferred_network_mode_gsm_wcdma_lte_choice">GSM/WCDMA/LTE</string>
+    <string name="preferred_network_mode_lte_wcdma_choice">LTE/WCDMA</string>
+    <string name="preferred_network_mode_gsm_wcdma_preferred_choice">GSM/WCDMA preferred</string>
+    <string name="preferred_network_mode_wcdma_only_choice">WCDMA only</string>
+    <string name="preferred_network_mode_lte_tdscdma_cdma_evdo_gsm_wcdma_summary">Preferred network mode: Automatic</string>
+    <string name="preferred_network_mode_lte_cdma_evdo_summary">Preferred network mode: LTE/CDMA</string>
+    <string name="preferred_network_mode_cdma_summary">Preferred network mode: CDMA</string>
+    <string name="preferred_network_mode_cdma_evdo_summary">Preferred network mode: CDMA</string>
+    <string name="preferred_network_mode_gsm_wcdma_summary">Preferred network mode: GSM/UMTS</string>
+    <string name="preferred_network_mode_td_scdma_lte_gsm_wcdma_cdma_evdo_choice">Automatic</string>
+    <string name="preferred_network_mode_cdma_lte_evdo_choice">LTE/CDMA</string>
+    <string name="preferred_network_mode_cdma_evdo_auto_choice">CDMA</string>
+    <string name="preferred_network_mode_gsm_wcdma_auto_choice">GSM/UMTS</string>
+</resources>

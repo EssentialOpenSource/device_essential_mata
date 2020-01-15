@@ -1,0 +1,42 @@
+type essential_camera_app, domain;
+
+app_domain(essential_camera_app)
+net_domain(essential_camera_app)
+
+# Services from untrusted_app_all.
+# Should be kept in sync with untrusted_app_all.
+allow essential_camera_app audioserver_service:service_manager find;
+allow essential_camera_app cameraserver_service:service_manager find;
+allow essential_camera_app drmserver_service:service_manager find;
+allow essential_camera_app mediaserver_service:service_manager find;
+allow essential_camera_app mediaextractor_service:service_manager find;
+allow essential_camera_app mediametrics_service:service_manager find;
+allow essential_camera_app mediadrmserver_service:service_manager find;
+allow essential_camera_app nfc_service:service_manager find;
+allow essential_camera_app radio_service:service_manager find;
+allow essential_camera_app surfaceflinger_service:service_manager find;
+allow essential_camera_app app_api_service:service_manager find;
+allow essential_camera_app vr_manager_service:service_manager find;
+
+# Execute libraries from RenderScript cache
+allow essential_camera_app app_data_file:file { rx_file_perms };
+
+# Read memory info
+allow essential_camera_app proc_meminfo:file r_file_perms;
+
+# Read and write system app data files passed over Binder.
+# Motivating case was /data/data/com.android.settings/cache/*.jpg for
+# cropping or taking user photos.
+allow essential_camera_app system_app_data_file:file { read write getattr };
+allow essential_camera_app hal_sidecar_essential_hwservice:hwservice_manager find;
+binder_call(essential_camera_app, hal_sidecar_essential_default)
+allow essential_camera_app nfc_service:service_manager find;
+r_dir_file(essential_camera_app, sysfs_usb_device)
+
+allow essential_camera_app neko_device:chr_file rw_file_perms;
+
+allow essential_camera_app vendor_file:file { getattr open read };
+
+# Allow access to perfd
+allow essential_camera_app perfd_socket:sock_file write;
+allow essential_camera_app perfd:unix_stream_socket connectto;

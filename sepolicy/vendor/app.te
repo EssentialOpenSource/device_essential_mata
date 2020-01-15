@@ -1,0 +1,2 @@
+# For the camera app
+get_prop(appdomain, camera_prop)

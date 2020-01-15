@@ -1,0 +1,2 @@
+set_prop(hal_gatekeeper, keymaster_prop)
+get_prop(hal_gatekeeper, tee_listener_prop)

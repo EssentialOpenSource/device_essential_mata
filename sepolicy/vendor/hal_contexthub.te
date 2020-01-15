@@ -1,0 +1,3 @@
+# Allow context hub HAL to communicate with daemon via socket
+allow hal_contexthub_default chre:unix_stream_socket connectto;
+allow hal_contexthub_default chre_socket:sock_file write;

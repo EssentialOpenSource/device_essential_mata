@@ -1,0 +1,9 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="battery_suggestion_summary" >"Activer la batterie adaptative"</string>
+    <string name="smart_battery_manager_title" >"Batterie adaptative"</string>
+    <string name="smart_battery_footer" product="default" >"Afin de prolonger l\'autonomie de la batterie, la batterie adaptative limite l\'utilisation de la batterie pour les applications peu utilisées. Votre téléphone apprendra comment vous utilisez les applications au fil du temps.\n\nLes notifications peuvent être retardées pour ces applications."</string>
+    <string name="smart_battery_footer" product="tablet" >"Afin de prolonger l\'autonomie de la batterie, la batterie adaptative limite l\'utilisation de la batterie pour les applications peu utilisées. Votre tablette apprendra comment vous utilisez les applications au fil du temps.\n\nLes notifications peuvent être retardées pour ces applications."</string>
+    <string name="smart_battery_footer" product="device" >"Afin de prolonger l\'autonomie de la batterie, la batterie adaptative limite l\'utilisation de la batterie pour les applications peu utilisées. Votre appareil apprendra comment vous utilisez les applications au fil du temps.\n\nLes notifications peuvent être retardées pour ces applications."</string>
+    <string name="smart_battery_title" >"Utiliser la batterie adaptative"</string>
+    <string name="battery_tip_smart_battery_summary" >"Activer la batterie adaptative"</string>
+</resources>

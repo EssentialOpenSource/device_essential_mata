@@ -1,0 +1,6 @@
+# interact with thermal_config
+set_prop(hal_vr, thermal_prop)
+
+# Access to touch vrmode node
+allow hal_vr sysfs_touch:dir r_dir_perms;
+allow hal_vr sysfs_touch:file rw_file_perms;

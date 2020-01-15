@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!--- Copyright (c) 2014-2017, The Linux Foundation. All rights reserved.       -->
+<!---                                                                           -->
+<!--- Redistribution and use in source and binary forms, with or without        -->
+<!--- modification, are permitted provided that the following conditions are    -->
+<!--- met:                                                                      -->
+<!---     * Redistributions of source code must retain the above copyright      -->
+<!---       notice, this list of conditions and the following disclaimer.       -->
+<!---     * Redistributions in binary form must reproduce the above             -->
+<!---       copyright notice, this list of conditions and the following         -->
+<!---       disclaimer in the documentation and/or other materials provided     -->
+<!---       with the distribution.                                              -->
+<!---     * Neither the name of The Linux Foundation nor the names of its       -->
+<!---       contributors may be used to endorse or promote products derived     -->
+<!---       from this software without specific prior written permission.       -->
+<!---                                                                           -->
+<!--- THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED              -->
+<!--- WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF      -->
+<!--- MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT    -->
+<!--- ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS    -->
+<!--- BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR    -->
+<!--- CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF      -->
+<!--- SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR           -->
+<!--- BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,     -->
+<!--- WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE      -->
+<!--- OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN    -->
+<!--- IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.                             -->
+
+<mixer>
+    <!-- These are the initial mixer settings -->
+    <ctl name="LSM1 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM2 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM3 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM4 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM5 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM6 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM7 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM8 Mixer SLIMBUS_5_TX" value="0" />
+    <ctl name="LSM1 Port" value="None" />
+    <ctl name="LSM2 Port" value="None" />
+    <ctl name="LSM3 Port" value="None" />
+    <ctl name="LSM4 Port" value="None" />
+    <ctl name="LSM5 Port" value="None" />
+    <ctl name="LSM6 Port" value="None" />
+    <ctl name="LSM7 Port" value="None" />
+    <ctl name="LSM8 Port" value="None" />
+    <ctl name="SLIMBUS_5_TX LSM Function" value="None" />
+    <ctl name="MADONOFF Switch" value="0" />
+    <ctl name="MAD Input" value="DMIC1" />
+    <ctl name="MAD_BROADCAST Switch" value="0" />
+    <ctl name="TX13 INP MUX" value="CDC_DEC_5" />
+    <ctl name="AIF4_MAD Mixer SLIM TX12" value="0" />
+    <ctl name="AIF4_MAD Mixer SLIM TX13" value="0" />
+    <ctl name="CPE AFE MAD Enable" value="0"/>
+    <ctl name="CLK MODE" value="EXTERNAL" />
+    <ctl name="EC BUF MUX INP" value="ZERO" />
+    <ctl name="ADC MUX1" value="DMIC" />
+    <ctl name="DMIC MUX1" value="ZERO" />
+
+    <path name="listen-voice-wakeup-1">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM1 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM1 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+
+    <path name="listen-voice-wakeup-2">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM2 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM2 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-3">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM3 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM3 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-4">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM4 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM4 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-5">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM5 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM5 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-6">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM6 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM6 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-7">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM7 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM7 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+    <path name="listen-voice-wakeup-8">
+        <ctl name="SLIMBUS_5_TX LSM Function" value="AUDIO" />
+        <ctl name="LSM8 Port" value="SLIMBUS_5_TX" />
+        <ctl name="LSM8 Mixer SLIMBUS_5_TX" value="1" />
+    </path>
+
+    <path name="listen-cpe-handset-mic">
+        <ctl name="MADONOFF Switch" value="1" />
+        <ctl name="TX13 INP MUX" value="CPE_TX_PP" />
+        <ctl name="AIF4_MAD Mixer SLIM TX13" value="1" />
+        <ctl name="MAD Input" value="DMIC0" />
+        <ctl name="CPE AFE MAD Enable" value="1"/>
+    </path>
+
+    <path name="listen-cpe-handset-mic-ecpp">
+        <ctl name="CLK MODE" value="INTERNAL" />
+        <ctl name="EC BUF MUX INP" value="DEC1" />
+        <ctl name="ADC MUX1" value="DMIC" />
+        <ctl name="DMIC MUX1" value="DMIC0" />
+    </path>
+
+    <!-- path name used for low bandwidth FTRT codec interface -->
+    <path name="listen-cpe-handset-mic low-speed-intf">
+        <ctl name="MADONOFF Switch" value="1" />
+        <ctl name="AIF4_MAD Mixer SLIM TX12" value="1" />
+        <ctl name="MAD Input" value="DMIC0" />
+        <ctl name="CPE AFE MAD Enable" value="1"/>
+    </path>
+
+    <path name="listen-ape-handset-mic">
+        <ctl name="MAD_BROADCAST Switch" value="1" />
+        <ctl name="TX13 INP MUX" value="MAD_BRDCST" />
+        <ctl name="AIF4_MAD Mixer SLIM TX13" value="1" />
+        <ctl name="MAD Input" value="DMIC0" />
+    </path>
+
+</mixer>

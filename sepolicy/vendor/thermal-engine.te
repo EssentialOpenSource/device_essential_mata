@@ -1,0 +1,37 @@
+type thermal-engine, domain;
+type thermal-engine_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(thermal-engine)
+
+allow thermal-engine self:capability2 block_suspend;
+
+# to read /sys/devices
+allow thermal-engine sysfs:dir r_dir_perms;
+
+allow thermal-engine sysfs_msm_subsys:dir r_dir_perms;
+allow thermal-engine sysfs_msm_subsys:file rw_file_perms;
+allow thermal-engine sysfs_soc:dir search;
+allow thermal-engine sysfs_soc:file r_file_perms;
+allow thermal-engine sysfs_thermal:dir r_dir_perms;
+allow thermal-engine sysfs_thermal:file rw_file_perms;
+allow thermal-engine sysfs_leds:file rw_file_perms;
+allow thermal-engine sysfs_thermal:lnk_file read;
+allow thermal-engine sysfs_rmtfs:dir search;
+allow thermal-engine sysfs_rmtfs:file r_file_perms;
+# to read /proc/stat
+allow thermal-engine proc_stat:file { getattr open read };
+# IThermal Thermal HAL
+hal_server_domain(thermal-engine, hal_thermal)
+
+allow thermal-engine thermal_device:chr_file rw_file_perms;
+
+r_dir_file(thermal-engine, sysfs_leds)
+r_dir_file(thermal-engine, sysfs_msm_subsys)
+r_dir_file(thermal-engine, sysfs_uio)
+r_dir_file(thermal-engine, sysfs_esoc)
+
+allow thermal-engine self:socket create_socket_perms;
+allowxperm thermal-engine self:socket ioctl msm_sock_ipc_ioctls;
+
+# reboot/shutdown for thermal limits exceeded
+set_prop(thermal-engine, powerctl_prop)

@@ -1,0 +1,16 @@
+type init-insmod-sh, domain;
+type init-insmod-sh_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(init-insmod-sh)
+
+allow init-insmod-sh vendor_shell_exec:file rx_file_perms;
+allow init-insmod-sh vendor_toolbox_exec:file rx_file_perms;
+
+# Set the sys.touch.modules.ready property
+set_prop(init-insmod-sh, system_prop)
+
+# Allow insmod
+allow init-insmod-sh self:capability sys_module;
+allow init-insmod-sh system_file:system module_load;
+
+allow init-insmod-sh vendor_file:system module_load;

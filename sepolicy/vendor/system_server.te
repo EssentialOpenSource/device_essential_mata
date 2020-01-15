@@ -1,0 +1,27 @@
+allow system_server self:socket ioctl;
+allowxperm system_server self:socket ioctl msm_sock_ipc_ioctls;
+
+binder_call(system_server, hal_camera_default)
+
+allow system_server persist_file:dir search;
+allow system_server persist_sensors_file:dir search;
+allow system_server persist_sensors_file:file r_file_perms;
+allow system_server wlan_device:chr_file rw_file_perms;
+allow system_server sysfs_msm_subsys:file { open read getattr};
+
+# Switch states
+r_dir_file(system_server, sysfs_audio)
+
+# TODO(b/30675296): Remove following dontaudit's upon resolution of this bug
+# The timerslack_ns denials spam the system really horribly
+dontaudit system_server audioserver:file write;
+dontaudit system_server untrusted_app:file write;
+dontaudit system_server hal_audio_default:file write;
+dontaudit system_server appdomain:file write;
+
+get_prop(system_server, build_prop)
+# NFC check for Package Manager
+get_prop(system_server, nfc_service_prop)
+get_prop(system_server, omadm_prop)
+
+get_prop(system_server, grip_prop)
