@@ -306,16 +306,10 @@ PRODUCT_PACKAGES += update_engine \
 		    update_engine_client \
 		    update_verifier \
 		    bootctrl.msm8998 \
+		    bootctrl.msm8998.recovery \
 		    android.hardware.boot@1.0-impl \
+		    android.hardware.boot@1.0-impl.recovery \
 		    android.hardware.boot@1.0-service
-
-# Enable update engine sideloading by including the static version of the
-# boot_control HAL and its dependencies.
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.msm8998 \
-    libgptutils \
-    libz \
-    libcutils
 
 PRODUCT_PACKAGES += \
     update_engine_sideload
