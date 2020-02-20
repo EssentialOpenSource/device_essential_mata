@@ -1,16 +1,20 @@
-To build:
+To build R preview code:
 
-- Clone the latest AOSP code (For example 10.0.0_r25 tag)
+- Clone the latest R AOSP code (For example android-r-preview-1 tag)
 
-repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r25
+repo init -u https://android.googlesource.com/platform/manifest -b android-r-preview-1
+
+- Apply
+
+https://android-review.googlesource.com/c/platform/external/e2fsprogs/+/1216916
 
 - Add Essential mata repo
 
 mkdir -p device/essential
 cd device/essential
-git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata
+git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata -b r-preview
 
-- Download prebuilt vendor.img (To be provided)
+- Download prebuilt vendor-QQ1A.200105.032.img (To be provided)
 
 source build/envsetup.sh
 lunch mata-userdebug
