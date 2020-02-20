@@ -105,8 +105,6 @@ genfscon sysfs /kernel/boot_slpi/boot                                   u:object
 genfscon sysfs /devices/soc/c1b7000.i2c/i2c-9/9-0008                    u:object_r:sysfs_easel:s0
 genfscon sysfs /class/typec                                             u:object_r:sysfs_usb_c:s0
 genfscon sysfs /class/typec/usbc0                                       u:object_r:sysfs_usb_c:s0
-genfscon sysfs /class/sidecar/power_control                             u:object_r:sidecar_file:s0
-genfscon sysfs /class/sidecar/attached                                  u:object_r:sidecar_file:s0
 genfscon sysfs /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb1 u:object_r:sysfs_usb_device:s0
 genfscon sysfs /devices/soc/a800000.ssusb/a800000.dwc3/xhci-hcd.0.auto/usb2 u:object_r:sysfs_usb_device:s0
 genfscon sysfs /devices/soc/1c00000.qcom,pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1 u:object_r:sysfs_usb_device:s0

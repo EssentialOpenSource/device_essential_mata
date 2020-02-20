@@ -65,8 +65,8 @@ allow hal_dumpstate_impl sysfs_scsi_devices_0000:dir r_dir_perms;
 allow hal_dumpstate_impl sysfs_scsi_devices_0000:file r_file_perms;
 
 # Access Sidecar entries
-allow hal_dumpstate_impl sidecar_file:chr_file rw_file_perms;
-allow hal_dumpstate_impl sidecar_file:file rw_file_perms;
+allow hal_dumpstate_impl usb_serial_device:chr_file rw_file_perms;
+allow hal_dumpstate_impl usb_serial_device:file rw_file_perms;
 
 allow hal_dumpstate_impl shell_data_file:file getattr;
 userdebug_or_eng(`allow hal_dumpstate_impl debugfs_dma_bufinfo:file r_file_perms;')

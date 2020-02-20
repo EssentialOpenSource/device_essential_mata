@@ -31,8 +31,8 @@ hal_server_domain(hal_sidecar_essential_default, hal_sidecar_essential)
 type hal_sidecar_essential_default_exec, exec_type, vendor_file_type, file_type;
 init_daemon_domain(hal_sidecar_essential_default)
 
-allow hal_sidecar_essential_default sidecar_file:chr_file rw_file_perms;
-allow hal_sidecar_essential_default sidecar_file:file rw_file_perms;
+allow hal_sidecar_essential_default usb_serial_device:chr_file rw_file_perms;
+allow hal_sidecar_essential_default usb_serial_device:file rw_file_perms;
 
 binder_call(system_app, hal_sidecar_essential_default)
 allow system_app hal_sidecar_essential_hwservice:hwservice_manager find;
@@ -40,7 +40,7 @@ allow system_app hal_sidecar_essential_hwservice:hwservice_manager find;
 add_hwservice(hal_sidecar_essential_server, hal_sidecar_essential_hwservice)
 allow hal_sidecar_essential_client hal_sidecar_essential_hwservice:hwservice_manager find;
 
-allow ueventd sidecar_file:chr_file { create setattr unlink };
-allow sidecar_file tmpfs:filesystem associate;
+allow ueventd usb_serial_device:chr_file { create setattr unlink };
+allow usb_serial_device tmpfs:filesystem associate;
 
 set_prop(hal_sidecar_essential_default, system_prop)

@@ -121,5 +121,4 @@ type hbtp_cfg_file, file_type;
 type hbtp_log_file, file_type;
 type adsprpcd_file, file_type, mlstrustedobject;
 
-type sidecar_file, fs_type, sysfs_type;
 type rfs_system_file, file_type, system_file_type;

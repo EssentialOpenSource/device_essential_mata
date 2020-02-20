@@ -38,7 +38,6 @@
 /dev/pn81a                                      u:object_r:pn81a_device:s0
 /dev/stmvl53l0_ranging                          u:object_r:stm_device:s0
 /dev/dpl_ctrl                                   u:object_r:rmnet_device:s0
-/dev/ttyACM[0-9]*                               u:object_r:sidecar_file:s0
 /dev/neko([0-9])+                               u:object_r:neko_device:s0
 
 # dev socket nodes
