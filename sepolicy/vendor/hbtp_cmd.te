@@ -17,7 +17,7 @@ allow hwservicemanager hbtp_cmd:dir search;
 allow hwservicemanager hbtp_cmd:file { open read };
 allow hwservicemanager hbtp_cmd:process getattr;
 
-allow init hbtp_cmd:process { noatsecure rlimitinh siginh transition };
+allow init hbtp_cmd:process { rlimitinh siginh transition };
 
 allow hbtp_cmd hbtp_vendor_data_file:dir search;
 allow hbtp_cmd hbtp_vendor_data_file:file { open read getattr };

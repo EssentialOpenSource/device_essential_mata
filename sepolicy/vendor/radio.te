@@ -19,7 +19,6 @@ allow radio hal_imsrtp_hwservice:hwservice_manager find;
 
 allow radio {
   mediaextractor_service
-  mediacodec_service
 }:service_manager find;
 
 r_dir_file(radio, sysfs_msm_subsys)

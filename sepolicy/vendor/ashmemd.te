@@ -1,2 +1,0 @@
-allow ashmemd dumpstate:fd use;
-allow ashmemd dumpstate:fifo_file write;
