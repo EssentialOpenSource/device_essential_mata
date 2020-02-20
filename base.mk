@@ -534,7 +534,7 @@ $(call inherit-product-if-exists, vendor/harman/sprint-flags.mk)
 
 # OEM Unlock reporting
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.oem_unlock_supported=true
+    ro.oem_unlock_supported=1
 
 PRODUCT_CHARACTERISTICS := nosdcard
 
