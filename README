@@ -1,12 +1,21 @@
 To build R preview code:
 
-- Clone the latest R AOSP code (For example android-r-preview-1 tag)
+- Clone the latest R AOSP code
 
 repo init -u https://android.googlesource.com/platform/manifest -b android-r-preview-1
 
 - Apply
 
 https://android-review.googlesource.com/c/platform/external/e2fsprogs/+/1216916
+https://android.googlesource.com/platform/libcore/+/0a5160d04a3f
+https://android.googlesource.com/platform/libcore/+/d8a6e4823995e64a9e21c0ad9289d9d530f18034
+https://android.googlesource.com/platform/libcore/+/c6298a8b77942aa1108548bd70e97059dc9d7b6e
+
+- Revert
+
+https://android.googlesource.com/platform/system/sepolicy/+/61178550157fce18861ddd59fa9a6a29cf06c583%5E%21/#F2
+
+Otherwise lead to init issue due to empty mapping files (To be checked)
 
 - Add Essential mata repo
 
