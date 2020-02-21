@@ -1,5 +1,7 @@
 LOCAL_KERNEL := device/essential/mata/Image.gz-dtb
 
+PRODUCT_EXTRA_VNDK_VERSIONS := 29
+
 # Include Essential audio assets
 $(call inherit-product-if-exists, vendor/essential/apps/assets/sounds/audio.mk)
 
