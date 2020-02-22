@@ -7,7 +7,15 @@ allow kernel vendor_firmware_file:lnk_file read;
 
 dontaudit kernel kernel:system module_request;
 
+# Read FDs from /vendor/firmware
+allow kernel vendor_file:file r_file_perms;
+
+allow kernel persist_file:file r_file_perms;
+allow kernel tmpfs:dir search;
+
 allow kernel debugfs_ipc:dir search;
 allow kernel persist_file:dir search;
 
 allow kernel debugfs_wlan:dir search;
+allow kernel firmware_file:dir search;
+allow kernel firmware_file:file r_file_perms;

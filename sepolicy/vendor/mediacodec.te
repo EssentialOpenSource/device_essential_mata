@@ -5,6 +5,8 @@ allow mediacodec sysfs_soc:file r_file_perms;
 allow mediacodec sysfs_soc:dir search;
 
 allow mediacodec system_file:dir r_dir_perms;
+allow mediacodec firmware_file:dir search;
+allow mediacodec firmware_file:file r_file_perms;
 
 userdebug_or_eng(`
   allow mediacodec dumpstate:fd use;
