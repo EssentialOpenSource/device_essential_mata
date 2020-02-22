@@ -26,3 +26,6 @@ allow vendor_init preloads_data_file:dir { ioctl open };
 allow vendor_init preloads_media_file:dir setattr;
 allow vendor_init unlabeled:dir { getattr setattr search read relabelfrom };
 allow vendor_init unlabeled:file { getattr setattr read relabelfrom };
+
+allow vendor_init firmware_file:dir search;
+allow vendor_init firmware_file:file r_file_perms;
