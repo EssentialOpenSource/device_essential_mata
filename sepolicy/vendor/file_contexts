@@ -258,7 +258,7 @@
 
 # Hexagon DSP host runtime and DSP-side executable needed for Halide operation
 /vendor/lib(64)?/libadsprpc\.so             u:object_r:same_process_hal_file:s0
-/vendor/lib/dsp/fastrpc_shell_0             u:object_r:hexagon_halide_file:s0
+/vendor/lib/dsp/fastrpc_shell_0             u:object_r:adsprpcd_file:s0
 
 # Hexagon DSP lib to extract image features
 /vendor/lib/rfsa/adsp/libexternal_dog_skel\.so  u:object_r:same_process_hal_file:s0
@@ -297,7 +297,7 @@
 # /
 /tombstones                u:object_r:rootfs:s0
 /dsp(/.*)?                 u:object_r:adsprpcd_file:s0
-
+/vendor/lib/dsp(/.*)?      u:object_r:adsprpcd_file:s0
 
 # files in firmware
 /firmware                  u:object_r:firmware_file:s0
