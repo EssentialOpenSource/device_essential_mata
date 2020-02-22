@@ -144,9 +144,9 @@ AB_OTA_PARTITIONS := boot system vendor
 # Install odex files into the other system image
 BOARD_USES_SYSTEM_OTHER_ODEX := true
 
-BOARD_ROOT_EXTRA_FOLDERS := persist
 BOARD_ROOT_EXTRA_SYMLINKS := /vendor/lib/dsp:/dsp
 BOARD_ROOT_EXTRA_SYMLINKS += /vendor/firmware_mnt:/firmware
+BOARD_ROOT_EXTRA_SYMLINKS += /mnt/vendor/persist:/persist
 BOARD_SEPOLICY_DIRS += device/essential/mata/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := device/essential/mata/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := device/essential/mata/sepolicy/private
