@@ -70,6 +70,8 @@ BOARD_KERNEL_CMDLINE += quiet
 BOARD_KERNEL_CMDLINE += androidboot.hardware=mata user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 sched_enable_hmp=1 sched_enable_power_aware=1 service_locator.enable=1 swiotlb=2048 androidboot.configfs=true androidboot.usbcontroller=a800000.dwc3
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += firmware_class.path=/vendor/firmware_mnt/image
+
 BOARD_SECCOMP_POLICY := device/essential/mata/seccomp
 
 
@@ -142,7 +144,7 @@ AB_OTA_PARTITIONS := boot system vendor
 # Install odex files into the other system image
 BOARD_USES_SYSTEM_OTHER_ODEX := true
 
-BOARD_ROOT_EXTRA_FOLDERS := persist firmware dsp
+BOARD_ROOT_EXTRA_FOLDERS := persist dsp
 BOARD_SEPOLICY_DIRS += device/essential/mata/sepolicy/vendor
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR := device/essential/mata/sepolicy/public
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR := device/essential/mata/sepolicy/private
