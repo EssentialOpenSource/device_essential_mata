@@ -25,6 +25,8 @@
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
 
+firmware_directories /vendor/firmware_mnt/image/
+
 # the DIAG device node is not world writable/readable.
 /dev/diag                 0660   system     oem_2901
 
