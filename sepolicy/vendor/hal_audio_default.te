@@ -13,3 +13,6 @@ allow hal_audio_default audio_vendor_data_file:file create_file_perms;
 r_dir_file(hal_audio_default, sysfs_audio)
 
 set_prop(hal_audio_default, mqa_hd_prop)
+
+allow hal_audio_default firmware_file:dir r_dir_perms;
+allow hal_audio_default firmware_file:file r_file_perms;
