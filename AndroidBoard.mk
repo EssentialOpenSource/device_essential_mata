@@ -82,7 +82,7 @@ $(shell  mkdir -p $(TARGET_OUT_VENDOR)/firmware; \
 
 # Create symbolic links for wlan MAC address
 $(shell mkdir -p $(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld; \
-	ln -sf /persist/wlan_mac.bin \
+	ln -sf /mnt/vendor/persist/wlan_mac.bin \
 	$(TARGET_OUT_VENDOR)/firmware/wlan/qca_cld/wlan_mac.bin)
 
 #----------------------------------------------------------------------

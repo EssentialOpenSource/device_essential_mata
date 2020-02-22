@@ -71,7 +71,7 @@ on init
     write /sys/module/lpm_levels/parameters/sleep_disabled Y
 
     # Set permissions for persist partition
-    mkdir /persist 0771 root system
+    mkdir /mnt/vendor/persist 0771 root system
 
     # Support legacy paths
     symlink /sdcard /mnt/sdcard
@@ -192,13 +192,13 @@ on boot
     mkdir /dev/socket/qmux_gps 0770 gps gps
     chmod 2770 /dev/socket/qmux_gps
 
-    mkdir /persist/drm 0770 system system
-    mkdir /persist/bluetooth 0770 bluetooth system
-    mkdir /persist/misc 0770 system system
-    mkdir /persist/alarm 0770 system system
-    mkdir /persist/time 0770 system system
-    mkdir /persist/secnvm 0770 system system
-    mkdir /persist/report 0770 shell shell
+    mkdir /mnt/vendor/persist/drm 0770 system system
+    mkdir /mnt/vendor/persist/bluetooth 0770 bluetooth system
+    mkdir /mnt/vendor/persist/misc 0770 system system
+    mkdir /mnt/vendor/persist/alarm 0770 system system
+    mkdir /mnt/vendor/persist/time 0770 system system
+    mkdir /mnt/vendor/persist/secnvm 0770 system system
+    mkdir /mnt/vendor/persist/report 0770 shell shell
 
     #Create NETMGR daemon socket area
     mkdir /dev/socket/netmgr 0750 radio radio
@@ -262,10 +262,10 @@ on boot
     chmod 0660 /sys/kernel/dload/dload_mode
 
     # Create directory used for display
-    mkdir /persist/display 0770 system graphics
+    mkdir /mnt/vendor/persist/display 0770 system graphics
 
     # Create vpp directory
-    mkdir /persist/vpp 0770 media media
+    mkdir /mnt/vendor/persist/vpp 0770 media media
 
 on fs
     wait /dev/block/platform/soc/1da4000.ufshc
@@ -276,50 +276,50 @@ on fs
     # these partition flashed on the device. Failure to mount any partition in fstab file
     # results in failure to launch late-start class.
 
-    mkdir /persist/data 0700 system system
-    mkdir /persist/display 0770 system graphics
-    mkdir /persist/rfs 0770 root system
-    mkdir /persist/hlos_rfs 0770 root system
-    chmod 0770 /persist/rfs
-    chmod 0770 /persist/rfs/shared
-    chown system system /persist/rfs/shared
-    chmod 0770 /persist/rfs/msm
-    chown system system /persist/rfs/msm
-    chmod 0770 /persist/rfs/msm/adsp
-    chown system system /persist/rfs/msm/adsp
-    chmod 0770 /persist/rfs/msm/mpss
-    chown system system /persist/rfs/msm/mpss
-    mkdir /persist/rfs/msm/slpi 0770 system system
-    chmod 0770 /persist/rfs/mdm
-    chown system system /persist/rfs/mdm
-    chmod 0770 /persist/rfs/mdm/adsp
-    chown system system /persist/rfs/mdm/adsp
-    chmod 0770 /persist/rfs/mdm/mpss
-    chown system system /persist/rfs/mdm/mpss
-    mkdir /persist/rfs/mdm/slpi 0770 system system
-    chmod 0770 /persist/rfs/mdm/sparrow
-    chown system system /persist/rfs/mdm/sparrow
-    mkdir /persist/rfs/mdm/tn 0770 system system
-    chown system system /persist/rfs/apq
-    chmod 0770 /persist/rfs/apq
-    chown system system /persist/rfs/apq/gnss
-    chmod 0770 /persist/rfs/apq/gnss
-    chmod 0770 /persist/hlos_rfs
+    mkdir /mnt/vendor/persist/data 0700 system system
+    mkdir /mnt/vendor/persist/display 0770 system graphics
+    mkdir /mnt/vendor/persist/rfs 0770 root system
+    mkdir /mnt/vendor/persist/hlos_rfs 0770 root system
+    chmod 0770 /mnt/vendor/persist/rfs
+    chmod 0770 /mnt/vendor/persist/rfs/shared
+    chown system system /mnt/vendor/persist/rfs/shared
+    chmod 0770 /mnt/vendor/persist/rfs/msm
+    chown system system /mnt/vendor/persist/rfs/msm
+    chmod 0770 /mnt/vendor/persist/rfs/msm/adsp
+    chown system system /mnt/vendor/persist/rfs/msm/adsp
+    chmod 0770 /mnt/vendor/persist/rfs/msm/mpss
+    chown system system /mnt/vendor/persist/rfs/msm/mpss
+    mkdir /mnt/vendor/persist/rfs/msm/slpi 0770 system system
+    chmod 0770 /mnt/vendor/persist/rfs/mdm
+    chown system system /mnt/vendor/persist/rfs/mdm
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/adsp
+    chown system system /mnt/vendor/persist/rfs/mdm/adsp
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/mpss
+    chown system system /mnt/vendor/persist/rfs/mdm/mpss
+    mkdir /mnt/vendor/persist/rfs/mdm/slpi 0770 system system
+    chmod 0770 /mnt/vendor/persist/rfs/mdm/sparrow
+    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
+    mkdir /mnt/vendor/persist/rfs/mdm/tn 0770 system system
+    chown system system /mnt/vendor/persist/rfs/apq
+    chmod 0770 /mnt/vendor/persist/rfs/apq
+    chown system system /mnt/vendor/persist/rfs/apq/gnss
+    chmod 0770 /mnt/vendor/persist/rfs/apq/gnss
+    chmod 0770 /mnt/vendor/persist/hlos_rfs
 
-    restorecon_recursive --force /persist
-    mkdir /persist/data 0700 system system
-    chown system system /persist/rfs/shared
-    chown system system /persist/rfs/msm
-    chown system system /persist/rfs/msm/adsp
-    chown system system /persist/rfs/msm/mpss
-    chown system system /persist/rfs/msm/slpi
-    chown system system /persist/rfs/mdm
-    chown system system /persist/rfs/mdm/adsp
-    chown system system /persist/rfs/mdm/mpss
-    chown system system /persist/rfs/mdm/sparrow
-    chown system system /persist/rfs/mdm/tn
-    chown system system /persist/rfs/apq
-    chown system system /persist/rfs/apq/gnss
+    restorecon_recursive --force /mnt/vendor/persist
+    mkdir /mnt/vendor/persist/data 0700 system system
+    chown system system /mnt/vendor/persist/rfs/shared
+    chown system system /mnt/vendor/persist/rfs/msm
+    chown system system /mnt/vendor/persist/rfs/msm/adsp
+    chown system system /mnt/vendor/persist/rfs/msm/mpss
+    chown system system /mnt/vendor/persist/rfs/msm/slpi
+    chown system system /mnt/vendor/persist/rfs/mdm
+    chown system system /mnt/vendor/persist/rfs/mdm/adsp
+    chown system system /mnt/vendor/persist/rfs/mdm/mpss
+    chown system system /mnt/vendor/persist/rfs/mdm/sparrow
+    chown system system /mnt/vendor/persist/rfs/mdm/tn
+    chown system system /mnt/vendor/persist/rfs/apq
+    chown system system /mnt/vendor/persist/rfs/apq/gnss
 
 on post-fs
     chmod 0755 /sys/kernel/debug/tracing
@@ -401,13 +401,13 @@ on post-fs-data
     chown dhcp dhcp /data/misc/dhcp
 
     # Setup sensors-related directories and permissions
-    mkdir /persist/sensors 0775
-    chown root system /persist/sensors
-    write /persist/sensors/sensors_settings 1
-    chown root system /persist/sensors/sensors_settings
-    chmod 664 /persist/sensors/sensors_settings
-    chown root system /persist/sensors/sns.reg
-    chmod 664 /persist/sensors/sns.reg
+    mkdir /mnt/vendor/persist/sensors 0775
+    chown root system /mnt/vendor/persist/sensors
+    write /mnt/vendor/persist/sensors/sensors_settings 1
+    chown root system /mnt/vendor/persist/sensors/sensors_settings
+    chmod 664 /mnt/vendor/persist/sensors/sensors_settings
+    chown root system /mnt/vendor/persist/sensors/sns.reg
+    chmod 664 /mnt/vendor/persist/sensors/sns.reg
     chown root system /dev/sensors
     chmod 660 /dev/sensors
 
@@ -454,10 +454,10 @@ on post-fs-data
     mkdir /data/vendor/radio 0770 system radio
 
     # Mounting of persist is moved to 'on emmc-fs' and 'on fs' sections
-    # We chown/chmod /persist again so because mount is run as root + defaults
-    chown root system /persist
-    chmod 0771 /persist
-    chown system system /persist/WCNSS_qcom_wlan_nv.bin
+    # We chown/chmod /mnt/vendor/persist again so because mount is run as root + defaults
+    chown root system /mnt/vendor/persist
+    chmod 0771 /mnt/vendor/persist
+    chown system system /mnt/vendor/persist/WCNSS_qcom_wlan_nv.bin
 
     #Create the symlink to qcn wpa_supplicant folder for ar6000 wpa_supplicant
     mkdir /data/system 0775 system system

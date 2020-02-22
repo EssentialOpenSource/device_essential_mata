@@ -8,5 +8,5 @@
 /dev/block/platform/soc/1da4000.ufshc/by-name/dsp        /vendor/lib/dsp      ext4     ro,nosuid,nodev,barrier=1,context=u:object_r:adsprpcd_file:s0                        wait,slotselect
 /devices/*/xhci-hcd.0.auto*                              auto                 auto     defaults                                         voldmanaged=usb:auto
 /devices/*/0000:01:00.0*                                 auto                 auto     defaults                                         voldmanaged=usb:auto
-/dev/block/platform/soc/1da4000.ufshc/by-name/persist    /persist             ext4     noatime,nosuid,nodev,barrier=1                   wait
+/dev/block/platform/soc/1da4000.ufshc/by-name/persist    /mnt/vendor/persist  ext4     noatime,nosuid,nodev,barrier=1                   wait
 /dev/block/zram0                                         none                 swap     defaults                                         zramsize=536870912,max_comp_streams=8
