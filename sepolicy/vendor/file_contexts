@@ -296,11 +296,14 @@
 
 # /
 /tombstones                u:object_r:rootfs:s0
-/dsp(/.*)?                 u:object_r:adsprpcd_file:s0
 /vendor/lib/dsp(/.*)?      u:object_r:adsprpcd_file:s0
 
 # files in firmware
-/firmware                  u:object_r:firmware_file:s0
+/firmware                            u:object_r:rootfs:s0
+
+# TODO: Remove them once no need to maintain the backward compatibility. (b/111219177)
+/persist                             u:object_r:rootfs:s0
+/dsp                                 u:object_r:rootfs:s0
 
 # /mnt/vendor/persist
 /mnt/vendor/persist(/.*)?            u:object_r:persist_file:s0
