@@ -14,7 +14,7 @@ allowxperm sensors self:socket ioctl msm_sock_ipc_ioctls;
 allow sensors persist_sensors_file:dir rw_dir_perms;
 allow sensors persist_sensors_file:file create_file_perms;
 allow sensors persist_file:dir { getattr search };
-allow sensors persist_file:lnk_file read;
+allow sensors persist_file:lnk_file r_file_perms;
 
 allow sensors mnt_vendor_file:dir { getattr search };
 
