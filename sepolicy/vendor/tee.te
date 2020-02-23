@@ -10,6 +10,8 @@ allow tee block_device:dir { getattr search };
 allow tee ssd_block_device:blk_file rw_file_perms;
 allow tee sg_device:chr_file { rw_file_perms setattr };
 
+allow tee mnt_vendor_file:dir r_dir_perms;
+
 allow tee persist_file:dir r_dir_perms;
 allow tee persist_drm_file:dir create_dir_perms;
 allow tee persist_drm_file:file create_file_perms;

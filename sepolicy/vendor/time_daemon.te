@@ -30,3 +30,5 @@ allowxperm time_daemon self:socket ioctl msm_sock_ipc_ioctls;
 
 allow time_daemon time_vendor_data_file:dir create_dir_perms;
 allow time_daemon time_vendor_data_file:file create_file_perms;
+
+allow time_daemon mnt_vendor_file:dir search;

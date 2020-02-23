@@ -36,4 +36,6 @@ allow btaddr_extract persist_bluetooth_file:file { read open };
 allow btaddr_extract persist_file:dir search;
 allow btaddr_extract persist_file:lnk_file read;
 
+allow btaddr_extract mnt_vendor_file:dir search;
+
 set_prop(btaddr_extract, bluetooth_prop)

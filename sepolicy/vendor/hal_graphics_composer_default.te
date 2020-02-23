@@ -49,3 +49,6 @@ userdebug_or_eng(`
 
 allow hal_graphics_composer_default perfd_socket:sock_file write;
 allow hal_graphics_composer_default perfd:unix_stream_socket connectto;
+
+allow hal_graphics_composer_default mnt_vendor_file:dir search;
+allow hal_graphics_composer_default mnt_vendor_file:file r_file_perms;

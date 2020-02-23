@@ -19,6 +19,9 @@ allow system_app pstore_backup_file:dir r_dir_perms;
 
 # For EssentialSUW barcode support
 allow system_app persist_file:dir create;
+allow system_app mnt_vendor_file:dir search;
+allow system_app mnt_vendor_file:file r_file_perms;
+
 
 # For Essential Accessory OTA support
 allow system_app ota_package_file:dir { add_name search write };

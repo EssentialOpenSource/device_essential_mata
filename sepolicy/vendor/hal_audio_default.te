@@ -16,3 +16,5 @@ set_prop(hal_audio_default, mqa_hd_prop)
 
 allow hal_audio_default firmware_file:dir r_dir_perms;
 allow hal_audio_default firmware_file:file r_file_perms;
+
+allow hal_audio_default mnt_vendor_file:dir search;

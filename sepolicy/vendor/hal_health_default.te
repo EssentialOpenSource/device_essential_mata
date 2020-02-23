@@ -9,3 +9,4 @@ allow hal_health_default debugfs_ufs:dir search;
 allow hal_health_default sysfs_scsi_devices_0000:dir search;
 allow hal_health_default debugfs_ufs:file { getattr open read };
 allow hal_health_default sysfs_scsi_devices_0000:file { getattr open read };
+allow hal_health_default mnt_vendor_file:dir r_dir_perms;

@@ -12,3 +12,5 @@ allow adsprpcd adsprpcd_file:dir read;
 allow adsprpcd adsprpcd_file:file { getattr open read };
 
 allow adsprpcd_file self:filesystem associate;
+
+allow adsprpcd mnt_vendor_file:dir r_dir_perms;
