@@ -54,10 +54,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 ##fluencetype can be "fluence" or "fluencepro" or "none"
 PRODUCT_PROPERTY_OVERRIDES += \
-ro.vendor.audio.sdk.fluencetype=fluencepro\
-persist.vendor.audio.fluence.voicecall=true\
-persist.vendor.audio.fluence.voicerec=false\
-persist.vendor.audio.fluence.speaker=true
+ro.qc.sdk.audio.fluencetype=fluencepro \
+persist.audio.fluence.voicecall=true \
+persist.audio.fluence.voicecomm=true \
+persist.audio.fluence.voicerec=false \
+persist.audio.fluence.speaker=true \
+
 
 #disable tunnel encoding
 PRODUCT_PROPERTY_OVERRIDES += \

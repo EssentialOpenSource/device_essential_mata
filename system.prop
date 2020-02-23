@@ -144,13 +144,6 @@ ro.vendor.sensors.wu=false
 #Disable face beautification
 persist.ts.rtmakeup=false
 
-# audio
-##fluencetype can be "fluence" or "fluencepro" or "none"
-ro.qc.sdk.audio.fluencetype=fluencepro
-persist.audio.fluence.voicecall=true
-persist.audio.fluence.voicecomm=true
-persist.audio.fluence.voicerec=false
-persist.audio.fluence.speaker=true
 
 #Property to enable display default color mode
 vendor.display.enable_default_color_mode=1

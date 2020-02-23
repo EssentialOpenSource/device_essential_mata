@@ -177,7 +177,6 @@ ro.min_freq_0              u:object_r:vendor_default_prop:s0
 ro.min_freq_4              u:object_r:vendor_default_prop:s0
 ro.oem_unlock.pst          u:object_r:vendor_default_prop:s0
 ro.qcom.                   u:object_r:vendor_default_prop:s0
-ro.qc.sdk.audio.fluencetype  u:object_r:vendor_default_prop:s0
 ro.qfusion_use_report_period  u:object_r:vendor_default_prop:s0
 ro.qti.                    u:object_r:vendor_default_prop:s0
 ro.qualcomm.               u:object_r:vendor_default_prop:s0
@@ -197,5 +196,9 @@ sys.qca1530                u:object_r:vendor_default_prop:s0
 vendor.audio.adm.buffering.ms  u:object_r:vendor_default_prop:s0
 vendor.vidc.enc.dcvs.extra-buff-count  u:object_r:vendor_default_prop:s0
 ubwc.no.compression        u:object_r:vendor_default_prop:s0
-
+persist.audio.fluence.speaker  u:object_r:vendor_default_prop:s0
+persist.audio.fluence.voicecall  u:object_r:vendor_default_prop:s0
+persist.audio.fluence.voicecomm  u:object_r:vendor_default_prop:s0
+persist.audio.fluence.voicerec  u:object_r:vendor_default_prop:s0
+ro.qc.sdk.audio.fluencetype  u:object_r:vendor_default_prop:s0
 
