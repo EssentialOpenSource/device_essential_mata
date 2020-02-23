@@ -81,12 +81,6 @@ vendor.gralloc.disable_ubwc u:object_r:public_vendor_default_prop:s0
 vendor.debug.egl.profiler   u:object_r:public_vendor_default_prop:s0
 vendor.gralloc.enable_ahardware_buffer  u:object_r:public_vendor_default_prop:s0
 
-# public_vendor_system_prop
-# They are public_vendor_system_props for vendor-specific extension.
-sys.all.modules.ready      u:object_r:public_vendor_system_prop:s0
-sys.qcom.devup             u:object_r:public_vendor_system_prop:s0
-vendor.sys.slpi.firmware.version  u:object_r:public_vendor_system_prop:s0
-
 # vendor_default_prop
 audio_hal.in_period_size   u:object_r:vendor_default_prop:s0
 audio_hal.period_multiplier  u:object_r:vendor_default_prop:s0
