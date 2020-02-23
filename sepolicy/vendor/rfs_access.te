@@ -16,6 +16,8 @@ allow rfs_access firmware_file:file r_file_perms;
 allow rfs_access mnt_vendor_file:dir search;
 allow rfs_access mnt_vendor_file:file r_file_perms;
 allow rfs_access persist_file:dir search;
+# We are using the backward compatibilty calls
+allow rfs_access persist_file:lnk_file read;
 allow rfs_access persist_rfs_file:dir create_dir_perms;
 allow rfs_access persist_rfs_file:file create_file_perms;
 

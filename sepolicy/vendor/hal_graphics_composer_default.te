@@ -11,6 +11,7 @@ allow hal_graphics_composer_default sysfs_msm_subsys:dir search;
 allow hal_graphics_composer_default sysfs_msm_subsys:file r_file_perms;
 allow hal_graphics_composer_default sysfs_mdss_mdp_caps:file r_file_perms;
 allow hal_graphics_composer_default persist_file:dir search;
+allow hal_graphics_composer_default persist_file:lnk_file read;
 
 # Allow dir search in '/mnt/vendor'
 allow hal_graphics_composer_default mnt_vendor_file:dir search;

@@ -34,5 +34,6 @@ init_daemon_domain(btaddr_extract)
 allow btaddr_extract persist_bluetooth_file:dir search;
 allow btaddr_extract persist_bluetooth_file:file { read open };
 allow btaddr_extract persist_file:dir search;
+allow btaddr_extract persist_file:lnk_file read;
 
 set_prop(btaddr_extract, bluetooth_prop)
