@@ -8,3 +8,5 @@ allow domain diag_device:chr_file rw_file_perms;
 allow domain debugfs_kgsl:dir search;
 
 allow domain debugfs_ion:dir search;
+
+get_prop(domain, public_vendor_default_prop)

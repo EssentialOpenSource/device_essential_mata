@@ -57,6 +57,35 @@ vendor.powerhal.lpm          u:object_r:power_prop:s0
 vendor.powerhal.init         u:object_r:power_prop:s0
 vendor.powerhal.rendering    u:object_r:power_prop:s0
 
+# public_vendor_default_prop
+# They are public_vendor_default_props for vendor-specific extension.
+# Usually they are for vndk-sp libs and vendor apks.
+fastrpc.perf.              u:object_r:public_vendor_default_prop:s0
+persist.cne.cqetimer       u:object_r:public_vendor_default_prop:s0
+persist.cne.feature        u:object_r:public_vendor_default_prop:s0
+persist.cne.logging.qxdm   u:object_r:public_vendor_default_prop:s0
+persist.gcam.              u:object_r:public_vendor_default_prop:s0
+persist.vendor.cnd.iwlan   u:object_r:public_vendor_default_prop:s0
+persist.vendor.cnd.wqe     u:object_r:public_vendor_default_prop:s0
+ro.graphics.memory         u:object_r:public_vendor_default_prop:s0
+ro.boot.ddrsize            u:object_r:public_vendor_default_prop:s0
+ro.boot.hardware.ddr       u:object_r:public_vendor_default_prop:s0
+ro.boot.hardware.ufs       u:object_r:public_vendor_default_prop:s0
+ro.qcom.adreno.            u:object_r:public_vendor_default_prop:s0
+ro.vendor.graphics.memory  u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.changepixelformat  u:object_r:public_vendor_default_prop:s0
+vendor.debug.prerotation.disable  u:object_r:public_vendor_default_prop:s0
+vendor.debug.rs.           u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.swapinterval      u:object_r:public_vendor_default_prop:s0
+vendor.gralloc.disable_ubwc u:object_r:public_vendor_default_prop:s0
+vendor.debug.egl.profiler   u:object_r:public_vendor_default_prop:s0
+vendor.gralloc.enable_ahardware_buffer  u:object_r:public_vendor_default_prop:s0
+
+# public_vendor_system_prop
+# They are public_vendor_system_props for vendor-specific extension.
+sys.all.modules.ready      u:object_r:public_vendor_system_prop:s0
+sys.qcom.devup             u:object_r:public_vendor_system_prop:s0
+vendor.sys.slpi.firmware.version  u:object_r:public_vendor_system_prop:s0
 
 # vendor_default_prop
 audio_hal.in_period_size   u:object_r:vendor_default_prop:s0

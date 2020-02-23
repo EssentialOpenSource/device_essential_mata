@@ -25,3 +25,4 @@ type grip_prop, property_type;
 type mqa_hd_prop, property_type;
 type wfd_service_prop, property_type;
 type power_prop, property_type;
+type public_vendor_default_prop, property_type;
