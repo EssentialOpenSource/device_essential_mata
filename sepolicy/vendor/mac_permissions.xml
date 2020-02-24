@@ -20,4 +20,8 @@
         seinfo tag is assigned.
       - The default tag is consulted last if needed.
 -->
+    <!-- AOSP apps key -->
+    <signer signature="@AOSP" >
+      <seinfo value="aosp" />
+    </signer>
 </policy>

@@ -1,0 +1,22 @@
+type qti_audio_app, domain;
+
+app_domain(qti_audio_app)
+net_domain(qti_audio_app)
+
+hwbinder_use(qti_audio_app)
+
+# Services from untrusted_app_all.
+# Should be kept in sync with untrusted_app_all.
+allow qti_audio_app audioserver_service:service_manager find;
+allow qti_audio_app cameraserver_service:service_manager find;
+allow qti_audio_app drmserver_service:service_manager find;
+allow qti_audio_app mediaserver_service:service_manager find;
+allow qti_audio_app mediaextractor_service:service_manager find;
+allow qti_audio_app mediametrics_service:service_manager find;
+allow qti_audio_app mediadrmserver_service:service_manager find;
+allow qti_audio_app nfc_service:service_manager find;
+allow qti_audio_app radio_service:service_manager find;
+allow qti_audio_app surfaceflinger_service:service_manager find;
+allow qti_audio_app app_api_service:service_manager find;
+allow qti_audio_app vr_manager_service:service_manager find;
+allow qti_audio_app vnd_qcrilhook_hwservice:hwservice_manager find;

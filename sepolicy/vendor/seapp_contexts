@@ -10,3 +10,5 @@ user=_app seinfo=platform name=com.essential.klik domain=essential_camera_app ty
 #Needed for time service apk
 user=_app seinfo=platform name=com.qualcomm.timeservice domain=timeservice_app type=app_data_file
 
+# Custom domain to allow QtiAudio access to RILD/QCOM audio HIDL
+user=_app seinfo=aosp name=com.qualcomm.qti.audioservice domain=qti_audio_app type=app_data_file
