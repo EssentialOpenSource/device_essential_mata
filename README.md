@@ -17,7 +17,8 @@ https://android.googlesource.com/platform/libcore/+/c6298a8b77942aa1108548bd70e9
 
 https://android.googlesource.com/platform/system/sepolicy/+/61178550157fce18861ddd59fa9a6a29cf06c583%5E%21/#F2
 
-Otherwise lead to init issue due to empty mapping files (To be checked)
+BOARD_SEPOLICY_VERS := 29.0 doesn't build and without it the wrong mapping (1000) is created and 29.0 one
+is empty. For now, reverting this patch for the AOSP build (OK with GSI)
 
 * Add Essential mata repo
 
