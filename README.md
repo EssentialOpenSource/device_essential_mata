@@ -62,3 +62,12 @@ fastboot format userdata
 
 * Reboot
 
+## Known issues with GSI
+
+1. Audio is not routing for phone calls
+
+The audio HAL needs to be aware of the call status. This is provided
+by QtiTelephonyService which is platform signed.
+
+Unfortunately GSI from Google are signed with custom keys and not
+AOSP keys - Therefore leading to a signature mismatch
