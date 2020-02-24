@@ -1476,6 +1476,7 @@ SYSTEM_HEALTH_MONITOR := libsystem_health_mon
 #TELEPHONY_APPS
 TELEPHONY_APPS := datastatusnotification
 TELEPHONY_APPS += QtiTelephonyService
+TELEPHONY_APPS += QtiAudioService
 TELEPHONY_APPS += telephonyservice.xml
 TELEPHONY_APPS += embms
 TELEPHONY_APPS += embms.xml

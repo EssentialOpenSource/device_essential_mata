@@ -34,6 +34,7 @@
     <!-- These are telephony components that need to freely run in the background -->
     <allow-in-power-save package="com.qualcomm.atfwd" />
     <allow-in-power-save package="com.qualcomm.qti.telephonyservice" />
+    <allow-in-power-save package="com.qualcomm.qti.audioservice" />
     <allow-in-power-save package="com.qulacomm.qcrilmsgtunnel" />
     <allow-in-power-save package="com.qualcomm.qti.ims" />
     <allow-in-power-save package="com.qualcomm.qti.radioconfiginterface" />
