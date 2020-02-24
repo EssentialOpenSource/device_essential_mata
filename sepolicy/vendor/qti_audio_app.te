@@ -20,3 +20,5 @@ allow qti_audio_app surfaceflinger_service:service_manager find;
 allow qti_audio_app app_api_service:service_manager find;
 allow qti_audio_app vr_manager_service:service_manager find;
 allow qti_audio_app vnd_qcrilhook_hwservice:hwservice_manager find;
+
+allow qti_audio_app rild:binder { call transfer };

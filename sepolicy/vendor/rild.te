@@ -27,3 +27,5 @@ userdebug_or_eng(`
 
 allow rild radio_vendor_data_file:dir rw_dir_perms;
 allow rild radio_vendor_data_file:file create_file_perms;
+
+allow rild qti_audio_app:binder { call transfer };
