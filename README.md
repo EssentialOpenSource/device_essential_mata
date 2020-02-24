@@ -27,7 +27,7 @@ cd device/essential
 git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata -b r-preview
 ```
 
-* Download prebuilt vendor-QQ1A.200105.032.img (To be provided)
+* Download prebuilt vendor-QQ1A.200105.086.img (To be provided)
 
 ```
 source build/envsetup.sh

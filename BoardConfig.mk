@@ -183,4 +183,4 @@ WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 # Use 64 bits version for DRM service
 TARGET_ENABLE_MEDIADRM_64 := true
 
-BOARD_PREBUILT_VENDORIMAGE := device/essential/mata/vendor-QQ1A.200105.032.img
+BOARD_PREBUILT_VENDORIMAGE := device/essential/mata/vendor-QQ1A.200105.086.img
