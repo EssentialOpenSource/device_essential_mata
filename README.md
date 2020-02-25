@@ -89,11 +89,3 @@ fastboot format userdata
 ```
 
 * Reboot
-
-### Known issues with GSI
-
-1. Cellular data doesn't work
-
-datastatusnotification needs to share the APN status with the modem.
-This requires privileged/signature (WRITE_APN_SETTINGS) permission that cannot be
-granted for GSI.
