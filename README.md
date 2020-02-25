@@ -1,4 +1,27 @@
-# To build R preview code:
+# Build AOSP code
+
+The provided vendor images was tested with 10.0 r25 and r_preview_1
+
+## Getting the sources
+
+### To build latest Android 10 AOSP tag
+
+* Clone the latest AOSP code (For example 10.0.0_r25 tag)
+
+```
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r25
+```
+
+* Add Essential mata repo (master branch)
+
+```
+mkdir -p device/essential
+cd device/essential
+git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata
+```
+
+
+### To build R preview code:
 
 * Clone the latest R AOSP code
 
@@ -20,7 +43,7 @@ https://android.googlesource.com/platform/system/sepolicy/+/61178550157fce18861d
 BOARD_SEPOLICY_VERS := 29.0 doesn't build and without it the wrong mapping (1000) is created and 29.0 one
 is empty. For now, reverting this patch for the AOSP build (OK with GSI)
 
-* Add Essential mata repo
+* Add Essential mata repo (r-preview branch)
 
 ```
 mkdir -p device/essential
@@ -28,7 +51,10 @@ cd device/essential
 git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata -b r-preview
 ```
 
-* Download prebuilt vendor-QQ1A.200105.086.img (To be provided)
+## Building
+
+* Download prebuilt vendor-QQ1A.200105.088.img (To be provided)
+* Start a build
 
 ```
 source build/envsetup.sh
@@ -40,7 +66,8 @@ make -j16
 
 # To flash GSI
 
-* Get the latest [GSI for Android 11](https://developer.android.com/topic/generic-system-image/releases)
+* Get the latest [GSI for Android 11/Android 10](https://developer.android.com/topic/generic-system-image/releases)
+* Tested with QJR1.191112.001 and RPP1.200123.016.A1
 * Flash the userdebug open source build (see above)
 * Disable verity (GSI image don't have any verity metadata)
 
@@ -63,7 +90,7 @@ fastboot format userdata
 
 * Reboot
 
-## Known issues with GSI
+### Known issues with GSI
 
 1. Cellular data doesn't work
 
