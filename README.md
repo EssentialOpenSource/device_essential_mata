@@ -53,7 +53,8 @@ git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata 
 
 ## Building
 
-* Download prebuilt vendor-QQ1A.200105.088.img (To be provided)
+* Download prebuilt [vendor-QQ1A.200105.088.img](https://www.essential.com/developer/current-builds)
+* Extract in device/essential/mata
 * Start a build
 
 ```
