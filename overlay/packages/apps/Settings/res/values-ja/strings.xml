@@ -17,7 +17,6 @@
     <string name="nfc_payment_setting_ng_button">"OK"</string>
     <string name="battery_suggestion_summary" >"自動調整バッテリーを ON にする"</string>
     <string name="smart_battery_manager_title" >"自動調整バッテリー"</string>
-    <string name="smart_battery_footer" product="default" >"自動調整バッテリーで使用頻度の低いアプリの電池使用を制限すると、電池が長持ちします。時間の経過とともに、スマートフォンがアプリの使用状況を学習します。\n\nこのアプリの通知は遅れることがあります。"</string>
     <string name="smart_battery_footer" product="tablet" >"自動調整バッテリーで使用頻度の低いアプリの電池使用を制限すると、電池が長持ちします。時間の経過とともに、タブレットがアプリの使用状況を学習します。\n\nこのアプリの通知は遅れることがあります。"</string>
     <string name="smart_battery_footer" product="device" >"自動調整バッテリーで使用頻度の低いアプリの電池使用を制限すると、電池が長持ちします。時間の経過とともに、端末がアプリの使用状況を学習します。\n\nこのアプリの通知は遅くなることがあります。"</string>
     <string name="smart_battery_title" >"自動調整バッテリーの使用"</string>
