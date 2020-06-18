@@ -1,15 +1,15 @@
 # Build AOSP code
 
-The provided vendor images was tested with 10.0 r25 and r_preview_1
+The provided vendor images was tested with 10.0 r39 and r_preview_4
 
 ## Getting the sources
 
 ### To build latest Android 10 AOSP tag
 
-* Clone the latest AOSP code (For example 10.0.0_r25 tag)
+* Clone the latest AOSP code (For example 10.0.0_r39 tag)
 
 ```
-repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r25
+repo init -u https://android.googlesource.com/platform/manifest -b android-10.0.0_r39
 ```
 
 * Add Essential mata repo (master branch)
@@ -26,15 +26,15 @@ git clone https://github.com/EssentialOpenSource/device_essential_mata.git mata
 * Clone the latest R AOSP code
 
 ```
-repo init -u https://android.googlesource.com/platform/manifest -b android-r-preview-1
+repo init -u https://android.googlesource.com/platform/manifest -b android-r-preview-4
 ```
 
 * Apply
 
-https://android-review.googlesource.com/c/platform/external/e2fsprogs/+/1216916
-https://android.googlesource.com/platform/libcore/+/0a5160d04a3f
-https://android.googlesource.com/platform/libcore/+/d8a6e4823995e64a9e21c0ad9289d9d530f18034
-https://android.googlesource.com/platform/libcore/+/c6298a8b77942aa1108548bd70e97059dc9d7b6e
+https://android.googlesource.com/platform/external/linux-kselftest/+/db3a9fa235b35199b31b6e056c5e853e017554fc
+https://android.googlesource.com/platform/external/seccomp-tests/+/f109fb9e5705801c4ab8400df9cc9d68d8132022
+https://android.googlesource.com/platform/libcore/+/7afc6fac7c7e8ef9db73ebb63872b9ec93915866
+https://android.googlesource.com/platform/libcore/+/0b557ea
 
 * Revert
 
