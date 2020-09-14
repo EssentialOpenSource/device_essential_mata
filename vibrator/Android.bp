@@ -24,14 +24,11 @@ cc_binary {
     shared_libs: [
         "libhidlbase",
         "libcutils",
-        "libhidltransport",
         "liblog",
-        "libhwbinder",
         "libutils",
         "libhardware",
-        "android.hardware.vibrator@1.0",
-        "android.hardware.vibrator@1.1",
-        "android.hardware.vibrator@1.2",
+        "libbinder_ndk",
+        "android.hardware.vibrator-ndk_platform",
     ],
     proprietary: true,
 }
